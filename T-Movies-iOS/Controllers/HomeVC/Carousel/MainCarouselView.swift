@@ -1,14 +1,14 @@
 //
-//  MainView.swift
+//  MainCarouselView.swift
 //  T-Movies-iOS
 //
-//  Created by Taha JADID on 27/2/2023.
+//  Created by Taha JADID on 28/2/2023.
 //
 
 import ToosieSlide
 import UIKit
 
-class MainView: UIView {
+class MainCarouselView: UIView {
     private let reuseIdentifier = "CustomCarouselCell"
 
   // MARK: - UIElements
@@ -89,7 +89,7 @@ class MainView: UIView {
 
 // MARK: - Action
 
-extension MainView {
+extension MainCarouselView {
   @objc func scrollToCell() {
     let randomInt = Int.random(in: 0..<8)
     print("scroll to cell \(randomInt)")
@@ -99,7 +99,7 @@ extension MainView {
 
 // MARK: - Data Source
 
-extension MainView: UICollectionViewDataSource {
+extension MainCarouselView: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     8
   }
@@ -109,7 +109,7 @@ extension MainView: UICollectionViewDataSource {
   }
 }
 
-extension MainView: UICollectionViewDelegateCarouselLayout {
+extension MainCarouselView: UICollectionViewDelegateCarouselLayout {
   func collectionView(_ collectionView: UICollectionView, willDisplayCellAt cellIndex: CellIndex) {
     print("Will Display Cell at \(cellIndex)")
   }
