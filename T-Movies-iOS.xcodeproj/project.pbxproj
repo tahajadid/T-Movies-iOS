@@ -204,11 +204,7 @@
 		1C35AFC729ACFB7900A57F5F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				1C38131029AE54750035B242 /* UIViewExtension.swift */,
-				1C38131229AE54E00035B242 /* MKLayer.swift */,
-				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
-				1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */,
-				1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */,
+				1C38132429AEC1350035B242 /* Extensions */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -292,6 +288,18 @@
 				1C38131C29AEBDAF0035B242 /* ApiService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		1C38132429AEC1350035B242 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C38131029AE54750035B242 /* UIViewExtension.swift */,
+				1C38131229AE54E00035B242 /* MKLayer.swift */,
+				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
+				1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */,
+				1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3DD38ADDB6CDAFE25C03D2AC /* Pods */ = {
