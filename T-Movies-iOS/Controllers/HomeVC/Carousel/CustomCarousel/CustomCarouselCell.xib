@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-PD-rhh">
-                                        <rect key="frame" x="1" y="1" width="258" height="324"/>
+                                        <rect key="frame" x="1" y="1.9999999999999982" width="258" height="322.33333333333331"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="primary_color"/>
