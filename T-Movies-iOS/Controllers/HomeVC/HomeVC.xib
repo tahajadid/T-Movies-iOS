@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,18 +19,101 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-BO-DLA" customClass="MainCarouselView" customModule="T_Movies_iOS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="99" width="393" height="679"/>
-                    <color key="backgroundColor" name="background_color"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Et-hY-3tw" customClass="HeaderView" customModule="T_Movies_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eL2-Up-nzz"/>
+                    </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-Rf-R8E" userLabel="TitleContainer">
+                    <rect key="frame" x="0.0" y="139" width="393" height="80"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With               You Can't" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-8x-2D6">
+                            <rect key="frame" x="59" y="18" width="288" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                            <color key="textColor" name="label_color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Vt-pE6">
+                            <rect key="frame" x="139" y="14" width="88" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="aXN-LB-rLy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blink Your Eyes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="687-Uc-ljY">
+                            <rect key="frame" x="121" y="47" width="151" height="29"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                            <color key="textColor" name="label_color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="background_color"/>
+                    <constraints>
+                        <constraint firstItem="687-Uc-ljY" firstAttribute="top" secondItem="kBy-Vt-pE6" secondAttribute="bottom" constant="4" id="3fh-ee-mdr"/>
+                        <constraint firstItem="kBy-Vt-pE6" firstAttribute="top" secondItem="wKZ-Rf-R8E" secondAttribute="top" constant="14" id="ORc-Nl-NCd"/>
+                        <constraint firstItem="kBy-Vt-pE6" firstAttribute="leading" secondItem="wKZ-Rf-R8E" secondAttribute="leading" constant="139" id="Rzk-JX-kFt"/>
+                        <constraint firstAttribute="height" constant="80" id="fjB-Ib-WSB"/>
+                        <constraint firstItem="687-Uc-ljY" firstAttribute="centerX" secondItem="wKZ-Rf-R8E" secondAttribute="centerX" id="gV3-18-ym4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
+                            <color key="value" name="background_color"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Se-boU">
+                    <rect key="frame" x="0.0" y="264" width="393" height="588"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-BO-DLA" customClass="MainCarouselView" customModule="T_Movies_iOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="62" width="393" height="400"/>
+                            <color key="backgroundColor" name="background_color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="400" id="LQE-Tb-iOV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJU-Ot-xBN">
+                            <rect key="frame" x="60" y="20" width="3" height="20"/>
+                            <color key="backgroundColor" name="primary_color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="AmL-El-R4C"/>
+                                <constraint firstAttribute="width" constant="3" id="OFi-oQ-1Sz"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87g-At-iDI">
+                            <rect key="frame" x="73" y="18.333333333333314" width="116" height="23.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="feN-BO-DLA" firstAttribute="top" secondItem="87g-At-iDI" secondAttribute="bottom" constant="20" id="1cl-8J-91u"/>
+                        <constraint firstItem="feN-BO-DLA" firstAttribute="trailing" secondItem="5oR-IF-boO" secondAttribute="trailing" id="Bku-bg-JO8"/>
+                        <constraint firstItem="tJU-Ot-xBN" firstAttribute="leading" secondItem="5oR-IF-boO" secondAttribute="leading" constant="60" id="Bwm-Mu-FWj"/>
+                        <constraint firstItem="tJU-Ot-xBN" firstAttribute="top" secondItem="5oR-IF-boO" secondAttribute="top" constant="20" id="MGP-6d-Mso"/>
+                        <constraint firstItem="87g-At-iDI" firstAttribute="leading" secondItem="tJU-Ot-xBN" secondAttribute="trailing" constant="10" id="QtR-dq-GDz"/>
+                        <constraint firstItem="87g-At-iDI" firstAttribute="centerY" secondItem="tJU-Ot-xBN" secondAttribute="centerY" id="hp0-0f-np0"/>
+                        <constraint firstItem="feN-BO-DLA" firstAttribute="leading" secondItem="5oR-IF-boO" secondAttribute="leading" id="nYT-Sj-W90"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="TVC-rs-fkv"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="5oR-IF-boO"/>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background_color"/>
             <constraints>
-                <constraint firstItem="feN-BO-DLA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="TR5-wS-GZM"/>
-                <constraint firstItem="feN-BO-DLA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UW2-V7-tTl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="feN-BO-DLA" secondAttribute="bottom" constant="40" id="r11-bv-xgw"/>
-                <constraint firstItem="feN-BO-DLA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uXK-FK-1Fc"/>
+                <constraint firstItem="8Et-hY-3tw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6sp-M6-wi2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wKZ-Rf-R8E" secondAttribute="trailing" id="Diw-09-RhH"/>
+                <constraint firstItem="wKZ-Rf-R8E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KjT-2A-Ldm"/>
+                <constraint firstItem="wKZ-Rf-R8E" firstAttribute="top" secondItem="8Et-hY-3tw" secondAttribute="bottom" constant="40" id="SRP-iR-yyI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Et-hY-3tw" secondAttribute="trailing" id="cY1-uO-nCi"/>
+                <constraint firstItem="8Et-hY-3tw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pdX-am-FDC"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
@@ -38,5 +122,14 @@
         <namedColor name="background_color">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="label_color">
+            <color red="0.41960784313725491" green="0.40000000000000002" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary_color">
+            <color red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

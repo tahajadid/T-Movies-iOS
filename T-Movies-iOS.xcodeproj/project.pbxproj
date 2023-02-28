@@ -24,6 +24,16 @@
 		1C38130529AE4A7E0035B242 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C38130329AE4A7E0035B242 /* ProfileVC.xib */; };
 		1C38130829AE4A940035B242 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38130629AE4A940035B242 /* SearchVC.swift */; };
 		1C38130929AE4A940035B242 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C38130729AE4A940035B242 /* SearchVC.xib */; };
+		1C38130D29AE52500035B242 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38130C29AE52500035B242 /* HeaderView.swift */; };
+		1C38130F29AE52690035B242 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C38130E29AE52690035B242 /* HeaderView.xib */; };
+		1C38131129AE54750035B242 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131029AE54750035B242 /* UIViewExtension.swift */; };
+		1C38131329AE54E00035B242 /* MKLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131229AE54E00035B242 /* MKLayer.swift */; };
+		1C38131729AE5E190035B242 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131629AE5E190035B242 /* MainTabBarController.swift */; };
+		1C38131B29AEBD7A0035B242 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131A29AEBD7A0035B242 /* Network.swift */; };
+		1C38131D29AEBDAF0035B242 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131C29AEBDAF0035B242 /* ApiService.swift */; };
+		1C38131F29AEBDE90035B242 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38131E29AEBDE90035B242 /* AppConstants.swift */; };
+		1C38132129AEBE3F0035B242 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */; };
+		1C38132329AEBF300035B242 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */; };
 		331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */; };
 		3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
 		78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */; };
@@ -69,6 +79,16 @@
 		1C38130329AE4A7E0035B242 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		1C38130629AE4A940035B242 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		1C38130729AE4A940035B242 /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		1C38130C29AE52500035B242 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		1C38130E29AE52690035B242 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		1C38131029AE54750035B242 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1C38131229AE54E00035B242 /* MKLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKLayer.swift; sourceTree = "<group>"; };
+		1C38131629AE5E190035B242 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		1C38131A29AEBD7A0035B242 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		1C38131C29AEBDAF0035B242 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		1C38131E29AEBDE90035B242 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +152,8 @@
 		1C35AF9229ACFAFC00A57F5F /* T-Movies-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1C35AFC429ACFB5300A57F5F /* Models */,
+				1C38131829AEBCCA0035B242 /* Data */,
+				1C38130A29AE51970035B242 /* Custom Views */,
 				1C35AFC629ACFB6800A57F5F /* Controllers */,
 				1C35AFC729ACFB7900A57F5F /* Utility */,
 				1C35AFA129ACFAFD00A57F5F /* Info.plist */,
@@ -175,6 +196,7 @@
 				1C38130029AE4A590035B242 /* ProfileVC */,
 				1C35AFC929ACFBD200A57F5F /* HomeVC */,
 				1C35AFC829ACFBBE00A57F5F /* SearchVC */,
+				1C38131629AE5E190035B242 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +204,11 @@
 		1C35AFC729ACFB7900A57F5F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1C38131029AE54750035B242 /* UIViewExtension.swift */,
+				1C38131229AE54E00035B242 /* MKLayer.swift */,
+				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
+				1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */,
+				1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -230,6 +257,41 @@
 				1C38130329AE4A7E0035B242 /* ProfileVC.xib */,
 			);
 			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		1C38130A29AE51970035B242 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C38130B29AE51A10035B242 /* HeaderView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		1C38130B29AE51A10035B242 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				1C38130C29AE52500035B242 /* HeaderView.swift */,
+				1C38130E29AE52690035B242 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		1C38131829AEBCCA0035B242 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1C38131929AEBCD10035B242 /* Networking */,
+				1C35AFC429ACFB5300A57F5F /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1C38131929AEBCD10035B242 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1C38131A29AEBD7A0035B242 /* Network.swift */,
+				1C38131C29AEBDAF0035B242 /* ApiService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		3DD38ADDB6CDAFE25C03D2AC /* Pods */ = {
@@ -370,6 +432,7 @@
 				1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */,
 				1C35AFD629AD5A7C00A57F5F /* CustomCarouselCell.xib in Resources */,
 				1C38130529AE4A7E0035B242 /* ProfileVC.xib in Resources */,
+				1C38130F29AE52690035B242 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,13 +560,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C38131B29AEBD7A0035B242 /* Network.swift in Sources */,
+				1C38131129AE54750035B242 /* UIViewExtension.swift in Sources */,
 				1C38130829AE4A940035B242 /* SearchVC.swift in Sources */,
+				1C38131729AE5E190035B242 /* MainTabBarController.swift in Sources */,
+				1C38132329AEBF300035B242 /* UIViewControllerExtension.swift in Sources */,
+				1C38131F29AEBDE90035B242 /* AppConstants.swift in Sources */,
+				1C38130D29AE52500035B242 /* HeaderView.swift in Sources */,
+				1C38132129AEBE3F0035B242 /* UIApplicationExtension.swift in Sources */,
 				1C35AFD529AD5A7C00A57F5F /* CustomCarouselCell.swift in Sources */,
+				1C38131329AE54E00035B242 /* MKLayer.swift in Sources */,
 				1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */,
 				1C38130429AE4A7E0035B242 /* ProfileVC.swift in Sources */,
 				1C3812FF29AE492A0035B242 /* MainCarouselView.swift in Sources */,
 				1C35AFCC29AD0E0000A57F5F /* HomeVC.swift in Sources */,
 				1C35AF9429ACFAFC00A57F5F /* AppDelegate.swift in Sources */,
+				1C38131D29AEBDAF0035B242 /* ApiService.swift in Sources */,
 				1C35AF9629ACFAFC00A57F5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
