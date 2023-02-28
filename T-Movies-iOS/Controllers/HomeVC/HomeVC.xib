@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-BO-DLA" customClass="MainView" customModule="T_Movies_iOS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-BO-DLA" customClass="MainCarouselView" customModule="T_Movies_iOS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="99" width="393" height="679"/>
                     <color key="backgroundColor" name="background_color"/>
                 </view>
