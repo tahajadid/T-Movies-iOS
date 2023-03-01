@@ -50,24 +50,25 @@ class MainCarouselView: UIView {
     style()
     update()
     layout()
+      
   }
   
   // MARK: - CSUL
   
   func configure() {
     addSubview(collection)
-    //addSubview(button)
     
     collection.dataSource = self
     collection.delegate = self
     
-    //button.addTarget(self, action: #selector(scrollToCell), for: .touchUpInside)
   }
   
   func style() {
-    //button.setTitle("scroll to random cell", for: .normal)
-    //button.setTitleColor(.blue, for: .normal)
-    collection.showsHorizontalScrollIndicator = false
+      collection.showsHorizontalScrollIndicator = false
+      
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+          self.collection.scrollToCell(at: 2)
+      }
   }
   
   func update() {}
@@ -79,10 +80,6 @@ class MainCarouselView: UIView {
     collection.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     collection.heightAnchor.constraint(equalToConstant: 400).isActive = true
     collection.backgroundColor = UIColor(named: "background_color")
-    //button.translatesAutoresizingMaskIntoConstraints = false
-    //button.topAnchor.constraint(equalTo: collection.bottomAnchor, constant: 40).isActive = true
-    //button.centerXAnchor.constraint(equalTo: collection.centerXAnchor).isActive = true
-    //button.heightAnchor.constraint(equalToConstant: 40).isActive = true
       
   }
 }

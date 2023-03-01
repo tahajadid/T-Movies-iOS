@@ -23,18 +23,20 @@ class MainTabBarViewController: UITabBarController {
 
         
         vc1.tabBarItem.image = UIImage(named: "Squircle")
-        vc2.tabBarItem.image = UIImage(named: "Search")
-        vc3.tabBarItem.image = UIImage(named: "profile")
+        vc2.tabBarItem.image = UIImage(systemName: "magnifyingglass.circle")
+        vc3.tabBarItem.image = UIImage(systemName: "person")
 
         vc1.tabBarItem.selectedImage = UIImage(named: "Subtract")
-        vc2.tabBarItem.selectedImage = UIImage(named: "Search_fill")
-        vc3.tabBarItem.selectedImage = UIImage(named: "profile_fill")
+        vc2.tabBarItem.selectedImage = UIImage(systemName: "magnifyingglass.circle.fill")
+        vc3.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        
 
         vc1.title = "Home"
         vc2.title = "Coming"
         vc3.title = "Other"
         
         tabBar.tintColor = UIColor(named: "primary_color")
+        tabBar.unselectedItemTintColor = UIColor.init(named: "label_color")
 
         setViewControllers([vc1,vc2,vc3], animated: true)
 
