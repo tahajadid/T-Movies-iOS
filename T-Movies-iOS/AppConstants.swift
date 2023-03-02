@@ -15,6 +15,7 @@ class Constants {
     */
     static let API_KEY = "6c134967a90569d3dcea0346a1238c82"
     static let baseURL = "https://api.themoviedb.org/3/trending/movie/day"
+    static let baseURLImage = "https://image.tmdb.org/t/p/w500/"
 
     static let noNetworkWording = "No network available"
     static let noSignalIcon = "No_signal"

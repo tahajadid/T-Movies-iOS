@@ -21,22 +21,24 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("viewDidLoad -----")
+
         //initCollectionView()
         
         viewModel.getMoviesResponse()
 
+        
         viewModel.$movieResponse.sink(receiveValue: { movieResponse in
             if movieResponse?.results.isEmpty == false {
-                print("items : \(movieResponse!)")
+                //print("items : \(movieResponse!)")
                 self.initListMovies = movieResponse?.results ?? [Result]()
                 self.loading(show: false)
                 
                 self.initCollectionView()
             }
-            print("items : \(movieResponse)")
+            print("items -----")
 
         }).store(in: &cancellable)
-        
         // Do any additional setup after loading the view.
     }
 
@@ -45,6 +47,9 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        print("viewWillAppear -----")
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,14 +92,32 @@ extension SearchVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleMovieCell", for: indexPath) as? SingleMovieCell else {
             fatalError("can't dequeue CustomCell")
         }
-        //cell.setImage(self.allWallpapers[indexPath.item].pathPoster ?? "")
+        cell.setImage(initListMovies[indexPath.item].posterPath)
+        
+        cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
+
+        if(initListMovies[indexPath.row].isFavourite == true){
+            cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
+        }
+
         return cell
     }
     
-    /*
+    @objc func customCellButtonTapped(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: moviesCollectionView)
+        guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
+        print(indexPath.row)
+
+        initListMovies[indexPath.row].isFavourite = true
+        
+        moviesCollectionView.reloadData()
+    }
+    
+
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
+       /*
         let detailViewController = DetailViewController()
         detailViewController.pathWallpaper = allWallpapers[indexPath.row].pathPoster ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -102,8 +125,9 @@ extension SearchVC: UICollectionViewDataSource {
               navigationController.pushViewController(detailViewController, animated: true)
             }
         }
+        */
     }
-    */
+
 }
 
 extension SearchVC: UICollectionViewDelegateFlowLayout {
