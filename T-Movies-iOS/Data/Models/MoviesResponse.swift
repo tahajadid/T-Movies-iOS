@@ -33,6 +33,8 @@ struct Result: Codable {
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
+    var isFavourite: Bool = false
+
 
     enum CodingKeys: String, CodingKey {
         case adult

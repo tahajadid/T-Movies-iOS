@@ -18,9 +18,7 @@ class HomeViewModel {
     func getMoviesResponse() {
         movieRepository.callGetMoviesInfo(completion: { [self]success, model, error in
         if success {
-            print("values = \(String(describing: model))")
             movieResponse = model!
-    
         }
         })
         
