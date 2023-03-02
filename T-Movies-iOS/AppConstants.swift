@@ -13,10 +13,12 @@ class Constants {
     /*
      BASE URL
     */
-    static let baseURL = "https://dev.api.az.tgscloud.net"
+    static let API_KEY = "6c134967a90569d3dcea0346a1238c82"
+    static let baseURL = "https://api.themoviedb.org/3/trending/movie/day"
 
-    
     static let noNetworkWording = "No network available"
     static let noSignalIcon = "No_signal"
     static let oKWording = "OK"
+    static let msgErrorServer = "Une erreur est survenue. Veuillez réessayer plus tard"
+
 }
