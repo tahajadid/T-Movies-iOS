@@ -6,13 +6,25 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieDetailsVC: UIViewController {
     
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var blurUIView: UIView!
+    @IBOutlet weak var blurUIImageView: UIImageView!
+
+    @IBOutlet weak var categorieBg: UIView!
+    @IBOutlet weak var categorieMovie: UILabel!
+    
+    @IBOutlet weak var titleMovie: UILabel!
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    var movieInfo: Result!
     
     var isFavourite = false
     
@@ -21,8 +33,12 @@ class MovieDetailsVC: UIViewController {
         
         //view.insetsLayoutMarginsFromSafeArea = false
         
-        addRadiusBlur()
+        addRadiusToBg()
         
+        fillInformation()
+        
+        addRadiusBlur()
+
     }
     
     // Hide navigationBar on the Top
@@ -47,6 +63,18 @@ class MovieDetailsVC: UIViewController {
         blurUIView.addSubview(blurredView)
     }
     
+    func addRadiusToBg() {
+        self.categorieBg.layer.cornerRadius = 6
+    }
+    
+    func fillInformation() {
+        spinner.layer.cornerRadius = 8
+        spinner.startAnimating()
+        
+        setImage(movieInfo.posterPath)
+        titleMovie.text = movieInfo.title
+    }
+    
 
     @IBAction func favouriteClick(_ sender: UIButton) {
         if(isFavourite){
@@ -60,4 +88,23 @@ class MovieDetailsVC: UIViewController {
     @IBAction func backaClick(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func setImage(_ pathWallpapaer: String){
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(pathWallpapaer)") else {
+            return
+        }
+        moviePoster.sd_setImage(with: url, completed: { _,_,_,_ in
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+        })
+        
+        moviePoster.sd_setImage(with: url, completed: { _,_,_,_ in
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+        })
+        
+        blurUIImageView.sd_setImage(with: url, completed: nil)
+    }
+    
+    
 }

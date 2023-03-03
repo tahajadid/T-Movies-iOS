@@ -120,7 +120,7 @@ extension SearchVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         let movieDetailsVC = MovieDetailsVC()
-        //detailViewController.pathWallpaper = allWallpapers[indexPath.row].pathPoster ?? ""
+        movieDetailsVC.movieInfo = initListMovies[indexPath.row]
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             if let navigationController = self.navigationController {
               navigationController.pushViewController(movieDetailsVC, animated: true)
