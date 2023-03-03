@@ -172,7 +172,6 @@
 				1C38130A29AE51970035B242 /* Custom Views */,
 				1C35AFC629ACFB6800A57F5F /* Controllers */,
 				1C35AFC729ACFB7900A57F5F /* Utility */,
-				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
 				1C35AFA129ACFAFD00A57F5F /* Info.plist */,
 				1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */,
 				1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */,
@@ -224,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				1C38132429AEC1350035B242 /* Extensions */,
+				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
