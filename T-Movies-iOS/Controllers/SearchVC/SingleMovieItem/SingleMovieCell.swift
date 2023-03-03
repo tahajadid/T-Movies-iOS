@@ -23,6 +23,10 @@ class SingleMovieCell: UICollectionViewCell {
         
     }
     
+    override func prepareForReuse() {
+        favouriteButton.setImage(UIImage(named: "favourite"), for: .normal)
+        super.prepareForReuse()
+    }
     
     func setImage(_ pathWallpapaer: String){
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(pathWallpapaer)") else {
