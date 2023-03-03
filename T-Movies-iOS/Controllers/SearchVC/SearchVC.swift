@@ -108,6 +108,7 @@ extension SearchVC: UICollectionViewDataSource {
         guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
         print(indexPath.row)
 
+        
         initListMovies[indexPath.row].isFavourite = true
         
         moviesCollectionView.reloadData()
@@ -117,15 +118,15 @@ extension SearchVC: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       /*
-        let detailViewController = DetailViewController()
-        detailViewController.pathWallpaper = allWallpapers[indexPath.row].pathPoster ?? ""
+       
+        let movieDetailsVC = MovieDetailsVC()
+        //detailViewController.pathWallpaper = allWallpapers[indexPath.row].pathPoster ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             if let navigationController = self.navigationController {
-              navigationController.pushViewController(detailViewController, animated: true)
+              navigationController.pushViewController(movieDetailsVC, animated: true)
             }
         }
-        */
+        
     }
 
 }
