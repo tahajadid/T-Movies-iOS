@@ -12,6 +12,9 @@ class HomeViewModel {
 
     @Published var movieResponse: MoviesResponse?
     @Published var error: String?
+    
+    @Published var popularMovieResponse: MoviesResponse?
+    
     let movieRepository = MovieRepository()
 
 
@@ -19,6 +22,16 @@ class HomeViewModel {
         movieRepository.callGetMoviesInfo(completion: { [self]success, model, error in
         if success {
             movieResponse = model!
+        }
+        })
+        
+    }
+    
+    
+    func getPopularMoviesResponse() {
+        movieRepository.callGetPopularMovies(completion: { [self]success, model, error in
+        if success {
+            popularMovieResponse = model!
         }
         })
         

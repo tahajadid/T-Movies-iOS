@@ -45,6 +45,7 @@ class SearchVC: UIViewController {
     
     // Hide navigationBar on the Top
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
