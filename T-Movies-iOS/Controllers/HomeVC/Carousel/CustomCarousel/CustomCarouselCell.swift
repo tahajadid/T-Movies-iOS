@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CustomCarouselCell: UICollectionViewCell {
 
@@ -30,6 +31,21 @@ class CustomCarouselCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 12
 
 
+    }
+    
+    func setImage(_ pathWallpapaer: String){
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(pathWallpapaer)") else {
+            return
+        }
+        imageView.sd_setImage(with: url, completed: nil)
+    }
+    
+    func setTitle(_ titleValue: String) {
+        title.text = titleValue
+    }
+    
+    func setRateValue(_ rate: String) {
+        rating.text = rate
     }
 
 }

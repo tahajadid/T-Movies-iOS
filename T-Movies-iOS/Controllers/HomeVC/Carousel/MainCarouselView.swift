@@ -7,10 +7,16 @@
 
 import ToosieSlide
 import UIKit
+import Combine
 
 class MainCarouselView: UIView {
     private let reuseIdentifier = "CustomCarouselCell"
 
+    let viewModel = HomeViewModel()
+    var cancellable: Set<AnyCancellable> = []
+    
+    var initListMovies :[Result] = []
+    
   // MARK: - UIElements
   
   //private let button = UIButton()
@@ -56,10 +62,20 @@ class MainCarouselView: UIView {
   // MARK: - CSUL
   
   func configure() {
-    addSubview(collection)
-    
-    collection.dataSource = self
-    collection.delegate = self
+      addSubview(collection)
+      viewModel.getPopularMoviesResponse()
+      
+      viewModel.$popularMovieResponse.sink(receiveValue: { movieResponse in
+          if movieResponse?.results.isEmpty == false {
+              //print("items : \(movieResponse!)")
+              self.initListMovies = movieResponse?.results ?? [Result]()
+              
+              // init collection
+              self.collection.dataSource = self
+              self.collection.delegate = self
+          }
+
+      }).store(in: &cancellable)
     
   }
   
@@ -67,47 +83,68 @@ class MainCarouselView: UIView {
       collection.showsHorizontalScrollIndicator = false
       
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-          self.collection.scrollToCell(at: 2)
+          self.collection.scrollToCell(at: 4)
       }
   }
   
-  func update() {}
-  
-  func layout() {
-    collection.translatesAutoresizingMaskIntoConstraints = false
-    collection.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-    collection.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-    collection.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    collection.heightAnchor.constraint(equalToConstant: 400).isActive = true
-    collection.backgroundColor = UIColor(named: "background_color")
+    func update() {}
       
-  }
+    func layout() {
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        collection.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        collection.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        collection.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        collection.backgroundColor = UIColor(named: "background_color")
+    }
 }
 
 // MARK: - Action
 
 extension MainCarouselView {
-  @objc func scrollToCell() {
-    let randomInt = Int.random(in: 0..<8)
-    print("scroll to cell \(randomInt)")
-    collection.scrollToCell(at: randomInt)
-  }
+    @objc func scrollToCell() {
+        let randomInt = Int.random(in: 0..<8)
+        print("scroll to cell \(randomInt)")
+        collection.scrollToCell(at: randomInt)
+    }
 }
 
 // MARK: - Data Source
 
 extension MainCarouselView: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    8
+      initListMovies.count
   }
   
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    collectionView.dequeueReusableCell(withReuseIdentifier: CustomCarouselCell.identifier, for: indexPath) as? CustomCarouselCell ?? UICollectionViewCell()
-  }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCarouselCell.identifier, for: indexPath) as? CustomCarouselCell else { fatalError("can't dequeue CustomCell") }
+        
+        cell.setImage(initListMovies[indexPath.item].posterPath)
+        cell.setTitle(initListMovies[indexPath.item].title)
+        cell.setRateValue(String(Double(round(10 * Double(initListMovies[indexPath.item].voteAverage)) / 10)) )
+
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        let movieDetailsVC = MovieDetailsVC()
+        movieDetailsVC.movieInfo = initListMovies[indexPath.row]
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if let navigationController = HomeVC().navigationController {
+              navigationController.pushViewController(movieDetailsVC, animated: true)
+            }
+        }
+        
+        
+    }
 }
 
 extension MainCarouselView: UICollectionViewDelegateCarouselLayout {
-  func collectionView(_ collectionView: UICollectionView, willDisplayCellAt cellIndex: CellIndex) {
-    print("Will Display Cell at \(cellIndex)")
-  }
+    func collectionView(_ collectionView: UICollectionView, willDisplayCellAt cellIndex: CellIndex) {
+        print("Will Display Cell at \(cellIndex)")
+    }
 }

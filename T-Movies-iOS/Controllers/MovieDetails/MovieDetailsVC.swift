@@ -24,15 +24,20 @@ class MovieDetailsVC: UIViewController {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var descriptionValue: UILabel!
+    
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var ratingPeople: UILabel!
+    @IBOutlet weak var prodDate: UILabel!
+
+    
     var movieInfo: Result!
     
     var isFavourite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //view.insetsLayoutMarginsFromSafeArea = false
-        
+                
         addRadiusToBg()
         
         fillInformation()
@@ -48,10 +53,22 @@ class MovieDetailsVC: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+
+    
+    
+    @IBAction func favouriteClick(_ sender: UIButton) {
+        if(isFavourite){
+            favouriteButton.setImage(UIImage(named: "heart_button"), for: .normal)
+        }else{
+            favouriteButton.setImage(UIImage(named: "heart_on_button"), for: .normal)
+        }
+        isFavourite = !isFavourite
     }
+    
+    @IBAction func backaClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     func addRadiusBlur() {
         self.blurUIView.clipsToBounds = true
@@ -73,21 +90,13 @@ class MovieDetailsVC: UIViewController {
         
         setImage(movieInfo.posterPath)
         titleMovie.text = movieInfo.title
-    }
-    
+        
+        descriptionValue.text = movieInfo.overview
+        
+        rating.text = String(Double(round(10 * Double(movieInfo.voteAverage)) / 10)) 
 
-    @IBAction func favouriteClick(_ sender: UIButton) {
-        if(isFavourite){
-            favouriteButton.setImage(UIImage(named: "heart_button"), for: .normal)
-        }else{
-            favouriteButton.setImage(UIImage(named: "heart_on_button"), for: .normal)
-        }
-        isFavourite = !isFavourite
     }
     
-    @IBAction func backaClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
     
     func setImage(_ pathWallpapaer: String){
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(pathWallpapaer)") else {
@@ -98,13 +107,7 @@ class MovieDetailsVC: UIViewController {
             self.spinner.isHidden = true
         })
         
-        moviePoster.sd_setImage(with: url, completed: { _,_,_,_ in
-            self.spinner.stopAnimating()
-            self.spinner.isHidden = true
-        })
-        
         blurUIImageView.sd_setImage(with: url, completed: nil)
     }
-    
     
 }

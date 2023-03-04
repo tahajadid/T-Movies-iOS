@@ -10,6 +10,8 @@ import Combine
 
 class HomeVC: UIViewController {    
 
+
+    
     // Hide navigationBar on the Top
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,6 +25,9 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //initCollectionView()
+
     }
 
 }
