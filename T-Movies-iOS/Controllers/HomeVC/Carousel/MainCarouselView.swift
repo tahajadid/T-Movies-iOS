@@ -83,7 +83,7 @@ class MainCarouselView: UIView {
       collection.showsHorizontalScrollIndicator = false
       
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-          self.collection.scrollToCell(at: 4)
+          self.collection.scrollToCell(at: 2)
       }
   }
   
@@ -134,7 +134,10 @@ extension MainCarouselView: UICollectionViewDataSource {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if let navigationController = HomeVC().navigationController {
+            // get the parent VienComtroller to have the ability to navigate
+            // in case of creating an instance of HomeVC() that will not work
+            // because it's a new instance and we alreeady have an instance of homeVC that runs
+            if let navigationController = UIApplication.getTopViewController()?.navigationController {
               navigationController.pushViewController(movieDetailsVC, animated: true)
             }
         }
