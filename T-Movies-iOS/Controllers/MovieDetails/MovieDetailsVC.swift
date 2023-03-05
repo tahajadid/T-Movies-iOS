@@ -30,6 +30,11 @@ class MovieDetailsVC: UIViewController {
     @IBOutlet weak var ratingPeople: UILabel!
     @IBOutlet weak var prodDate: UILabel!
 
+    @IBOutlet weak var heightViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var heightViewParent: NSLayoutConstraint!
+    
+    @IBOutlet weak var adultValue: UILabel!
+    @IBOutlet weak var adultBg: UIView!
     
     var movieInfo: Result!
     
@@ -41,7 +46,7 @@ class MovieDetailsVC: UIViewController {
         addRadiusToBg()
         
         fillInformation()
-        
+
         addRadiusBlur()
 
     }
@@ -54,8 +59,6 @@ class MovieDetailsVC: UIViewController {
     }
     
 
-    
-    
     @IBAction func favouriteClick(_ sender: UIButton) {
         if(isFavourite){
             favouriteButton.setImage(UIImage(named: "heart_button"), for: .normal)
@@ -89,12 +92,15 @@ class MovieDetailsVC: UIViewController {
         spinner.startAnimating()
         
         setImage(movieInfo.posterPath)
-        titleMovie.text = movieInfo.title
         
         descriptionValue.text = movieInfo.overview
         
-        rating.text = String(Double(round(10 * Double(movieInfo.voteAverage)) / 10)) 
+        rating.text = String(Double(round(10 * Double(movieInfo.voteAverage)) / 10))
 
+        prodDate.text = movieInfo.releaseDate
+        
+        setAdultView()
+        adaptTitleSize()
     }
     
     
@@ -108,6 +114,35 @@ class MovieDetailsVC: UIViewController {
         })
         
         blurUIImageView.sd_setImage(with: url, completed: nil)
+    }
+    
+    func setAdultView() {
+        adultBg.layer.cornerRadius = 4
+        if(movieInfo.adult) {
+            adultBg.backgroundColor = .red
+            adultValue.text = "+18"
+            adultValue.textColor = .black
+        }
+    }
+    
+    // adapt size view depending on the title size
+    func adaptTitleSize() {
+        titleMovie.text = movieInfo.title
+        print(movieInfo.title.count)
+
+        if(movieInfo.title.count < 22){
+            // don't do anything
+        } else if(movieInfo.title.count < 44 && movieInfo.title.count > 21) {
+            // 2 lines in the title
+            heightViewParent.constant  = 640
+            heightViewBottom.constant = 140
+            
+        } else if(movieInfo.title.count > 43 ){
+            // 3 lines in the title
+            heightViewParent.constant  = 670
+            heightViewBottom.constant = 170
+        }
+
     }
     
 }
