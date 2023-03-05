@@ -13,12 +13,14 @@ class HomeVC: UIViewController {
 
     
     // Hide navigationBar on the Top
+    // Show tabBar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    // Hide navigationBar on the Top
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -27,8 +29,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //initCollectionView()
-
     }
 
 }
