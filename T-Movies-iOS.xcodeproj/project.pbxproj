@@ -10,7 +10,6 @@
 		1C35AF9429ACFAFC00A57F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */; };
 		1C35AF9629ACFAFC00A57F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */; };
 		1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9729ACFAFC00A57F5F /* ViewController.swift */; };
-		1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */; };
 		1C35AFA029ACFAFD00A57F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C35AF9E29ACFAFD00A57F5F /* LaunchScreen.storyboard */; };
 		1C35AFAB29ACFAFE00A57F5F /* T_Movies_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AFAA29ACFAFE00A57F5F /* T_Movies_iOSTests.swift */; };
 		1C35AFB529ACFAFE00A57F5F /* T_Movies_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AFB429ACFAFE00A57F5F /* T_Movies_iOSUITests.swift */; };
@@ -79,7 +78,6 @@
 		1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1C35AF9729ACFAFC00A57F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C35AF9F29ACFAFD00A57F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C35AFA129ACFAFD00A57F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C35AFA629ACFAFE00A57F5F /* T-Movies-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "T-Movies-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,7 +192,6 @@
 				1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */,
 				1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */,
 				1C35AF9729ACFAFC00A57F5F /* ViewController.swift */,
-				1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */,
 				1C35AF9E29ACFAFD00A57F5F /* LaunchScreen.storyboard */,
 			);
 			path = "T-Movies-iOS";
@@ -554,7 +551,6 @@
 				1C7187A729B5E8DB004C5C0D /* SideMenuVC.xib in Resources */,
 				1C38132929AF5BD80035B242 /* MovieDetailsVC.xib in Resources */,
 				1C38130929AE4A940035B242 /* SearchVC.xib in Resources */,
-				1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */,
 				1C35AFD629AD5A7C00A57F5F /* CustomCarouselCell.xib in Resources */,
 				1C38133D29B0E6050035B242 /* SingleMovieCell.xib in Resources */,
 				1C7187AC29B5EDFB004C5C0D /* SideMenuCell.xib in Resources */,
