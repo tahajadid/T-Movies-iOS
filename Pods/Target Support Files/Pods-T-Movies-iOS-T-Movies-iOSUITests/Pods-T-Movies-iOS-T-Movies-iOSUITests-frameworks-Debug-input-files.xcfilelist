@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/ToosieSlide/ToosieSlide.framework
