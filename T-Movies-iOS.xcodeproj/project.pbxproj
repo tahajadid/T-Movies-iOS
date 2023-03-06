@@ -186,12 +186,12 @@
 		1C35AF9229ACFAFC00A57F5F /* T-Movies-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1C7187BA29B631CB004C5C0D /* Images.xcassets */,
 				1C38131829AEBCCA0035B242 /* Data */,
 				1C38130A29AE51970035B242 /* Custom Views */,
 				1C35AFC629ACFB6800A57F5F /* Controllers */,
 				1C35AFC729ACFB7900A57F5F /* Utility */,
 				1C35AFA129ACFAFD00A57F5F /* Info.plist */,
+				1C7187BA29B631CB004C5C0D /* Images.xcassets */,
 				1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */,
 				1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */,
 				1C35AF9729ACFAFC00A57F5F /* ViewController.swift */,

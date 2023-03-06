@@ -18,7 +18,7 @@ class MainTabBarViewController: UITabBarController {
         
         let vc1 = UINavigationController(rootViewController: HomeVC())
         let vc2 = UINavigationController(rootViewController: SearchVC())
-        let vc3 = UINavigationController(rootViewController: HomeVC())
+        let vc3 = UINavigationController(rootViewController: ProfileVC())
 
         
         vc1.tabBarItem.image = UIImage(named: "Squircle")

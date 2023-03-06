@@ -48,7 +48,17 @@ class MovieDetailsVC: UIViewController {
         fillInformation()
 
         addRadiusBlur()
+        
+        
+        let gestureSwipe = UISwipeGestureRecognizer(target: self, action:  #selector (self.dimissAll (_:)))
+        gestureSwipe.direction = .right
+        self.view.addGestureRecognizer(gestureSwipe)
 
+    }
+    
+    
+    @objc func dimissAll(_ sender: UISwipeGestureRecognizer){
+        navigationController?.popViewController(animated: true)
     }
     
     // Hide navigationBar on the Top
@@ -71,6 +81,7 @@ class MovieDetailsVC: UIViewController {
     @IBAction func backaClick(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
     
     
     func addRadiusBlur() {

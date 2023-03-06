@@ -27,19 +27,19 @@ class Constants {
         MenuOptionItem(
             id: 0,
             title: "Home",
-            image: "home",
+            image: "home_menu",
             isSelected: true
         ),
         MenuOptionItem(
             id: 1,
             title: "Favourite",
-            image: "favourite",
+            image: "favourite_menu",
             isSelected: false
         ),
         MenuOptionItem(
             id: 2,
             title: "Settings",
-            image: "settings",
+            image: "setting_menu",
             isSelected: false
         )
     ]
