@@ -42,6 +42,15 @@
 		1C38133829B09C1A0035B242 /* HomeVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38133729B09C1A0035B242 /* HomeVewModel.swift */; };
 		1C38133C29B0E6050035B242 /* SingleMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38133A29B0E6050035B242 /* SingleMovieCell.swift */; };
 		1C38133D29B0E6050035B242 /* SingleMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C38133B29B0E6050035B242 /* SingleMovieCell.xib */; };
+		1C7187A629B5E8DB004C5C0D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187A429B5E8DB004C5C0D /* SideMenuVC.swift */; };
+		1C7187A729B5E8DB004C5C0D /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7187A529B5E8DB004C5C0D /* SideMenuVC.xib */; };
+		1C7187AB29B5EDFA004C5C0D /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187A929B5EDFA004C5C0D /* SideMenuCell.swift */; };
+		1C7187AC29B5EDFB004C5C0D /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7187AA29B5EDFA004C5C0D /* SideMenuCell.xib */; };
+		1C7187AE29B5EF2F004C5C0D /* MenuOptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187AD29B5EF2F004C5C0D /* MenuOptionItem.swift */; };
+		1C7187B029B5EFE3004C5C0D /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187AF29B5EFE3004C5C0D /* MenuDelegate.swift */; };
+		1C7187B529B5FE98004C5C0D /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B429B5FE98004C5C0D /* PresentTransition.swift */; };
+		1C7187B729B5FF29004C5C0D /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B629B5FF29004C5C0D /* DismissTransition.swift */; };
+		1C7187B929B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B829B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift */; };
 		331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */; };
 		3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
 		78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */; };
@@ -105,6 +114,15 @@
 		1C38133729B09C1A0035B242 /* HomeVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVewModel.swift; sourceTree = "<group>"; };
 		1C38133A29B0E6050035B242 /* SingleMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMovieCell.swift; sourceTree = "<group>"; };
 		1C38133B29B0E6050035B242 /* SingleMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleMovieCell.xib; sourceTree = "<group>"; };
+		1C7187A429B5E8DB004C5C0D /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		1C7187A529B5E8DB004C5C0D /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
+		1C7187A929B5EDFA004C5C0D /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		1C7187AA29B5EDFA004C5C0D /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		1C7187AD29B5EF2F004C5C0D /* MenuOptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionItem.swift; sourceTree = "<group>"; };
+		1C7187AF29B5EFE3004C5C0D /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		1C7187B429B5FE98004C5C0D /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
+		1C7187B629B5FF29004C5C0D /* DismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
+		1C7187B829B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
 		354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				1C38132E29AFA2710035B242 /* MoviesResponse.swift */,
+				1C7187AD29B5EF2F004C5C0D /* MenuOptionItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +229,7 @@
 		1C35AFC629ACFB6800A57F5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C7187A329B5E8B6004C5C0D /* SideMenuVC */,
 				1C35AFC929ACFBD200A57F5F /* HomeVC */,
 				1C38132A29AF67350035B242 /* MainTabBarVC */,
 				1C38132529AF5B9A0035B242 /* MovieDetails */,
@@ -222,8 +242,10 @@
 		1C35AFC729ACFB7900A57F5F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1C7187B329B5FE8B004C5C0D /* Transition */,
 				1C38132429AEC1350035B242 /* Extensions */,
 				1C38131E29AEBDE90035B242 /* AppConstants.swift */,
+				1C7187AF29B5EFE3004C5C0D /* MenuDelegate.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -320,6 +342,7 @@
 				1C38132029AEBE3F0035B242 /* UIApplicationExtension.swift */,
 				1C38132229AEBF300035B242 /* UIViewControllerExtension.swift */,
 				1C38133029AFA2FF0035B242 /* IntExtensions.swift */,
+				1C7187B829B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,6 +387,34 @@
 				1C38133B29B0E6050035B242 /* SingleMovieCell.xib */,
 			);
 			path = SingleMovieItem;
+			sourceTree = "<group>";
+		};
+		1C7187A329B5E8B6004C5C0D /* SideMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				1C7187A829B5EDD9004C5C0D /* SideMenuCell */,
+				1C7187A429B5E8DB004C5C0D /* SideMenuVC.swift */,
+				1C7187A529B5E8DB004C5C0D /* SideMenuVC.xib */,
+			);
+			path = SideMenuVC;
+			sourceTree = "<group>";
+		};
+		1C7187A829B5EDD9004C5C0D /* SideMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				1C7187A929B5EDFA004C5C0D /* SideMenuCell.swift */,
+				1C7187AA29B5EDFA004C5C0D /* SideMenuCell.xib */,
+			);
+			path = SideMenuCell;
+			sourceTree = "<group>";
+		};
+		1C7187B329B5FE8B004C5C0D /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				1C7187B429B5FE98004C5C0D /* PresentTransition.swift */,
+				1C7187B629B5FF29004C5C0D /* DismissTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		3DD38ADDB6CDAFE25C03D2AC /* Pods */ = {
@@ -500,11 +551,13 @@
 			files = (
 				1C35AFA029ACFAFD00A57F5F /* LaunchScreen.storyboard in Resources */,
 				1C35AFCD29AD0E0000A57F5F /* HomeVC.xib in Resources */,
+				1C7187A729B5E8DB004C5C0D /* SideMenuVC.xib in Resources */,
 				1C38132929AF5BD80035B242 /* MovieDetailsVC.xib in Resources */,
 				1C38130929AE4A940035B242 /* SearchVC.xib in Resources */,
 				1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */,
 				1C35AFD629AD5A7C00A57F5F /* CustomCarouselCell.xib in Resources */,
 				1C38133D29B0E6050035B242 /* SingleMovieCell.xib in Resources */,
+				1C7187AC29B5EDFB004C5C0D /* SideMenuCell.xib in Resources */,
 				1C38130529AE4A7E0035B242 /* ProfileVC.xib in Resources */,
 				1C38130F29AE52690035B242 /* HeaderView.xib in Resources */,
 			);
@@ -634,20 +687,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7187AE29B5EF2F004C5C0D /* MenuOptionItem.swift in Sources */,
 				1C38133129AFA2FF0035B242 /* IntExtensions.swift in Sources */,
 				1C38133829B09C1A0035B242 /* HomeVewModel.swift in Sources */,
 				1C38131B29AEBD7A0035B242 /* Network.swift in Sources */,
 				1C38131129AE54750035B242 /* UIViewExtension.swift in Sources */,
 				1C38130829AE4A940035B242 /* SearchVC.swift in Sources */,
 				1C38131729AE5E190035B242 /* MainTabBarController.swift in Sources */,
+				1C7187AB29B5EDFA004C5C0D /* SideMenuCell.swift in Sources */,
+				1C7187B729B5FF29004C5C0D /* DismissTransition.swift in Sources */,
+				1C7187B929B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift in Sources */,
 				1C38132329AEBF300035B242 /* UIViewControllerExtension.swift in Sources */,
 				1C38131F29AEBDE90035B242 /* AppConstants.swift in Sources */,
 				1C38133C29B0E6050035B242 /* SingleMovieCell.swift in Sources */,
+				1C7187B029B5EFE3004C5C0D /* MenuDelegate.swift in Sources */,
 				1C38130D29AE52500035B242 /* HeaderView.swift in Sources */,
 				1C38132129AEBE3F0035B242 /* UIApplicationExtension.swift in Sources */,
 				1C38132D29AFA0000035B242 /* MovieRepository.swift in Sources */,
 				1C35AFD529AD5A7C00A57F5F /* CustomCarouselCell.swift in Sources */,
 				1C38131329AE54E00035B242 /* MKLayer.swift in Sources */,
+				1C7187A629B5E8DB004C5C0D /* SideMenuVC.swift in Sources */,
+				1C7187B529B5FE98004C5C0D /* PresentTransition.swift in Sources */,
 				1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */,
 				1C38130429AE4A7E0035B242 /* ProfileVC.swift in Sources */,
 				1C3812FF29AE492A0035B242 /* MainCarouselView.swift in Sources */,

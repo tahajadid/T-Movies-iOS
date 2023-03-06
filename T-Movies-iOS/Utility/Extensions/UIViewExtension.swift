@@ -9,6 +9,26 @@ import UIKit
 /*
  This class is extension of UIView
  */
+
+public extension UIView {
+
+    func fadeTo(_ alpha: CGFloat, duration: TimeInterval = 0.3) {
+      DispatchQueue.main.async {
+        UIView.animate(withDuration: duration) {
+          self.alpha = alpha
+        }
+      }
+    }
+    
+    func fadeIn(_ duration: TimeInterval = 0.5) {
+      fadeTo(1.0, duration: duration)
+    }
+
+    func fadeOut(_ duration: TimeInterval = 0.5) {
+      fadeTo(0.0, duration: duration)
+    }
+
+}
 extension UIView {
     /*
      New Inspectable for Setting CornerRadius
@@ -290,6 +310,7 @@ private var initialMkLayerKey: Int = 0
  Ripple Effect
  */
 extension UIView {
+    
     /*
      Ripple's Effect
      */
@@ -422,4 +443,6 @@ extension UIView {
         super.touchesMoved(touches, with: event)
         mkLayer.touchesMoved(touches: touches, withEvent: event)
     }
+    
+    
 }

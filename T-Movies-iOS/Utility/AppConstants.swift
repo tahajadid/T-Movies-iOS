@@ -23,4 +23,25 @@ class Constants {
     static let oKWording = "OK"
     static let msgErrorServer = "Une erreur est survenue. Veuillez réessayer plus tard"
 
+    static var menuList: [MenuOptionItem] = [
+        MenuOptionItem(
+            id: 0,
+            title: "Home",
+            image: "home",
+            isSelected: true
+        ),
+        MenuOptionItem(
+            id: 1,
+            title: "Favourite",
+            image: "favourite",
+            isSelected: false
+        ),
+        MenuOptionItem(
+            id: 2,
+            title: "Settings",
+            image: "settings",
+            isSelected: false
+        )
+    ]
+    
 }
