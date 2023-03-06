@@ -20,29 +20,17 @@ class SideMenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureMenuTable()
+        configureUI()
 
-        
-        let gestureHide = UITapGestureRecognizer(target: self, action:  #selector (self.hideSideMenu (_:)))
-        rightView.addGestureRecognizer(gestureHide)
-        
-        let gestureSwipe = UISwipeGestureRecognizer(target: self, action:  #selector (self.hideSwipe (_:)))
-        gestureSwipe.direction = .left
-        rightView.addGestureRecognizer(gestureSwipe)
-        
-
-        logoutView.cornerRadius = 12
-        //rightView.fadeIn(2.0)  // uses custom duration (1.0 in this example)
-
-        //rightView.fadeIn(duration: 1.5)
-        
-        // Do any additional setup after loading the view.
     }
     
     // Hide navigationBar on the Top
     override func viewWillAppear(_ animated: Bool) {
-        rightView.fadeIn(2.0)  // uses custom duration (1.0 in this example)
-
+        self.rightView.alpha = 0
+        rightView.fadeIn(0.5)  // uses custom duration (1.0 in this example)
+        
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = true
@@ -54,9 +42,25 @@ class SideMenuVC: UIViewController {
         let nib = UINib(nibName: reuseIdentifier, bundle: nil)
         menuOptionTableView.register(nib, forCellReuseIdentifier: reuseIdentifier)
     }
+    
+    func configureUI() {
+        logoutView.cornerRadius = 8
+        
+        let gestureHide = UITapGestureRecognizer(target: self, action:  #selector (self.hideMenuOnTap (_:)))
+        rightView.addGestureRecognizer(gestureHide)
+        
+        let gestureSwipe = UISwipeGestureRecognizer(target: self, action:  #selector (self.hideMenuOnSwipe (_:)))
+        gestureSwipe.direction = .left
+        rightView.addGestureRecognizer(gestureSwipe)
+        
+        let logoutGesture = UITapGestureRecognizer(target: self, action:  #selector (self.hideMenuOnTap (_:)))
+        logoutView.addGestureRecognizer(logoutGesture)
+    }
 
 
-    @objc func hideSideMenu(_ sender:UITapGestureRecognizer){
+    @objc func hideMenuOnTap(_ sender:UITapGestureRecognizer){
+        rightView.fadeOut(0.2)  // uses custom duration (1.0 in this example)
+        
         // do other task
         let transition = CATransition()
         transition.duration = 0.3
@@ -69,7 +73,7 @@ class SideMenuVC: UIViewController {
 
     }
     
-    @objc func hideSwipe(_ sender: UISwipeGestureRecognizer){
+    @objc func hideMenuOnSwipe(_ sender: UISwipeGestureRecognizer){
         // do other task
         let transition = CATransition()
         transition.duration = 0.3

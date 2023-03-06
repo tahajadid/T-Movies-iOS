@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3DD51E1C-EAC1-4C82-883B-D34AA2AB7C2D"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01ABD3EC-8097-4974-80C4-DC6EC3EBF32F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/HomeVC/TestViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CF7EEBB-06F1-4F94-9B91-D035442507DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/HomeVC/HomeVewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getMoviesResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2CF7EEBB-06F1-4F94-9B91-D035442507DE - 81131f4e80edbeac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "T_Movies_iOS.HomeViewModel.getMoviesResponse() -&gt; ()"
+                  moduleName = "T-Movies-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/HomeVC/HomeVewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "2CF7EEBB-06F1-4F94-9B91-D035442507DE - 81131f4e80edbeac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "T_Movies_iOS.HomeViewModel.getMoviesResponse() -&gt; ()"
+                  moduleName = "T-Movies-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/HomeVC/HomeVewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "2CF7EEBB-06F1-4F94-9B91-D035442507DE - 4309b7b487f52e31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;T_Movies_iOS.MoviesResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in T_Movies_iOS.HomeViewModel.getMoviesResponse() -&gt; ()"
+                  moduleName = "T-Movies-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/HomeVC/HomeVewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "227B265A-FF00-4916-AE29-1E4D0BE41EC8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/HomeVC/HomeVewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getMoviesResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCB429C6-24E4-4572-A51F-FBB86A574183"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/SearchVC/SingleMovieItem/SingleMovieCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "changeFavovuriteIcon(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

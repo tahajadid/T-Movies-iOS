@@ -72,7 +72,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-BO-DLA" customClass="MainCarouselView" customModule="T_Movies_iOS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="62" width="393" height="400"/>
-                            <color key="backgroundColor" name="background_color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="400" id="LQE-Tb-iOV"/>
                             </constraints>
@@ -120,7 +119,7 @@
     </objects>
     <resources>
         <namedColor name="background_color">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="label_color">
             <color red="0.41999998688697815" green="0.40000000596046448" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

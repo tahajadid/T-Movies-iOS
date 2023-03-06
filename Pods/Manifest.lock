@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.6.4)
+  - SDWebImage (5.15.4):
+    - SDWebImage/Core (= 5.15.4)
+  - SDWebImage/Core (5.15.4)
+  - ToosieSlide (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SDWebImage (~> 5.0)
+  - ToosieSlide (~> 1.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SDWebImage
+    - ToosieSlide
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  SDWebImage: 1c39de67663e5eebb2f41324d5d580eeea12dd4c
+  ToosieSlide: b410e89e0e1c00aecddeecebd1b4a8ed66385cac
+
+PODFILE CHECKSUM: 08f78a917163fb0f6427b053596d761d997388a1
+
+COCOAPODS: 1.11.3

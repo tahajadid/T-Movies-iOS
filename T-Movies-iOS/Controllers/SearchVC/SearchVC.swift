@@ -104,13 +104,13 @@ extension SearchVC: UICollectionViewDataSource {
         return cell
     }
     
+    // invoked when we click on like image
     @objc func customCellButtonTapped(_ sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: moviesCollectionView)
         guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
         print(indexPath.row)
 
-        
-        initListMovies[indexPath.row].isFavourite = true
+        initListMovies[indexPath.row].isFavourite = !initListMovies[indexPath.row].isFavourite
         
         moviesCollectionView.reloadData()
     }
