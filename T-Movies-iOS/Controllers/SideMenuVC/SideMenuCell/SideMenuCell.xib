@@ -24,12 +24,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a4-Bf-KYq">
-                        <rect key="frame" x="56" y="19.666666666666668" width="42" height="21.000000000000004"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="56" y="18.333333333333329" width="44.333333333333343" height="23.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                        <color key="textColor" red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="9a4-Bf-KYq" firstAttribute="leading" secondItem="gp7-w0-VFd" secondAttribute="trailing" constant="10" id="MwZ-Ss-dPd"/>
                     <constraint firstItem="gp7-w0-VFd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jX6-Gh-hgj"/>

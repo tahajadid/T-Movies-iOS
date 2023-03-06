@@ -10,7 +10,6 @@
 		1C35AF9429ACFAFC00A57F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */; };
 		1C35AF9629ACFAFC00A57F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */; };
 		1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9729ACFAFC00A57F5F /* ViewController.swift */; };
-		1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */; };
 		1C35AFA029ACFAFD00A57F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C35AF9E29ACFAFD00A57F5F /* LaunchScreen.storyboard */; };
 		1C35AFAB29ACFAFE00A57F5F /* T_Movies_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AFAA29ACFAFE00A57F5F /* T_Movies_iOSTests.swift */; };
 		1C35AFB529ACFAFE00A57F5F /* T_Movies_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AFB429ACFAFE00A57F5F /* T_Movies_iOSUITests.swift */; };
@@ -51,6 +50,7 @@
 		1C7187B529B5FE98004C5C0D /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B429B5FE98004C5C0D /* PresentTransition.swift */; };
 		1C7187B729B5FF29004C5C0D /* DismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B629B5FF29004C5C0D /* DismissTransition.swift */; };
 		1C7187B929B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7187B829B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift */; };
+		1C7187BB29B631CB004C5C0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7187BA29B631CB004C5C0D /* Images.xcassets */; };
 		331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */; };
 		3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
 		78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */; };
@@ -79,7 +79,6 @@
 		1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1C35AF9729ACFAFC00A57F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C35AF9F29ACFAFD00A57F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C35AFA129ACFAFD00A57F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C35AFA629ACFAFE00A57F5F /* T-Movies-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "T-Movies-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +122,7 @@
 		1C7187B429B5FE98004C5C0D /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C7187B629B5FF29004C5C0D /* DismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissTransition.swift; sourceTree = "<group>"; };
 		1C7187B829B5FF6C004C5C0D /* UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
+		1C7187BA29B631CB004C5C0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +186,7 @@
 		1C35AF9229ACFAFC00A57F5F /* T-Movies-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1C7187BA29B631CB004C5C0D /* Images.xcassets */,
 				1C38131829AEBCCA0035B242 /* Data */,
 				1C38130A29AE51970035B242 /* Custom Views */,
 				1C35AFC629ACFB6800A57F5F /* Controllers */,
@@ -194,7 +195,6 @@
 				1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */,
 				1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */,
 				1C35AF9729ACFAFC00A57F5F /* ViewController.swift */,
-				1C35AF9C29ACFAFD00A57F5F /* Assets.xcassets */,
 				1C35AF9E29ACFAFD00A57F5F /* LaunchScreen.storyboard */,
 			);
 			path = "T-Movies-iOS";
@@ -553,8 +553,8 @@
 				1C35AFCD29AD0E0000A57F5F /* HomeVC.xib in Resources */,
 				1C7187A729B5E8DB004C5C0D /* SideMenuVC.xib in Resources */,
 				1C38132929AF5BD80035B242 /* MovieDetailsVC.xib in Resources */,
+				1C7187BB29B631CB004C5C0D /* Images.xcassets in Resources */,
 				1C38130929AE4A940035B242 /* SearchVC.xib in Resources */,
-				1C35AF9D29ACFAFD00A57F5F /* Assets.xcassets in Resources */,
 				1C35AFD629AD5A7C00A57F5F /* CustomCarouselCell.xib in Resources */,
 				1C38133D29B0E6050035B242 /* SingleMovieCell.xib in Resources */,
 				1C7187AC29B5EDFB004C5C0D /* SideMenuCell.xib in Resources */,
