@@ -66,11 +66,13 @@ class SearchVC: UIViewController {
     
     
     private func initCollectionView() {
+        // init Movies collection View
         moviesCollectionFlow.collectionView?.delegate = self
         let nib = UINib(nibName: "SingleMovieCell", bundle: nil)
         moviesCollectionView.register(nib, forCellWithReuseIdentifier: "SingleMovieCell")
         moviesCollectionView.dataSource = self
         
+        // init Categories collection View
         categoryCollectionFlow.collectionView?.delegate = self
         let nibCategory = UINib(nibName: categoryReuseIdentifier, bundle: nil)
         categoryCollectionView.register(nibCategory, forCellWithReuseIdentifier: categoryReuseIdentifier)
@@ -88,7 +90,7 @@ class SearchVC: UIViewController {
 
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
-       if ( show == false)
+        if ( show == false)
         {
            dismiss(animated: false, completion: nil)
         }
@@ -131,19 +133,6 @@ extension SearchVC: UICollectionViewDataSource {
     
     }
     
-    // invoked when we click on like image
-    @objc func customCellButtonTapped(_ sender: UIButton) {
-        let point = sender.convert(CGPoint.zero, to: moviesCollectionView)
-        guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
-        print(indexPath.row)
-
-        initListMovies[indexPath.row].isFavourite = !initListMovies[indexPath.row].isFavourite
-        
-        moviesCollectionView.reloadData()
-    }
-    
-
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
@@ -155,6 +144,32 @@ extension SearchVC: UICollectionViewDataSource {
                   navigationController.pushViewController(movieDetailsVC, animated: true)
                 }
             }
+        } else {
+            self.setSelectedItem(self.categoryList[indexPath.row])
+            collectionView.reloadData()
+        }
+    }
+    
+    // invoked when we click on like image
+    @objc func customCellButtonTapped(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: moviesCollectionView)
+        guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
+        print(indexPath.row)
+
+        initListMovies[indexPath.row].isFavourite = !initListMovies[indexPath.row].isFavourite
+        
+        moviesCollectionView.reloadData()
+    }
+    
+    // invoked when we click on category cell
+    func setSelectedItem(_ categoryOptionItem: CategoryOptionItem) {
+        for item in self.categoryList {
+            if(categoryOptionItem.id == item.id){
+                self.categoryList[item.id!].isSelected = true
+            }else {
+                self.categoryList[item.id!].isSelected = false
+            }
+            
         }
     }
 
@@ -163,7 +178,12 @@ extension SearchVC: UICollectionViewDataSource {
 extension SearchVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width/3 - 12, height: self.view.frame.height/3 - 60)
+        
+         if(collectionView.isEqual(self.moviesCollectionView)){
+             return CGSize(width: self.view.frame.width/3 - 12, height: self.view.frame.height/3 - 60)
+         } else {
+             return CGSize(width: self.view.frame.width/3 - 12, height: 50)
+         }
     }
 }
 

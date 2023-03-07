@@ -25,10 +25,8 @@ class CategoryItemCell: UICollectionViewCell {
     func adaptBackground(_ isSelected: Bool) {
         if isSelected {
             categoryBackground.backgroundColor = UIColor(named: "selected_categorie")
-            categoryTitle.textColor = .white
         } else {
             categoryBackground.backgroundColor = UIColor(named: "unselected_categorie")
-            categoryTitle.textColor = UIColor(named: "background_color")
         }
     }
 
