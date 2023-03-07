@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="profileImage" destination="eGJ-FI-szA" id="ZKs-PT-rwn"/>
                 <outlet property="profileImageBg" destination="s3K-3m-vUY" id="ckv-fS-lnM"/>
+                <outlet property="switchFaceid" destination="sft-N6-vab" id="vXj-Mq-eXx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,20 +46,70 @@
                         <constraint firstAttribute="width" constant="194" id="Tvg-4Q-un6"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taha Jadid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-Jy-g3x">
+                    <rect key="frame" x="144" y="379" width="105.33333333333331" height="23"/>
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                    <color key="textColor" name="primary_color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj5-va-cJ8">
+                    <rect key="frame" x="30" y="506.33333333333331" width="46" height="22.333333333333314"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qn-v5-9Zw">
+                    <rect key="frame" x="30" y="555.66666666666663" width="59" height="22.333333333333371"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sft-N6-vab">
+                    <rect key="frame" x="324" y="551.33333333333337" width="51" height="31"/>
+                    <color key="backgroundColor" name="background_color"/>
+                    <color key="onTintColor" name="primary_color"/>
+                </switch>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-vQ-T24">
+                    <rect key="frame" x="349" y="505.66666666666657" width="24" height="22.333333333333428"/>
+                    <color key="tintColor" name="primary_color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="WSS-Bk-mE2"/>
+                        <constraint firstAttribute="height" constant="24" id="kd8-e7-MQW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="th.jadid@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-qU-eif">
+                    <rect key="frame" x="188" y="506.33333333333331" width="153" height="22.333333333333314"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <color key="textColor" name="primary_color"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background_color"/>
             <constraints>
+                <constraint firstItem="sft-N6-vab" firstAttribute="top" secondItem="mqP-vQ-T24" secondAttribute="bottom" constant="22" id="0IW-h9-dvA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="We1-14-LeP" secondAttribute="trailing" id="3FE-v8-bI5"/>
+                <constraint firstItem="sft-N6-vab" firstAttribute="centerY" secondItem="7Qn-v5-9Zw" secondAttribute="centerY" id="4UU-55-dFz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sft-N6-vab" secondAttribute="trailing" constant="20" id="5dc-AO-tCD"/>
                 <constraint firstItem="FhL-RH-rgM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5jc-WG-fA0"/>
                 <constraint firstItem="eGJ-FI-szA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5k5-c2-pQ4"/>
+                <constraint firstItem="FaE-Jy-g3x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AO8-nL-4E9"/>
+                <constraint firstItem="bCL-qU-eif" firstAttribute="centerY" secondItem="Cj5-va-cJ8" secondAttribute="centerY" id="CRM-KV-JWz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Qn-v5-9Zw" secondAttribute="bottom" constant="240" id="Drt-bq-ls2"/>
                 <constraint firstItem="s3K-3m-vUY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FWC-qH-nfs"/>
                 <constraint firstItem="FhL-RH-rgM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LNU-wy-ddt"/>
                 <constraint firstItem="We1-14-LeP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N0f-sY-Yvk"/>
                 <constraint firstItem="s3K-3m-vUY" firstAttribute="top" secondItem="FhL-RH-rgM" secondAttribute="bottom" constant="60" id="PuE-M2-dyD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="We1-14-LeP" secondAttribute="bottom" id="RM6-4G-vKN"/>
                 <constraint firstItem="eGJ-FI-szA" firstAttribute="top" secondItem="FhL-RH-rgM" secondAttribute="bottom" constant="63" id="bK5-fn-HxV"/>
+                <constraint firstItem="7Qn-v5-9Zw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="d2Y-pf-Hzl"/>
+                <constraint firstItem="bCL-qU-eif" firstAttribute="centerY" secondItem="mqP-vQ-T24" secondAttribute="centerY" id="dZg-wd-Jcn"/>
+                <constraint firstItem="mqP-vQ-T24" firstAttribute="centerY" secondItem="Cj5-va-cJ8" secondAttribute="centerY" id="dcH-ah-jkI"/>
+                <constraint firstItem="FaE-Jy-g3x" firstAttribute="top" secondItem="s3K-3m-vUY" secondAttribute="bottom" constant="20" id="huE-xX-TPL"/>
                 <constraint firstItem="FhL-RH-rgM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hwP-bN-NTF"/>
+                <constraint firstItem="Cj5-va-cJ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="oJT-5B-Tud"/>
+                <constraint firstItem="mqP-vQ-T24" firstAttribute="leading" secondItem="bCL-qU-eif" secondAttribute="trailing" constant="8" id="qVf-e6-yu7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mqP-vQ-T24" secondAttribute="trailing" constant="20" id="t4D-sQ-Xav"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
@@ -72,11 +123,15 @@
         <image name="movieBg" width="200" height="367"/>
         <image name="my_pic" width="800" height="800"/>
         <image name="profile_bg" width="600" height="600"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="background_color">
             <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary_color">
+            <color red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
