@@ -7,6 +7,7 @@ target 'T-Movies-iOS' do
   pod 'ToosieSlide', '~> 1.1'
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'
+  pod 'KeychainSwift', '~> 19.0'
 
   # Pods for T-Movies-iOS
 
