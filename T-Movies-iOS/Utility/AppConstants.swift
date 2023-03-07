@@ -44,4 +44,27 @@ class Constants {
         )
     ]
     
+    static var categoryList: [CategoryOptionItem] = [
+        CategoryOptionItem(
+            title: "Trending",
+            isSelected: true
+        ),
+        CategoryOptionItem(
+            title: "Upcoming",
+            isSelected: false
+        ),
+        CategoryOptionItem(
+            title: "TV Show",
+            isSelected: false
+        ),
+        CategoryOptionItem(
+            title: "Action",
+            isSelected: false
+        ),
+        CategoryOptionItem(
+            title: "Top Rated",
+            isSelected: false
+        )
+    ]
+    
 }
