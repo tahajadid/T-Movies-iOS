@@ -20,7 +20,7 @@ class MovieRepository {
         var headers: [String: String] = [:]
         
         params["api_key"] = "6c134967a90569d3dcea0346a1238c82"
-        params["page"] = "1"
+        params["page"] = "5"
         headers["Content-Type"] = "application/json; charset=utf-8"
 
         apiRequest(method: .get,
@@ -51,7 +51,7 @@ class MovieRepository {
         var headers: [String: String] = [:]
         
         params["api_key"] = "6c134967a90569d3dcea0346a1238c82"
-        params["page"] = "3"
+        params["page"] = "2"
         headers["Content-Type"] = "application/json; charset=utf-8"
 
         apiRequest(method: .get,

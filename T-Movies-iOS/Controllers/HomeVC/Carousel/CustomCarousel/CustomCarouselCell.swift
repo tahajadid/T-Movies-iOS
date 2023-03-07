@@ -15,7 +15,8 @@ class CustomCarouselCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rating: UILabel!
-    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+
     /// The unique identifier of the cell.
     static let identifier = String(describing: CustomCarouselCell.self)
     /// The height of the card cell.
@@ -29,8 +30,9 @@ class CustomCarouselCell: UICollectionViewCell {
         
         backView.layer.cornerRadius = 12
         imageView.layer.cornerRadius = 12
-
-
+        
+        spinner.layer.cornerRadius = 8
+        startSpinner()
     }
     
     func setImage(_ pathWallpapaer: String){
@@ -46,6 +48,18 @@ class CustomCarouselCell: UICollectionViewCell {
     
     func setRateValue(_ rate: String) {
         rating.text = rate
+    }
+    
+    func startSpinner() {
+        spinner.startAnimating()
+        print("Show spinner")
+    }
+    
+    func hideSpinner() {
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        print("// Hide spinner")
+
     }
 
 }

@@ -13,6 +13,7 @@ class SingleMovieCell: UICollectionViewCell {
     @IBOutlet weak var movieBg: UIImageView!
     @IBOutlet weak var moviPoster: UIImageView!
     @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +22,8 @@ class SingleMovieCell: UICollectionViewCell {
         movieBg.layer.cornerRadius = 16
         moviPoster.layer.cornerRadius = 16
         
+        spinner.layer.cornerRadius = 8
+        startSpinner()
     }
     
     override func prepareForReuse() {
@@ -40,5 +43,15 @@ class SingleMovieCell: UICollectionViewCell {
         favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
     }
 
+    func startSpinner() {
+        spinner.startAnimating()
+        print("Show spinner")
+    }
+    
+    func hideSpinner() {
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        print("// Hide spinner")
 
+    }
 }

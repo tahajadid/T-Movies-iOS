@@ -32,7 +32,6 @@ class SearchVC: UIViewController {
             if movieResponse?.results.isEmpty == false {
                 //print("items : \(movieResponse!)")
                 self.initListMovies = movieResponse?.results ?? [Result]()
-                self.loading(show: false)
                 
                 self.initCollectionView()
             }
@@ -93,6 +92,8 @@ extension SearchVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleMovieCell", for: indexPath) as? SingleMovieCell else {
             fatalError("can't dequeue CustomCell")
         }
+        cell.startSpinner()
+        
         cell.setImage(initListMovies[indexPath.item].posterPath)
         
         cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
@@ -100,6 +101,8 @@ extension SearchVC: UICollectionViewDataSource {
         if(initListMovies[indexPath.row].isFavourite == true){
             cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
         }
+        
+        cell.hideSpinner()
 
         return cell
     }
