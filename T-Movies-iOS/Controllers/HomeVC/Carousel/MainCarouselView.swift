@@ -67,7 +67,6 @@ class MainCarouselView: UIView {
       
       viewModel.$popularMovieResponse.sink(receiveValue: { movieResponse in
           if movieResponse?.results.isEmpty == false {
-              //print("items : \(movieResponse!)")
               self.initListMovies = movieResponse?.results ?? [Result]()
               
               // init collection
@@ -122,7 +121,9 @@ extension MainCarouselView: UICollectionViewDataSource {
         cell.setImage(initListMovies[indexPath.item].posterPath)
         cell.setTitle(initListMovies[indexPath.item].title)
         cell.setRateValue(String(Double(round(10 * Double(initListMovies[indexPath.item].voteAverage)) / 10)) )
-
+        
+        cell.hideSpinner()
+        
         return cell
     }
     

@@ -26,12 +26,24 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-PD-rhh">
                                         <rect key="frame" x="1" y="1" width="258" height="324"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-cc-Uf9">
+                                        <rect key="frame" x="110" y="143" width="40" height="40"/>
+                                        <color key="backgroundColor" name="background_color"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="PcX-Ng-2rM"/>
+                                            <constraint firstAttribute="height" constant="40" id="prp-dv-weA"/>
+                                        </constraints>
+                                        <color key="color" name="primary_color"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" name="primary_color"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="hMe-PD-rhh" secondAttribute="bottom" constant="1" id="HBi-xq-aOg"/>
                                     <constraint firstItem="hMe-PD-rhh" firstAttribute="top" secondItem="YYC-qP-gVg" secondAttribute="top" constant="1" id="Xrf-G2-qc6"/>
+                                    <constraint firstItem="DcH-cc-Uf9" firstAttribute="centerX" secondItem="YYC-qP-gVg" secondAttribute="centerX" id="hVw-uK-Orf"/>
                                     <constraint firstAttribute="trailing" secondItem="hMe-PD-rhh" secondAttribute="trailing" constant="1" id="pIg-uh-RDF"/>
+                                    <constraint firstItem="DcH-cc-Uf9" firstAttribute="centerY" secondItem="YYC-qP-gVg" secondAttribute="centerY" id="tPx-nd-FrA"/>
                                     <constraint firstItem="hMe-PD-rhh" firstAttribute="leading" secondItem="YYC-qP-gVg" secondAttribute="leading" constant="1" id="uts-Y6-jsK"/>
                                 </constraints>
                             </view>
@@ -87,6 +99,7 @@
                 <outlet property="backView" destination="YYC-qP-gVg" id="dNB-TH-tqS"/>
                 <outlet property="imageView" destination="hMe-PD-rhh" id="C32-5F-y9p"/>
                 <outlet property="rating" destination="Zfm-fr-GbE" id="5h7-2V-d5w"/>
+                <outlet property="spinner" destination="DcH-cc-Uf9" id="hzu-I1-ozB"/>
                 <outlet property="title" destination="ugg-pi-gtB" id="fcD-uy-YCf"/>
             </connections>
             <point key="canvasLocation" x="27.480916030534349" y="19.718309859154932"/>

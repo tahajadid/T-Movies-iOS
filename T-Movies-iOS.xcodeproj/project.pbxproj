@@ -350,8 +350,8 @@
 		1C38132529AF5B9A0035B242 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
-				1C38132629AF5BD80035B242 /* MovieDetailsVC.swift */,
 				1C38132729AF5BD80035B242 /* MovieDetailsVC.xib */,
+				1C38132629AF5BD80035B242 /* MovieDetailsVC.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -814,6 +814,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "T-Movies";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "use noth";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -869,6 +870,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "T-Movies";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "use noth";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
