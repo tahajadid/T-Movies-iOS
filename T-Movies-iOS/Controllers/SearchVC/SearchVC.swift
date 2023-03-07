@@ -27,27 +27,11 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("viewDidLoad -----")
-
-        searchView.layer.cornerRadius = 8
-        //initCollectionView()
+        initCategoryCollectionView()
+        configureUI()
         
-        viewModel.getMoviesResponse()
-
-        
-        viewModel.$movieResponse.sink(receiveValue: { movieResponse in
-            if movieResponse?.results.isEmpty == false {
-                //print("items : \(movieResponse!)")
-                self.initListMovies = movieResponse?.results ?? [Result]()
-                
-                self.initCollectionView()
-            }
-            print("items -----")
-
-        }).store(in: &cancellable)
-        // Do any additional setup after loading the view.
     }
-
+    
     
     // Hide navigationBar on the Top
     override func viewWillAppear(_ animated: Bool) {
@@ -64,14 +48,46 @@ class SearchVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+
+    func configureUI() {
+        
+        searchView.layer.cornerRadius = 8
+        
+        viewModel.getMoviesResponse()
+        viewModel.$movieResponse.sink(receiveValue: { movieResponse in
+            if movieResponse?.results.isEmpty == false {
+                //print("items : \(movieResponse!)")
+                self.initListMovies = movieResponse?.results ?? [Result]()
+                self.initMoviesCollectionView()
+            }
+
+        }).store(in: &cancellable)
+
+        
+        //Looks for single or multiple taps.
+         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
+    }
     
-    private func initCollectionView() {
+    //Calls this function when the tap is recognized.
+    @objc override func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    private func initMoviesCollectionView() {
         // init Movies collection View
         moviesCollectionFlow.collectionView?.delegate = self
         let nib = UINib(nibName: "SingleMovieCell", bundle: nil)
         moviesCollectionView.register(nib, forCellWithReuseIdentifier: "SingleMovieCell")
         moviesCollectionView.dataSource = self
         
+    }
+    
+    private func initCategoryCollectionView() {
         // init Categories collection View
         categoryCollectionFlow.collectionView?.delegate = self
         let nibCategory = UINib(nibName: categoryReuseIdentifier, bundle: nil)
@@ -95,6 +111,8 @@ class SearchVC: UIViewController {
            dismiss(animated: false, completion: nil)
         }
     }
+    
+
 
 }
 
