@@ -8,6 +8,7 @@ target 'T-Movies-iOS' do
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'
   pod 'KeychainSwift', '~> 19.0'
+  pod 'lottie-ios'
 
   # Pods for T-Movies-iOS
 
