@@ -23,7 +23,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-V5-SlL">
                     <rect key="frame" x="0.0" y="0.0" width="333" height="852"/>
-                    <color key="backgroundColor" name="background_sidemenu"/>
+                    <color key="backgroundColor" name="background_color"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-0S-cDc">
                     <rect key="frame" x="0.0" y="0.0" width="333" height="220"/>
@@ -79,10 +79,10 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UFc-Af-7BI">
                     <rect key="frame" x="10" y="230" width="323" height="508"/>
-                    <color key="backgroundColor" name="background_sidemenu"/>
+                    <color key="backgroundColor" name="background_color"/>
                     <color key="separatorColor" name="background_sidemenu"/>
                     <color key="sectionIndexColor" name="background_sidemenu"/>
-                    <color key="sectionIndexBackgroundColor" name="background_sidemenu"/>
+                    <color key="sectionIndexBackgroundColor" name="background_color"/>
                     <color key="sectionIndexTrackingBackgroundColor" name="background_sidemenu"/>
                 </tableView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_separator" translatesAutoresizingMaskIntoConstraints="NO" id="QBl-Lz-laq">

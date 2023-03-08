@@ -72,4 +72,12 @@ class Constants {
         )
     ]
     
+    
+    static var tempList: [Result] = [
+        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
+        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
+        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
+        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
+    ]
+    
 }

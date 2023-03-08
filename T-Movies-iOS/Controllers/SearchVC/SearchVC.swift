@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import UIView_Shimmer
 
 class SearchVC: UIViewController {
 
@@ -24,11 +25,18 @@ class SearchVC: UIViewController {
     var initListMovies :[Result] = []
     var filteredListMovies :[Result] = []
     var categoryList: [CategoryOptionItem] = Constants.categoryList
-
+    var tempList: [Result] = Constants.tempList
+    
     // MARK: - Constants
     private let categoryReuseIdentifier = "CategoryItemCell"
     private let movieReuseIdentifier = "SingleMovieCell"
 
+    
+    private var isLoadingMovies = true {
+        didSet {
+            moviesCollectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,17 +63,20 @@ class SearchVC: UIViewController {
         searchView.layer.cornerRadius = 8
         
         viewModel.getMoviesResponse()
+        initMoviesCollectionView()
+
         viewModel.$movieResponse.sink(receiveValue: { movieResponse in
             if movieResponse?.results.isEmpty == false {
-                //print("items : \(movieResponse!)")
                 self.initListMovies = movieResponse?.results ?? [Result]()
                 self.filteredListMovies = self.initListMovies
-                self.initMoviesCollectionView()
+                // when we set the var isLoading to false
+                // we invoke the reloadData method
+                self.isLoadingMovies = false
             }
 
         }).store(in: &cancellable)
+            
 
-        
         //Looks for single or multiple taps.
          let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -124,23 +135,6 @@ class SearchVC: UIViewController {
         categoryCollectionView.dataSource = self
         
     }
-    
-    func loading (show : Bool) {
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
-
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
-        if ( show == false)
-        {
-           dismiss(animated: false, completion: nil)
-        }
-    }
-    
 
 
 }
@@ -149,7 +143,11 @@ class SearchVC: UIViewController {
 extension SearchVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView.isEqual(self.moviesCollectionView)){
-            return filteredListMovies.count
+            if(!filteredListMovies.isEmpty) {
+                return filteredListMovies.count
+            } else {
+                return 10
+            }
         }else{
             return categoryList.count
         }
@@ -160,14 +158,15 @@ extension SearchVC: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieReuseIdentifier, for: indexPath) as? SingleMovieCell else {
                 fatalError("can't dequeue CustomCell")
             }
-            cell.startSpinner()
-            cell.setImage(filteredListMovies[indexPath.item].posterPath)
-            cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
-            if(filteredListMovies[indexPath.row].isFavourite == true){
-                cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
+            if(!filteredListMovies.isEmpty) {
+                cell.startSpinner()
+                cell.setImage(filteredListMovies[indexPath.item].posterPath)
+                cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
+                if(filteredListMovies[indexPath.row].isFavourite == true){
+                    cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
+                }
+                cell.hideSpinner()
             }
-            cell.hideSpinner()
-
             return cell
             
         }else{
@@ -195,6 +194,13 @@ extension SearchVC: UICollectionViewDataSource {
         } else {
             self.setSelectedItem(self.categoryList[indexPath.row])
             collectionView.reloadData()
+        }
+    }
+    
+    // invoked to add Shimmer Effect
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if(collectionView.isEqual(self.moviesCollectionView)){
+            cell.setTemplateWithSubviews(isLoadingMovies, animate: true, viewBackgroundColor: .darkGray)
         }
     }
     

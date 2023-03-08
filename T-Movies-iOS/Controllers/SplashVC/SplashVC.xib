@@ -20,15 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applogo" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-mq-iNz">
-                    <rect key="frame" x="21.666666666666657" y="251" width="350" height="350"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="only_logo" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-mq-iNz">
+                    <rect key="frame" x="21.666666666666657" y="211" width="350" height="350"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="350" id="t68-Hq-20k"/>
                         <constraint firstAttribute="height" constant="350" id="vJ2-Uw-1fV"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ1-1J-gqM">
-                    <rect key="frame" x="70" y="590" width="253" height="128"/>
+                    <rect key="frame" x="70" y="680" width="253" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="qjr-WJ-abb"/>
                     </constraints>
@@ -37,17 +37,17 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background_sidemenu"/>
             <constraints>
-                <constraint firstItem="eOX-mq-iNz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0Hy-tp-FZV"/>
+                <constraint firstItem="eOX-mq-iNz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-40" id="0Hy-tp-FZV"/>
                 <constraint firstItem="RZ1-1J-gqM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="R0v-ZW-2LX"/>
                 <constraint firstItem="eOX-mq-iNz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TcJ-ED-4F0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RZ1-1J-gqM" secondAttribute="bottom" constant="100" id="g23-tf-ZhE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RZ1-1J-gqM" secondAttribute="bottom" constant="10" id="g23-tf-ZhE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RZ1-1J-gqM" secondAttribute="trailing" constant="70" id="zhK-A0-QO2"/>
             </constraints>
             <point key="canvasLocation" x="122.90076335877862" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="applogo" width="1024" height="1024"/>
+        <image name="only_logo" width="1000" height="805"/>
         <namedColor name="background_sidemenu">
             <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
