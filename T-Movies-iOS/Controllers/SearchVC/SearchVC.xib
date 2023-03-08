@@ -15,6 +15,7 @@
                 <outlet property="categoryCollectionView" destination="pIf-yU-1eZ" id="VQ4-d6-KC6"/>
                 <outlet property="moviesCollectionFlow" destination="ZFp-Gx-pyQ" id="qXu-g8-vlb"/>
                 <outlet property="moviesCollectionView" destination="dY0-SA-bkL" id="UGR-d3-gre"/>
+                <outlet property="searchTextField" destination="4br-f7-Gip" id="Zc2-gW-NXZ"/>
                 <outlet property="searchView" destination="KTc-lU-xz8" id="PLD-SK-ZSu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -64,12 +65,15 @@
                                 <constraint firstAttribute="height" constant="34" id="yMD-T5-BWV"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4br-f7-Gip">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search.." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4br-f7-Gip">
                             <rect key="frame" x="44" y="8" width="279" height="34"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textColor" name="label_color"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="searchHandler:" destination="-1" eventType="editingChanged" id="bBv-d9-Kt9"/>
+                            </connections>
                         </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_gray" translatesAutoresizingMaskIntoConstraints="NO" id="t4J-Os-hGb">
                             <rect key="frame" x="10" y="15" width="26" height="20"/>

@@ -16,12 +16,15 @@ class SearchVC: UIViewController {
     @IBOutlet weak var categoryCollectionFlow: UICollectionViewFlowLayout!
     
     @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     let viewModel = HomeViewModel()
     var cancellable: Set<AnyCancellable> = []
     var initListMovies :[Result] = []
+    var filteredListMovies :[Result] = []
     private let categoryReuseIdentifier = "CategoryItemCell"
-    
+    private let movieReuseIdentifier = "SingleMovieCell"
+
     var categoryList: [CategoryOptionItem] = Constants.categoryList
 
     override func viewDidLoad() {
@@ -38,9 +41,6 @@ class SearchVC: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        print("viewWillAppear -----")
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +58,7 @@ class SearchVC: UIViewController {
             if movieResponse?.results.isEmpty == false {
                 //print("items : \(movieResponse!)")
                 self.initListMovies = movieResponse?.results ?? [Result]()
+                self.filteredListMovies = self.initListMovies
                 self.initMoviesCollectionView()
             }
 
@@ -70,6 +71,8 @@ class SearchVC: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
+        changeClearButtonColor()
+
     }
     
     //Calls this function when the tap is recognized.
@@ -78,17 +81,42 @@ class SearchVC: UIViewController {
         view.endEditing(true)
     }
     
-    private func initMoviesCollectionView() {
-        // init Movies collection View
-        moviesCollectionFlow.collectionView?.delegate = self
-        let nib = UINib(nibName: "SingleMovieCell", bundle: nil)
-        moviesCollectionView.register(nib, forCellWithReuseIdentifier: "SingleMovieCell")
-        moviesCollectionView.dataSource = self
+    // MARK: - Search Handler
+    @IBAction func searchHandler(_ sender: UITextField) {
         
+        if let searachText = sender.text {
+            if(searachText.isEmpty){
+                filteredListMovies = initListMovies
+            } else {
+                filteredListMovies = initListMovies.filter{item in
+                    item.title.lowercased().contains(searachText.lowercased())
+                }
+            }
+            moviesCollectionView.reloadData()
+            moviesCollectionView.reloadInputViews()
+
+        }
     }
     
+    // change ClearButton background color
+    private func changeClearButtonColor() {
+        if let clearButton = searchTextField.value(forKey: "_clearButton") as? UIButton {
+            let templateImage = clearButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
+            clearButton.setImage(templateImage, for: .normal)
+            clearButton.tintColor = UIColor(named: "label_color")
+        }
+    }
+    
+    // init Movies collection View
+    private func initMoviesCollectionView() {
+        moviesCollectionFlow.collectionView?.delegate = self
+        let nib = UINib(nibName: movieReuseIdentifier, bundle: nil)
+        moviesCollectionView.register(nib, forCellWithReuseIdentifier: movieReuseIdentifier)
+        moviesCollectionView.dataSource = self
+    }
+    
+    // init Categories collection View
     private func initCategoryCollectionView() {
-        // init Categories collection View
         categoryCollectionFlow.collectionView?.delegate = self
         let nibCategory = UINib(nibName: categoryReuseIdentifier, bundle: nil)
         categoryCollectionView.register(nibCategory, forCellWithReuseIdentifier: categoryReuseIdentifier)
@@ -119,7 +147,7 @@ class SearchVC: UIViewController {
 extension SearchVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView.isEqual(self.moviesCollectionView)){
-            return initListMovies.count
+            return filteredListMovies.count
         }else{
             return categoryList.count
         }
@@ -127,13 +155,13 @@ extension SearchVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(collectionView.isEqual(self.moviesCollectionView)){
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleMovieCell", for: indexPath) as? SingleMovieCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieReuseIdentifier, for: indexPath) as? SingleMovieCell else {
                 fatalError("can't dequeue CustomCell")
             }
             cell.startSpinner()
-            cell.setImage(initListMovies[indexPath.item].posterPath)
+            cell.setImage(filteredListMovies[indexPath.item].posterPath)
             cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
-            if(initListMovies[indexPath.row].isFavourite == true){
+            if(filteredListMovies[indexPath.row].isFavourite == true){
                 cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
             }
             cell.hideSpinner()
@@ -156,7 +184,7 @@ extension SearchVC: UICollectionViewDataSource {
        
         if(collectionView.isEqual(self.moviesCollectionView)){
             let movieDetailsVC = MovieDetailsVC()
-            movieDetailsVC.movieInfo = initListMovies[indexPath.row]
+            movieDetailsVC.movieInfo = filteredListMovies[indexPath.row]
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 if let navigationController = self.navigationController {
                   navigationController.pushViewController(movieDetailsVC, animated: true)
@@ -174,7 +202,7 @@ extension SearchVC: UICollectionViewDataSource {
         guard let indexPath = moviesCollectionView.indexPathForItem(at: point)  else { return }
         print(indexPath.row)
 
-        initListMovies[indexPath.row].isFavourite = !initListMovies[indexPath.row].isFavourite
+        filteredListMovies[indexPath.row].isFavourite = !filteredListMovies[indexPath.row].isFavourite
         
         moviesCollectionView.reloadData()
     }
