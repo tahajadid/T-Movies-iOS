@@ -36,5 +36,23 @@ class HomeViewModel {
         })
         
     }
+    
+    func getTopRatedMoviesResponse() {
+        movieRepository.callGetTopRatedMovies(completion: { [self]success, model, error in
+        if success {
+            popularMovieResponse = model!
+        }
+        })
+        
+    }
+    
+    func getUpcomingMoviesResponse() {
+        movieRepository.callGetUpcomingMovies(completion: { [self]success, model, error in
+        if success {
+            popularMovieResponse = model!
+        }
+        })
+        
+    }
 
 }

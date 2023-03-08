@@ -16,6 +16,9 @@ class Constants {
     static let API_KEY = "6c134967a90569d3dcea0346a1238c82"
     static let baseURL = "https://api.themoviedb.org/3/trending/movie/day"
     static let basePopularURL = "https://api.themoviedb.org/3/trending/movie/day"
+    static let baseTopRatedURL = "https://api.themoviedb.org/3/movie/top_rated"
+    static let baseTopUpcomingURL = "https://api.themoviedb.org/3/movie/upcoming"
+
     static let baseURLImage = "https://image.tmdb.org/t/p/w500/"
 
     static let noNetworkWording = "No network available"
