@@ -9,6 +9,7 @@ target 'T-Movies-iOS' do
   pod 'SDWebImage', '~> 5.0'
   pod 'KeychainSwift', '~> 19.0'
   pod 'lottie-ios'
+  pod 'UIView-Shimmer', '~> 1.0'
 
   # Pods for T-Movies-iOS
 

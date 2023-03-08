@@ -7,14 +7,24 @@
 
 import UIKit
 import SDWebImage
+import UIView_Shimmer
 
-class SingleMovieCell: UICollectionViewCell {
+class SingleMovieCell: UICollectionViewCell, ShimmeringViewProtocol {
 
     @IBOutlet weak var movieBg: UIImageView!
     @IBOutlet weak var moviPoster: UIImageView!
     @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
+    var shimmeringAnimatedItems: [UIView] {
+        [
+            movieBg,
+            moviPoster,
+            favouriteButton,
+            spinner
+        ]
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +33,8 @@ class SingleMovieCell: UICollectionViewCell {
         moviPoster.layer.cornerRadius = 16
         
         spinner.layer.cornerRadius = 8
+        
+        movieBg.isHidden = true
         startSpinner()
     }
     
@@ -36,6 +48,8 @@ class SingleMovieCell: UICollectionViewCell {
             return
         }
         moviPoster.sd_setImage(with: url, completed: nil)
+        movieBg.isHidden = false
+
     }
     
     @objc func changeFavovuriteIcon(_ sender:UITapGestureRecognizer){

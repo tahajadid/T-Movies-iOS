@@ -11,8 +11,8 @@ import Lottie
 class SplashVC: UIViewController {
 
     @IBOutlet weak var AnimatedView: UIView!
-    
     @IBOutlet weak var logoIamge: UIImageView!
+    
     private var animationView: LottieAnimationView?
 
     override func viewDidLoad() {
