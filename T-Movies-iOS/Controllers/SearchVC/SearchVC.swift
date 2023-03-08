@@ -10,29 +10,30 @@ import Combine
 
 class SearchVC: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     @IBOutlet weak var moviesCollectionFlow: UICollectionViewFlowLayout!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionFlow: UICollectionViewFlowLayout!
-    
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     
+    // MARK: - Variables
     let viewModel = HomeViewModel()
     var cancellable: Set<AnyCancellable> = []
     var initListMovies :[Result] = []
     var filteredListMovies :[Result] = []
+    var categoryList: [CategoryOptionItem] = Constants.categoryList
+
+    // MARK: - Constants
     private let categoryReuseIdentifier = "CategoryItemCell"
     private let movieReuseIdentifier = "SingleMovieCell"
 
-    var categoryList: [CategoryOptionItem] = Constants.categoryList
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initCategoryCollectionView()
         configureUI()
-        
     }
     
     
@@ -144,6 +145,7 @@ class SearchVC: UIViewController {
 
 }
 
+// MARK: - SearchVC extension
 extension SearchVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView.isEqual(self.moviesCollectionView)){
@@ -221,6 +223,7 @@ extension SearchVC: UICollectionViewDataSource {
 
 }
 
+// MARK: - SearchVC Delegate Flow Layout
 extension SearchVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
