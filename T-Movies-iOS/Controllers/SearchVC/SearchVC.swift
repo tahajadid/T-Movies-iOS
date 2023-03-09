@@ -143,20 +143,9 @@ class SearchVC: UIViewController {
             
                 viewModel.$popularMovieResponse.sink(receiveValue: { movieResponse in
                     if movieResponse?.results.isEmpty == false {
-                        print("-- -- -- -- New")
-
-                        print(movieResponse)
                         self.initListMovies = movieResponse?.results ?? [Result]()
                         self.filteredListMovies = self.initListMovies
-                        // when we set the var isLoading to false
-                        // we invoke the reloadData method
                         self.isLoadingMovies = false
-                        
-                        print("-- -- -- -- filtered ListMovies")
-                        print(self.filteredListMovies)
-                        
-                        self.moviesCollectionView.reloadData()
-                        self.moviesCollectionView.reloadInputViews()
                         
                     }
 
@@ -167,21 +156,9 @@ class SearchVC: UIViewController {
                 viewModel.getTopRatedMoviesResponse()
                 viewModel.$topratedMovieResponse.sink(receiveValue: { movieResponse in
                     if movieResponse?.results.isEmpty == false {
-                        print("-- -- -- -- New")
-
-                        print(movieResponse)
                         self.initListMovies = movieResponse?.results ?? [Result]()
                         self.filteredListMovies = self.initListMovies
-                        // when we set the var isLoading to false
-                        // we invoke the reloadData method
                         self.isLoadingMovies = false
-                        
-                        print("-- -- -- -- filtered ListMovies")
-                        print(self.filteredListMovies)
-                        
-                        self.moviesCollectionView.reloadData()
-                        self.moviesCollectionView.reloadInputViews()
-                        
                     }
 
                 }).store(in: &cancellable)
@@ -191,21 +168,9 @@ class SearchVC: UIViewController {
                 viewModel.getUpcomingMoviesResponse()
                 viewModel.$upcomingMovieResponse.sink(receiveValue: { movieResponse in
                     if movieResponse?.results.isEmpty == false {
-                        print("-- -- -- -- New")
-
-                        print(movieResponse)
                         self.initListMovies = movieResponse?.results ?? [Result]()
                         self.filteredListMovies = self.initListMovies
-                        // when we set the var isLoading to false
-                        // we invoke the reloadData method
                         self.isLoadingMovies = false
-                        
-                        print("-- -- -- -- filtered ListMovies")
-                        print(self.filteredListMovies)
-                        
-                        self.moviesCollectionView.reloadData()
-                        self.moviesCollectionView.reloadInputViews()
-                        
                     }
 
                 }).store(in: &cancellable)
@@ -215,21 +180,9 @@ class SearchVC: UIViewController {
                 viewModel.getLatestMoviesResponse()
                 viewModel.$latestMovieResponse.sink(receiveValue: { movieResponse in
                     if movieResponse?.results.isEmpty == false {
-                        print("-- -- -- -- New")
-
-                        print(movieResponse)
                         self.initListMovies = movieResponse?.results ?? [Result]()
                         self.filteredListMovies = self.initListMovies
-                        // when we set the var isLoading to false
-                        // we invoke the reloadData method
                         self.isLoadingMovies = false
-                        
-                        print("-- -- -- -- filtered ListMovies")
-                        print(self.filteredListMovies)
-                        
-                        self.moviesCollectionView.reloadData()
-                        self.moviesCollectionView.reloadInputViews()
-                        
                     }
 
                 }).store(in: &cancellable)
@@ -239,20 +192,9 @@ class SearchVC: UIViewController {
                 viewModel.getTrendingMoviesResponse()
                 viewModel.$trendingMovieResponse.sink(receiveValue: { movieResponse in
                     if movieResponse?.results.isEmpty == false {
-                        print("-- -- -- -- New")
-
                         self.initListMovies = movieResponse?.results ?? [Result]()
                         self.filteredListMovies = self.initListMovies
-                        // when we set the var isLoading to false
-                        // we invoke the reloadData method
                         self.isLoadingMovies = false
-                        
-                        print("-- -- -- -- filtered ListMovies")
-                        print(self.filteredListMovies)
-                        
-                        self.moviesCollectionView.reloadData()
-                        self.moviesCollectionView.reloadInputViews()
-                        
                     }
 
                 }).store(in: &cancellable)
@@ -260,30 +202,6 @@ class SearchVC: UIViewController {
             default:
                 print("Other")
         }
-    }
-    
-    private func sinkMoviesResponse() {
-
-        viewModel.$movieResponse.sink(receiveValue: { movieResponse in
-            if movieResponse?.results.isEmpty == false {
-                print("-- -- -- -- New")
-
-                print(movieResponse)
-                self.initListMovies = movieResponse?.results ?? [Result]()
-                self.filteredListMovies = self.initListMovies
-                // when we set the var isLoading to false
-                // we invoke the reloadData method
-                self.isLoadingMovies = false
-                
-                print("-- -- -- -- filtered ListMovies")
-                print(self.filteredListMovies)
-                
-                self.moviesCollectionView.reloadData()
-                self.moviesCollectionView.reloadInputViews()
-                
-            }
-
-        }).store(in: &cancellable)
     }
 
 }
