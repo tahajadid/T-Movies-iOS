@@ -25,7 +25,6 @@ class SearchVC: UIViewController {
     var initListMovies :[Result] = []
     var filteredListMovies :[Result] = []
     var categoryList: [CategoryOptionItem] = Constants.categoryList
-    var tempList: [Result] = Constants.tempList
     
     // MARK: - Constants
     private let categoryReuseIdentifier = "CategoryItemCell"

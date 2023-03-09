@@ -13,7 +13,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBg: UIImageView!
     @IBOutlet weak var switchFaceid: UISwitch!
-
+    @IBOutlet weak var editView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -39,7 +40,10 @@ class ProfileVC: UIViewController {
         profileImageBg.layer.masksToBounds = false
         profileImageBg.layer.cornerRadius = profileImageBg.frame.height/2
         profileImageBg.clipsToBounds = true
-        // Do any additional setup after loading the view.
+        
+        editView.layer.masksToBounds = false
+        editView.layer.cornerRadius = editView.frame.height/2
+        editView.clipsToBounds = true
         
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
     }
