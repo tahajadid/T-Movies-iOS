@@ -14,7 +14,12 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImageBg: UIImageView!
     @IBOutlet weak var switchFaceid: UISwitch!
     @IBOutlet weak var editView: UIView!
+        
+    @IBOutlet weak var lineOne: UIView!
+    @IBOutlet weak var lineTwo: UIView!
+    @IBOutlet weak var emailTextField: UITextField!
     
+    var emailEnabled = false
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -32,6 +37,17 @@ class ProfileVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    //Calls this function when the tap is recognized.
+    @objc override func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @IBAction func clickOnEdit(_ sender: UIButton) {
+        emailEnabled = !emailEnabled
+        emailTextField.isUserInteractionEnabled = emailEnabled
+    }
+    
     func configureUI() {
         profileImage.layer.masksToBounds = false
         profileImage.layer.cornerRadius = profileImage.frame.height/2
@@ -45,6 +61,11 @@ class ProfileVC: UIViewController {
         editView.layer.cornerRadius = editView.frame.height/2
         editView.clipsToBounds = true
         
+        lineOne.layer.cornerRadius = 4
+        lineTwo.layer.cornerRadius = 4
+
+        emailTextField.isUserInteractionEnabled = emailEnabled
+
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
     }
     
