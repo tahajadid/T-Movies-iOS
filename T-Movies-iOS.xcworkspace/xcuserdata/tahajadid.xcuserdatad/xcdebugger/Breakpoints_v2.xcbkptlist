@@ -99,5 +99,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "callNewMoviesList(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3a3ef85fc05920a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "T_Movies_iOS.SearchVC.callNewMoviesList(Swift.String) -&gt; ()"
+                  moduleName = "T-Movies-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3f5f9b41cec045bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;T_Movies_iOS.MoviesResponse&gt;) -&gt; () in T_Movies_iOS.SearchVC.callNewMoviesList(Swift.String) -&gt; ()"
+                  moduleName = "T-Movies-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6767B926-5E30-497B-AD19-8B707E26E83E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "callNewMoviesList(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

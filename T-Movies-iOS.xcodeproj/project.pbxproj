@@ -13,6 +13,7 @@
 		1C04750C29B88F5700B7CC31 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04750A29B88F5700B7CC31 /* SplashVC.swift */; };
 		1C04750D29B88F5700B7CC31 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C04750B29B88F5700B7CC31 /* SplashVC.xib */; };
 		1C04751029B8A26700B7CC31 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C04750F29B8A26700B7CC31 /* loading.json */; };
+		1C04751429B9F4E900B7CC31 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04751329B9F4E900B7CC31 /* SearchViewModel.swift */; };
 		1C35AF9429ACFAFC00A57F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */; };
 		1C35AF9629ACFAFC00A57F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */; };
 		1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C35AF9729ACFAFC00A57F5F /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		1C04750A29B88F5700B7CC31 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		1C04750B29B88F5700B7CC31 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
 		1C04750F29B8A26700B7CC31 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		1C04751329B9F4E900B7CC31 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		1C35AF9029ACFAFC00A57F5F /* T-Movies-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T-Movies-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C35AF9329ACFAFC00A57F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C35AF9529ACFAFC00A57F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		1C04751229B9F4D400B7CC31 /* SearchViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C04751329B9F4E900B7CC31 /* SearchViewModel.swift */,
+			);
+			path = SearchViewModel;
+			sourceTree = "<group>";
+		};
 		1C35AF8729ACFAFC00A57F5F = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		1C35AFC829ACFBBE00A57F5F /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
+				1C04751229B9F4D400B7CC31 /* SearchViewModel */,
 				1C04750029B77E7600B7CC31 /* CategoryItem */,
 				1C38133E29B0E6080035B242 /* SingleMovieItem */,
 				1C38130629AE4A940035B242 /* SearchVC.swift */,
@@ -746,6 +757,7 @@
 				1C38132329AEBF300035B242 /* UIViewControllerExtension.swift in Sources */,
 				1C38131F29AEBDE90035B242 /* AppConstants.swift in Sources */,
 				1C38133C29B0E6050035B242 /* SingleMovieCell.swift in Sources */,
+				1C04751429B9F4E900B7CC31 /* SearchViewModel.swift in Sources */,
 				1C7187B029B5EFE3004C5C0D /* MenuDelegate.swift in Sources */,
 				1C38130D29AE52500035B242 /* HeaderView.swift in Sources */,
 				1C38132129AEBE3F0035B242 /* UIApplicationExtension.swift in Sources */,
