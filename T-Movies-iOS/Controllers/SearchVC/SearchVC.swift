@@ -20,12 +20,11 @@ class SearchVC: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     // MARK: - Variables
-    let viewModel = HomeViewModel()
+    let viewModel = SearchViewModel()
     var cancellable: Set<AnyCancellable> = []
     var initListMovies :[Result] = []
     var filteredListMovies :[Result] = []
     var categoryList: [CategoryOptionItem] = Constants.categoryList
-    var tempList: [Result] = Constants.tempList
     
     // MARK: - Constants
     private let categoryReuseIdentifier = "CategoryItemCell"
@@ -62,10 +61,10 @@ class SearchVC: UIViewController {
         
         searchView.layer.cornerRadius = 8
         
-        viewModel.getMoviesResponse()
+        viewModel.getLatestMoviesResponse()
         initMoviesCollectionView()
 
-        viewModel.$movieResponse.sink(receiveValue: { movieResponse in
+        viewModel.$latestMovieResponse.sink(receiveValue: { movieResponse in
             if movieResponse?.results.isEmpty == false {
                 self.initListMovies = movieResponse?.results ?? [Result]()
                 self.filteredListMovies = self.initListMovies
@@ -78,7 +77,7 @@ class SearchVC: UIViewController {
             
 
         //Looks for single or multiple taps.
-         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -136,6 +135,74 @@ class SearchVC: UIViewController {
         
     }
 
+    func callNewMoviesList(_ category: String) {
+        switch(category){
+            case "Popular" :
+                isLoadingMovies = true
+                viewModel.getPopularMoviesResponse()
+            
+                viewModel.$popularMovieResponse.sink(receiveValue: { movieResponse in
+                    if movieResponse?.results.isEmpty == false {
+                        self.initListMovies = movieResponse?.results ?? [Result]()
+                        self.filteredListMovies = self.initListMovies
+                        self.isLoadingMovies = false
+                        
+                    }
+
+                }).store(in: &cancellable)
+            
+            case "Top Rated" :
+                isLoadingMovies = true
+                viewModel.getTopRatedMoviesResponse()
+                viewModel.$topratedMovieResponse.sink(receiveValue: { movieResponse in
+                    if movieResponse?.results.isEmpty == false {
+                        self.initListMovies = movieResponse?.results ?? [Result]()
+                        self.filteredListMovies = self.initListMovies
+                        self.isLoadingMovies = false
+                    }
+
+                }).store(in: &cancellable)
+            
+            case "Upcoming" :
+                isLoadingMovies = true
+                viewModel.getUpcomingMoviesResponse()
+                viewModel.$upcomingMovieResponse.sink(receiveValue: { movieResponse in
+                    if movieResponse?.results.isEmpty == false {
+                        self.initListMovies = movieResponse?.results ?? [Result]()
+                        self.filteredListMovies = self.initListMovies
+                        self.isLoadingMovies = false
+                    }
+
+                }).store(in: &cancellable)
+            
+            case "Latest" :
+                isLoadingMovies = true
+                viewModel.getLatestMoviesResponse()
+                viewModel.$latestMovieResponse.sink(receiveValue: { movieResponse in
+                    if movieResponse?.results.isEmpty == false {
+                        self.initListMovies = movieResponse?.results ?? [Result]()
+                        self.filteredListMovies = self.initListMovies
+                        self.isLoadingMovies = false
+                    }
+
+                }).store(in: &cancellable)
+            
+            case "Trending" :
+                isLoadingMovies = true
+                viewModel.getTrendingMoviesResponse()
+                viewModel.$trendingMovieResponse.sink(receiveValue: { movieResponse in
+                    if movieResponse?.results.isEmpty == false {
+                        self.initListMovies = movieResponse?.results ?? [Result]()
+                        self.filteredListMovies = self.initListMovies
+                        self.isLoadingMovies = false
+                    }
+
+                }).store(in: &cancellable)
+            
+            default:
+                print("Other")
+        }
+    }
 
 }
 
@@ -155,17 +222,17 @@ extension SearchVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(collectionView.isEqual(self.moviesCollectionView)){
+            print("-- -- -- -- Inside collectionView")
+
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieReuseIdentifier, for: indexPath) as? SingleMovieCell else {
                 fatalError("can't dequeue CustomCell")
             }
             if(!filteredListMovies.isEmpty) {
-                cell.startSpinner()
                 cell.setImage(filteredListMovies[indexPath.item].posterPath)
                 cell.favouriteButton.addTarget(self, action: #selector(customCellButtonTapped), for: .touchUpInside)
                 if(filteredListMovies[indexPath.row].isFavourite == true){
                     cell.favouriteButton.setImage(UIImage(named: "favourite_fill"), for: .normal)
                 }
-                cell.hideSpinner()
             }
             return cell
             
@@ -174,7 +241,6 @@ extension SearchVC: UICollectionViewDataSource {
             
             categoryCell.categoryTitle.text = categoryList[indexPath.item].title
             categoryCell.adaptBackground(categoryList[indexPath.item].isSelected ?? false)
-            
             return categoryCell
         }
     
@@ -194,13 +260,15 @@ extension SearchVC: UICollectionViewDataSource {
         } else {
             self.setSelectedItem(self.categoryList[indexPath.row])
             collectionView.reloadData()
+            callNewMoviesList(categoryList[indexPath.item].title!)
+
         }
     }
     
     // invoked to add Shimmer Effect
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if(collectionView.isEqual(self.moviesCollectionView)){
-            cell.setTemplateWithSubviews(isLoadingMovies, animate: true, viewBackgroundColor: .darkGray)
+            cell.setTemplateWithSubviews(isLoadingMovies, animate: true, viewBackgroundColor: .black)
         }
     }
     

@@ -16,6 +16,11 @@ class Constants {
     static let API_KEY = "6c134967a90569d3dcea0346a1238c82"
     static let baseURL = "https://api.themoviedb.org/3/trending/movie/day"
     static let basePopularURL = "https://api.themoviedb.org/3/trending/movie/day"
+    
+    static let baseTopRatedURL = "https://api.themoviedb.org/3/movie/top_rated"
+    static let baseTopUpcomingURL = "https://api.themoviedb.org/3/movie/upcoming"
+    static let baseLatestURL = "https://api.themoviedb.org/3/movie/upcoming"
+
     static let baseURLImage = "https://image.tmdb.org/t/p/w500/"
 
     static let noNetworkWording = "No network available"
@@ -47,7 +52,7 @@ class Constants {
     static var categoryList: [CategoryOptionItem] = [
         CategoryOptionItem(
             id: 0,
-            title: "Trending",
+            title: "Latest",
             isSelected: true
         ),
         CategoryOptionItem(
@@ -57,12 +62,12 @@ class Constants {
         ),
         CategoryOptionItem(
             id: 2,
-            title: "TV Show",
+            title: "Popular",
             isSelected: false
         ),
         CategoryOptionItem(
             id: 3,
-            title: "Action",
+            title: "Trending",
             isSelected: false
         ),
         CategoryOptionItem(
@@ -73,11 +78,5 @@ class Constants {
     ]
     
     
-    static var tempList: [Result] = [
-        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
-        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
-        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
-        Result(adult: false, backdropPath: "", id: 0, title: "", originalLanguage: "", originalTitle: "", overview: "", posterPath: "", mediaType: "", genreIDS: [1], popularity: 2.2, releaseDate: "", video: true, voteAverage: 3.3, voteCount: 3),
-    ]
     
 }

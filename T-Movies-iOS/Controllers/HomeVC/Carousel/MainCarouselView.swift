@@ -63,9 +63,9 @@ class MainCarouselView: UIView {
   
   func configure() {
       addSubview(collection)
-      viewModel.getPopularMoviesResponse()
+      viewModel.getCarouselMoviesResponse()
       
-      viewModel.$popularMovieResponse.sink(receiveValue: { movieResponse in
+      viewModel.$carouselMovieResponse.sink(receiveValue: { movieResponse in
           if movieResponse?.results.isEmpty == false {
               self.initListMovies = movieResponse?.results ?? [Result]()
               
