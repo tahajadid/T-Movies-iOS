@@ -17,7 +17,8 @@ class ProfileVC: UIViewController {
         
     @IBOutlet weak var lineOne: UIView!
     @IBOutlet weak var lineTwo: UIView!
-    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var emailValue: UILabel!
     
     var emailEnabled = false
     override func viewDidLoad() {
@@ -44,8 +45,27 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func clickOnEdit(_ sender: UIButton) {
-        emailEnabled = !emailEnabled
-        emailTextField.isUserInteractionEnabled = emailEnabled
+        // Create the alert controller.
+        let alert = UIAlertController(title: "Email Adress Title", message: "Change your current email adress", preferredStyle: .alert)
+
+        // Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = self.emailValue.text
+        }
+
+        // Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            self.emailValue.text = textField?.text
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive , handler: { [weak alert] (_) in
+            // do nothing
+        }))
+        
+        // Present the alert.
+        self.present(alert, animated: true, completion: nil)
+
     }
     
     func configureUI() {
@@ -64,9 +84,9 @@ class ProfileVC: UIViewController {
         lineOne.layer.cornerRadius = 4
         lineTwo.layer.cornerRadius = 4
 
-        emailTextField.isUserInteractionEnabled = emailEnabled
 
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
+        
     }
     
     @objc func stateChangedSwitch(switchState: UISwitch) {
@@ -119,5 +139,6 @@ class ProfileVC: UIViewController {
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(ac, animated: true)
     }
+    
 
 }
