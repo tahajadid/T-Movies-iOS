@@ -69,8 +69,6 @@ class SideMenuVC: UIViewController {
         view.window!.layer.add(transition, forKey: kCATransition)
         self.dismiss(animated: false)
         
-        //dismiss(animated: true, completion: nil)
-
     }
     
     @objc func hideMenuOnSwipe(_ sender: UISwipeGestureRecognizer){
@@ -82,8 +80,6 @@ class SideMenuVC: UIViewController {
         view.window!.layer.add(transition, forKey: kCATransition)
         self.dismiss(animated: false)
         
-        //dismiss(animated: true, completion: nil)
-
     }
     
     
@@ -109,14 +105,50 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func setSelectedItem(_ menuOptionItem: MenuOptionItem) {
+
+        switch (menuOptionItem.title) {
+            case "Home" :
+                navigateToHome()
+            
+            case "Favourite" :
+                navigateToFavourite()
+                
+            case "Settings" :
+                navigateToSetting()
+                
+            default :
+                navigateToHome()
+        }
+        
+
         for item in self.menuList {
             if(menuOptionItem.id == item.id){
                 self.menuList[item.id!].isSelected = true
             }else {
                 self.menuList[item.id!].isSelected = false
             }
-            
         }
+    }
+    
+    func navigateToHome() {
+        let homeVC = MainTabBarViewController()
+        homeVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        homeVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+        self.present(homeVC,animated: false,completion: nil)
+    }
+    
+    func navigateToSetting() {
+        let settingVC = SettingVC()
+        //settingVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //settingVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+        self.present(settingVC,animated: true,completion: nil)
+    }
+    
+    func navigateToFavourite() {
+        let homeVC = MainTabBarViewController()
+        homeVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        homeVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+        self.present(homeVC,animated: false,completion: nil)
     }
     
     

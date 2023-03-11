@@ -23,8 +23,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYC-qP-gVg">
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="326"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jP-PO-8vv" userLabel="blackBackView">
+                                        <rect key="frame" x="2" y="2" width="256" height="322"/>
+                                        <color key="backgroundColor" name="background_sidemenu"/>
+                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-PD-rhh">
-                                        <rect key="frame" x="1" y="1" width="258" height="324"/>
+                                        <rect key="frame" x="2" y="2" width="256" height="322"/>
                                     </imageView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-cc-Uf9">
                                         <rect key="frame" x="110" y="143" width="40" height="40"/>
@@ -39,12 +43,16 @@
                                 </subviews>
                                 <color key="backgroundColor" name="primary_color"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hMe-PD-rhh" secondAttribute="bottom" constant="1" id="HBi-xq-aOg"/>
-                                    <constraint firstItem="hMe-PD-rhh" firstAttribute="top" secondItem="YYC-qP-gVg" secondAttribute="top" constant="1" id="Xrf-G2-qc6"/>
+                                    <constraint firstItem="1jP-PO-8vv" firstAttribute="top" secondItem="YYC-qP-gVg" secondAttribute="top" constant="2" id="B58-nK-bZC"/>
+                                    <constraint firstAttribute="bottom" secondItem="hMe-PD-rhh" secondAttribute="bottom" constant="2" id="HBi-xq-aOg"/>
+                                    <constraint firstItem="hMe-PD-rhh" firstAttribute="top" secondItem="YYC-qP-gVg" secondAttribute="top" constant="2" id="Xrf-G2-qc6"/>
                                     <constraint firstItem="DcH-cc-Uf9" firstAttribute="centerX" secondItem="YYC-qP-gVg" secondAttribute="centerX" id="hVw-uK-Orf"/>
-                                    <constraint firstAttribute="trailing" secondItem="hMe-PD-rhh" secondAttribute="trailing" constant="1" id="pIg-uh-RDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="1jP-PO-8vv" secondAttribute="bottom" constant="2" id="jbf-9Y-MN4"/>
+                                    <constraint firstItem="1jP-PO-8vv" firstAttribute="leading" secondItem="YYC-qP-gVg" secondAttribute="leading" constant="2" id="kNS-9i-qjc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hMe-PD-rhh" secondAttribute="trailing" constant="2" id="pIg-uh-RDF"/>
                                     <constraint firstItem="DcH-cc-Uf9" firstAttribute="centerY" secondItem="YYC-qP-gVg" secondAttribute="centerY" id="tPx-nd-FrA"/>
-                                    <constraint firstItem="hMe-PD-rhh" firstAttribute="leading" secondItem="YYC-qP-gVg" secondAttribute="leading" constant="1" id="uts-Y6-jsK"/>
+                                    <constraint firstItem="hMe-PD-rhh" firstAttribute="leading" secondItem="YYC-qP-gVg" secondAttribute="leading" constant="2" id="uts-Y6-jsK"/>
+                                    <constraint firstAttribute="trailing" secondItem="1jP-PO-8vv" secondAttribute="trailing" constant="2" id="vTp-m5-cG4"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labeljny jy jy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-pi-gtB">
@@ -97,6 +105,7 @@
             </constraints>
             <connections>
                 <outlet property="backView" destination="YYC-qP-gVg" id="dNB-TH-tqS"/>
+                <outlet property="blackBackView" destination="1jP-PO-8vv" id="rqH-6a-n5N"/>
                 <outlet property="imageView" destination="hMe-PD-rhh" id="C32-5F-y9p"/>
                 <outlet property="rating" destination="Zfm-fr-GbE" id="5h7-2V-d5w"/>
                 <outlet property="spinner" destination="DcH-cc-Uf9" id="hzu-I1-ozB"/>
@@ -109,10 +118,13 @@
         <image name="batman" width="345" height="512"/>
         <image name="star" width="61" height="60"/>
         <namedColor name="background_color">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background_sidemenu">
+            <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary_color">
-            <color red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98400002717971802" green="0.59200000762939453" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

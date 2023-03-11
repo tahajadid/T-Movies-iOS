@@ -9,6 +9,8 @@ import UIKit
 import LocalAuthentication
 
 class ProfileVC: UIViewController {
+    
+    let imagePicker: UIImagePickerController = UIImagePickerController()
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBg: UIImageView!
@@ -62,7 +64,7 @@ class ProfileVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive , handler: { [weak alert] (_) in
             // do nothing
         }))
-        
+
         // Present the alert.
         self.present(alert, animated: true, completion: nil)
 
@@ -87,6 +89,14 @@ class ProfileVC: UIViewController {
 
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
         
+        // Add listener to edit view
+        let gestureEdit = UITapGestureRecognizer(target: self, action:  #selector (self.editAction (_:)))
+        self.editView.addGestureRecognizer(gestureEdit)
+        
+    }
+    
+    @objc func editAction(_ sender:UITapGestureRecognizer) {
+        self.openGallary()
     }
     
     @objc func stateChangedSwitch(switchState: UISwitch) {
@@ -140,5 +150,27 @@ class ProfileVC: UIViewController {
         self.present(ac, animated: true)
     }
     
+
+}
+
+// MARK: - image picker
+extension ProfileVC: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        print("Did Finish picking with info ")
+        
+        if let img = info[.editedImage] as? UIImage {
+            self.profileImage.image = img
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func openGallary() {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
 
 }
