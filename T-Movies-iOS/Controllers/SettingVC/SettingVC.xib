@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="T_Movies_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="AnimatedView" destination="ylC-pe-ay9" id="cCS-zH-woa"/>
+                <outlet property="closeImage" destination="Ry8-ag-k6j" id="RkO-zB-a6j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ry8-ag-k6j">
+                    <rect key="frame" x="343" y="69" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="aHG-Ue-lkk"/>
+                        <constraint firstAttribute="height" constant="40" id="q2T-4C-6FP"/>
+                    </constraints>
+                    <color key="tintColor" name="background_color"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="x.circle.fill" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="x.circle.fill" catalog="system" symbolScale="large"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="closeClick:" destination="-1" eventType="touchUpInside" id="obg-YU-6BJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUH-X5-LWB">
+                    <rect key="frame" x="20" y="99" width="111" height="34"/>
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-Hf-J4x">
+                    <rect key="frame" x="20" y="153" width="353" height="210.33333333333337"/>
+                    <string key="text">Make sure that nothing is covering the TrueDepth camera or your face. If something is obstructing your nose or mouth, like glasses or a face mask, you might be asked to temporarily remove these items during setup.
+
+Set up Face ID to easily get access to the app</string>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjB-FG-Wyz">
+                    <rect key="frame" x="20.000000000000004" y="744.33333333333337" width="62.333333333333343" height="23.666666666666629"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                    <color key="textColor" name="label_color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5st-oE-Otw">
+                    <rect key="frame" x="324" y="740.66666666666663" width="51" height="31"/>
+                    <color key="onTintColor" name="label_color"/>
+                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylC-pe-ay9">
+                    <rect key="frame" x="46.666666666666657" y="414" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="lQn-dv-YM6"/>
+                        <constraint firstAttribute="height" constant="300" id="wo5-yv-1Xh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
+                            <color key="value" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="primary_color"/>
+            <constraints>
+                <constraint firstItem="DsE-Hf-J4x" firstAttribute="top" secondItem="FUH-X5-LWB" secondAttribute="bottom" constant="20" id="37L-2J-Tyb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ry8-ag-k6j" secondAttribute="trailing" constant="10" id="8z3-Oh-NCm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DsE-Hf-J4x" secondAttribute="trailing" constant="20" id="9TM-Il-bq8"/>
+                <constraint firstItem="Ry8-ag-k6j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="JPk-P1-55Q"/>
+                <constraint firstItem="DsE-Hf-J4x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="R8C-Qh-chW"/>
+                <constraint firstItem="5st-oE-Otw" firstAttribute="centerY" secondItem="SjB-FG-Wyz" secondAttribute="centerY" id="RBt-oA-1EN"/>
+                <constraint firstItem="FUH-X5-LWB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Vpd-r9-TVT"/>
+                <constraint firstItem="SjB-FG-Wyz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZuO-du-DGp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ylC-pe-ay9" secondAttribute="bottom" constant="104" id="cLo-Rb-G58"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5st-oE-Otw" secondAttribute="trailing" constant="20" id="ikp-a6-QQs"/>
+                <constraint firstItem="ylC-pe-ay9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oJM-oZ-bH3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SjB-FG-Wyz" secondAttribute="bottom" constant="50" id="rMf-ck-omu"/>
+                <constraint firstItem="FUH-X5-LWB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rvk-KE-pdi"/>
+            </constraints>
+            <point key="canvasLocation" x="122.90076335877862" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="x.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="background_color">
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="label_color">
+            <color red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary_color">
+            <color red="0.98400002717971802" green="0.59200000762939453" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

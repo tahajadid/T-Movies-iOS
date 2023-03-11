@@ -12,6 +12,7 @@ class CustomCarouselCell: UICollectionViewCell {
 
     
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var blackBackView: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rating: UILabel!
@@ -29,6 +30,7 @@ class CustomCarouselCell: UICollectionViewCell {
         // Initialization code
         
         backView.layer.cornerRadius = 12
+        blackBackView.layer.cornerRadius = 12
         imageView.layer.cornerRadius = 12
         
         spinner.layer.cornerRadius = 8
