@@ -23,6 +23,10 @@ public extension UIView {
     func fadeIn(_ duration: TimeInterval = 0.5) {
       fadeTo(1.0, duration: duration)
     }
+    
+    func fadeInDesign(_ duration: TimeInterval = 0.5) {
+      fadeTo(0.6, duration: duration)
+    }
 
     func fadeOut(_ duration: TimeInterval = 0.5) {
       fadeTo(0.0, duration: duration)

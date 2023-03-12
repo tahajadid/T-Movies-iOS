@@ -17,6 +17,9 @@ class SplashVC: UIViewController {
     @IBOutlet weak var faceidButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var fixLogo: UIImageView!
+    @IBOutlet weak var designBottom: UIImageView!
+    
+    @IBOutlet weak var viewH: NSLayoutConstraint!
     
     private var animationView: LottieAnimationView?
 
@@ -36,6 +39,7 @@ class SplashVC: UIViewController {
         animationView?.isHidden = true
         loginSectionView.isHidden = true
         fixLogo.isHidden = true
+        designBottom.isHidden = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.animationView?.isHidden = false
@@ -83,6 +87,19 @@ class SplashVC: UIViewController {
         slideUpLogo()
         showLoginSection()
         loginButton.layer.cornerRadius = 6
+        
+        designBottom.isHidden = false
+        designBottom.alpha = 0
+        designBottom.fadeInDesign(0.3)
+
+        hideFaceIDIcon()
+    }
+    
+    func hideFaceIDIcon() {
+        // decrease the height of the mainVie
+        viewH.constant -= 40
+        // hide teh button
+        faceidButton.isHidden = true
     }
     
     func slideUpLogo() {
