@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="AnimatedView" destination="ylC-pe-ay9" id="cCS-zH-woa"/>
                 <outlet property="closeImage" destination="Ry8-ag-k6j" id="RkO-zB-a6j"/>
+                <outlet property="switchFaceID" destination="5st-oE-Otw" id="ple-az-8nE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
