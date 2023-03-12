@@ -12,9 +12,15 @@ class SplashVC: UIViewController {
 
     @IBOutlet weak var AnimatedView: UIView!
     @IBOutlet weak var logoIamge: UIImageView!
+    @IBOutlet weak var loginSectionView: UIView!
+    
+    @IBOutlet weak var faceidButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var fixLogo: UIImageView!
     
     private var animationView: LottieAnimationView?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +34,8 @@ class SplashVC: UIViewController {
         AnimatedView.addSubview(animationView!)
         
         animationView?.isHidden = true
+        loginSectionView.isHidden = true
+        fixLogo.isHidden = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.animationView?.isHidden = false
@@ -36,13 +44,68 @@ class SplashVC: UIViewController {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            let mainTabBarViewController = MainTabBarViewController()
-            mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
-            self.present(mainTabBarViewController, animated: true, completion: nil)
+            // check if the user had already activated keep online
+            var keepOnlineIsActivated = false
+            if(keepOnlineIsActivated) {
+                // navigate to home
+                self.navigateToDestination()
+            } else {
+                self.loginBehavior()
+            }
         }
         
         
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    
+    //Calls this function when the tap is recognized.
+    @objc override func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    
+    func navigateToDestination() {
+        let mainTabBarViewController = MainTabBarViewController()
+        mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+        self.present(mainTabBarViewController, animated: true, completion: nil)
+    }
+    
+    func loginBehavior() {
+        AnimatedView.isHidden = true
+        slideUpLogo()
+        showLoginSection()
+        loginButton.layer.cornerRadius = 6
+    }
+    
+    func slideUpLogo() {
+        let oldCenterFirst = self.logoIamge.center
+        let newCenterFirst = CGPoint(x: oldCenterFirst.x, y: oldCenterFirst.y - 220)
+
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+            self.logoIamge.center = newCenterFirst
+        }) { (success: Bool) in
+          print("Done top image")
+        }
+    }
+    
+    func showLoginSection() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.fixLogo.isHidden = false
+            self.logoIamge.isHidden = true
+            
+            self.loginSectionView.layer.cornerRadius = 10
+            self.loginSectionView.isHidden = false
+            self.loginSectionView.alpha = 0
+            self.loginSectionView.fadeIn(0.5)
+        }
     }
 
 

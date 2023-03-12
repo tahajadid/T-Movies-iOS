@@ -286,14 +286,14 @@
 		1C35AFC629ACFB6800A57F5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1CA84F9B29BBCF69008CEACD /* SettingVC */,
-				1C04750929B88F3B00B7CC31 /* SplashVC */,
-				1C7187A329B5E8B6004C5C0D /* SideMenuVC */,
 				1C35AFC929ACFBD200A57F5F /* HomeVC */,
 				1C38132A29AF67350035B242 /* MainTabBarVC */,
 				1C38132529AF5B9A0035B242 /* MovieDetails */,
 				1C38130029AE4A590035B242 /* ProfileVC */,
 				1C35AFC829ACFBBE00A57F5F /* SearchVC */,
+				1CA84F9B29BBCF69008CEACD /* SettingVC */,
+				1C7187A329B5E8B6004C5C0D /* SideMenuVC */,
+				1C04750929B88F3B00B7CC31 /* SplashVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
