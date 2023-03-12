@@ -13,11 +13,13 @@
             <connections>
                 <outlet property="AnimatedView" destination="RZ1-1J-gqM" id="aOz-ii-A8Q"/>
                 <outlet property="designBottom" destination="5qE-lb-03J" id="bG2-0x-fOJ"/>
+                <outlet property="emailTextField" destination="DbJ-pc-elW" id="jsa-Z6-Lmt"/>
                 <outlet property="faceidButton" destination="07F-Xh-5kY" id="mir-of-lMc"/>
                 <outlet property="fixLogo" destination="jhO-t3-YQ5" id="c42-9k-Reb"/>
                 <outlet property="loginButton" destination="2b4-c6-jad" id="3y3-9e-rXS"/>
                 <outlet property="loginSectionView" destination="R1m-Ur-dHp" id="gZ7-iY-0cU"/>
                 <outlet property="logoIamge" destination="eOX-mq-iNz" id="g6I-po-Q5J"/>
+                <outlet property="passwordTextField" destination="ENE-kc-ZxZ" id="4yl-gg-AHM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewH" destination="trw-LP-G06" id="Zzb-kE-5TG"/>
             </connections>
@@ -58,6 +60,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-pc-elW">
                             <rect key="frame" x="16" y="78.333333333333314" width="301" height="40"/>
                             <color key="backgroundColor" name="background_color"/>
+                            <color key="tintColor" name="primary_color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="wWv-mL-eD6"/>
                             </constraints>
@@ -74,6 +77,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENE-kc-ZxZ">
                             <rect key="frame" x="16" y="150.66666666666669" width="301" height="40"/>
                             <color key="backgroundColor" name="background_color"/>
+                            <color key="tintColor" name="primary_color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="DXE-uY-186"/>
                             </constraints>

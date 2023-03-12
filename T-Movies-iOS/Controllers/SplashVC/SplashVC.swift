@@ -19,6 +19,10 @@ class SplashVC: UIViewController {
     @IBOutlet weak var fixLogo: UIImageView!
     @IBOutlet weak var designBottom: UIImageView!
     
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBOutlet weak var viewH: NSLayoutConstraint!
     
     private var animationView: LottieAnimationView?
@@ -26,7 +30,7 @@ class SplashVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.logoIamge.alpha = 0
         logoIamge.fadeIn(1.5)  // uses custom duration (1.0 in this example)
         
@@ -66,7 +70,7 @@ class SplashVC: UIViewController {
         view.addGestureRecognizer(tap)
         
     }
-    
+
     
     //Calls this function when the tap is recognized.
     @objc override func dismissKeyboard() {
@@ -86,13 +90,31 @@ class SplashVC: UIViewController {
         AnimatedView.isHidden = true
         slideUpLogo()
         showLoginSection()
+        initFields()
+        
         loginButton.layer.cornerRadius = 6
         
         designBottom.isHidden = false
         designBottom.alpha = 0
-        designBottom.fadeInDesign(0.3)
+        designBottom.fadeInDesign(0.5)
 
-        hideFaceIDIcon()
+        //hideFaceIDIcon()
+        
+    }
+    
+    func initFields() {
+        emailTextField.text = nil
+        emailTextField.attributedPlaceholder = NSAttributedString(
+            string: "test@gmail.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        
+        passwordTextField.text = nil
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "*******",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+        passwordTextField.isSecureTextEntry = true
     }
     
     func hideFaceIDIcon() {
@@ -104,17 +126,29 @@ class SplashVC: UIViewController {
     
     func slideUpLogo() {
         let oldCenterFirst = self.logoIamge.center
-        let newCenterFirst = CGPoint(x: oldCenterFirst.x, y: oldCenterFirst.y - 220)
+        let newCenterFirst = CGPoint(x: oldCenterFirst.x, y: oldCenterFirst.y - 0)
 
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+        // slide to center (where is actualy)
+        UIView.animate(withDuration: 0, delay: 0, options: .curveLinear, animations: {
             self.logoIamge.center = newCenterFirst
         }) { (success: Bool) in
           print("Done top image")
         }
+        
+        // slide to top
+        let newwCenterFirst = CGPoint(x: oldCenterFirst.x, y: oldCenterFirst.y - 220)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+                self.logoIamge.center = newwCenterFirst
+            }) { (success: Bool) in
+              print("Done top image")
+            }
+        }
+
     }
     
     func showLoginSection() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             self.fixLogo.isHidden = false
             self.logoIamge.isHidden = true
             
