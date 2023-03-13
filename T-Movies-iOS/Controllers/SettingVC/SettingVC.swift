@@ -15,12 +15,15 @@ class SettingVC: UIViewController {
     @IBOutlet weak var closeImage: UIButton!
     @IBOutlet weak var switchFaceID: UISwitch!
     
+    
     private var animationView: LottieAnimationView?
-
+    private var defaults: UserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        setSwitchState()
+
         animationView = .init(name: "faceid")
         animationView!.frame = AnimatedView.bounds
         animationView!.contentMode = .scaleAspectFill
@@ -28,7 +31,6 @@ class SettingVC: UIViewController {
         AnimatedView.addSubview(animationView!)
         
         self.animationView!.play()
-        // Do any additional setup after loading the view.
         
         switchFaceID.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
 
@@ -46,6 +48,12 @@ class SettingVC: UIViewController {
        }
     }
 
+    // set Switch State depending on the value stored in UserDefaults
+    func setSwitchState() {
+        defaults = UserDefaults.standard
+        switchFaceID.setOn(defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED), animated: false)
+    }
+    
     // function that call the Face ID service
     func checkFaceID(_ actualValue: Bool) {
         let context = LAContext()
@@ -61,6 +69,8 @@ class SettingVC: UIViewController {
                     if success {
                         // change state of the switch
                         self?.switchFaceID.setOn(!actualValue, animated: true)
+                        UserDefaults.standard.set(!actualValue, forKey: Constants.FACEID_IS_ACTIVATED)
+
 
                     } else {
                         // change state of the switch

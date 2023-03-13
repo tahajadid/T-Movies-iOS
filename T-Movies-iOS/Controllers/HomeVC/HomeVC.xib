@@ -106,6 +106,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background_color"/>
+            <color key="tintColor" name="primary_color"/>
             <constraints>
                 <constraint firstItem="8Et-hY-3tw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6sp-M6-wi2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wKZ-Rf-R8E" secondAttribute="trailing" id="Diw-09-RhH"/>
@@ -122,7 +123,7 @@
             <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="label_color">
-            <color red="0.41999998688697815" green="0.40000000596046448" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary_color">
             <color red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

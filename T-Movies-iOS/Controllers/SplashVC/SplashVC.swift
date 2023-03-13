@@ -7,8 +7,11 @@
 
 import UIKit
 import Lottie
+import LocalAuthentication
 
 class SplashVC: UIViewController {
+
+    // MARK: - UI
 
     @IBOutlet weak var AnimatedView: UIView!
     @IBOutlet weak var logoIamge: UIImageView!
@@ -25,11 +28,69 @@ class SplashVC: UIViewController {
     
     @IBOutlet weak var viewH: NSLayoutConstraint!
     
+    // MARK: - Variables
+
     private var animationView: LottieAnimationView?
 
+    private var faceidIsActivated: Bool!
+    private var keepOnline: Bool!
+    
+    public var showOnlyLogin = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getDataFromCache()
+        
+        initUIComponents()
+        
+        print("-- -- -- -- -- ")
+        print(showOnlyLogin)
+        print("-- -- -- -- -- ")
+
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
+    }
+
+    
+    //Calls this function when the tap is recognized.
+    @objc override func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @IBAction func loginAction(_ sender: UIButton) {
+        navigateToDestination()
+    }
+    
+    @IBAction func faceIdAction(_ sender: UIButton) {
+        checkFaceID()
+    }
+    
+    
+    // function to init the UI Components
+    func initUIComponents() {
+        if(showOnlyLogin == true) {
+            showOnlyLoginUI()
+        } else {
+            showSplashUI()
+        }
+    }
+    
+    // show only the login section
+    func showOnlyLoginUI() {
+        loginSectionView.isHidden = true
+        logoIamge.isHidden = true
+        loginBehavior()
+    }
+    
+    // show the splash
+    func showSplashUI() {
         
         self.logoIamge.alpha = 0
         logoIamge.fadeIn(1.5)  // uses custom duration (1.0 in this example)
@@ -51,10 +112,10 @@ class SplashVC: UIViewController {
         }
         
         
+        // 3 seconds after the ending of animation
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             // check if the user had already activated keep online
-            var keepOnlineIsActivated = false
-            if(keepOnlineIsActivated) {
+            if(self.keepOnline) {
                 // navigate to home
                 self.navigateToDestination()
             } else {
@@ -62,22 +123,16 @@ class SplashVC: UIViewController {
             }
         }
         
-        
-        //Looks for single or multiple taps.
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-        
     }
+    
+    // function to get the state of variables from cache
+    func getDataFromCache() {
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: Constants.KEEP_ONLINE)
 
-    
-    //Calls this function when the tap is recognized.
-    @objc override func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+        faceidIsActivated = defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED)
+        keepOnline = defaults.bool(forKey: Constants.KEEP_ONLINE)
     }
-    
     
     func navigateToDestination() {
         let mainTabBarViewController = MainTabBarViewController()
@@ -98,7 +153,10 @@ class SplashVC: UIViewController {
         designBottom.alpha = 0
         designBottom.fadeInDesign(0.5)
 
-        //hideFaceIDIcon()
+        if(!faceidIsActivated) {
+            hideFaceIDIcon()
+        }
+        
         
     }
     
@@ -160,4 +218,47 @@ class SplashVC: UIViewController {
     }
 
 
+    // MARK: - FaceID Functions
+    
+    // function that call the Face ID service
+    func checkFaceID() {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [weak self] success, authenticationError in
+
+                DispatchQueue.main.async {
+                    if success {
+                        // change state of the switch
+                        self?.navigateToDestination()
+
+                    } else {
+                        // change state of the switch
+                        self?.showErrorFaceID()
+                    }
+                }
+            }
+        } else {
+            showErorrNoBiometry()
+        }
+    }
+    
+    // show error in case of failure authentification
+    func showErrorFaceID() {
+        let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(ac, animated: true)
+    }
+    
+    // show error in case of failure authentification
+    func showErorrNoBiometry() {
+        let ac = UIAlertController(title: "No Biometry", message: "Your phone does not support any method of Secure Authentification.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(ac, animated: true)
+    }
+    
 }

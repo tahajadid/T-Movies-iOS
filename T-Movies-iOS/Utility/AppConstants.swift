@@ -78,5 +78,10 @@ class Constants {
     ]
     
     
-    
+    static let FACEID_IS_ACTIVATED = "FACEID_IS_ACTIVATED"
+    static let KEEP_ONLINE = "KEEP_ONLINE"
+    static let USER_EMAIL = "USER_EMAIL"
+    static let USER_PWD = "USER_PWD"
+
+
 }
