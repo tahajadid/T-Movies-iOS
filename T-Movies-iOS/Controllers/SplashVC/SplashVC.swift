@@ -106,13 +106,13 @@ class SplashVC: UIViewController {
         emailTextField.text = nil
         emailTextField.attributedPlaceholder = NSAttributedString(
             string: "test@gmail.com",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         )
         
         passwordTextField.text = nil
         passwordTextField.attributedPlaceholder = NSAttributedString(
             string: "*******",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         )
         passwordTextField.isSecureTextEntry = true
     }
