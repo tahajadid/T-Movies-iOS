@@ -22,7 +22,9 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var emailValue: UILabel!
     
+    private var defaults: UserDefaults!
     var emailEnabled = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -70,7 +72,16 @@ class ProfileVC: UIViewController {
 
     }
     
+    // set Switch State depending on the value stored in UserDefaults
+    func setSwitchState() {
+        defaults = UserDefaults.standard
+        print(defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED))
+        switchFaceid.setOn(defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED), animated: false)
+    }
+    
     func configureUI() {
+        setSwitchState()
+        
         profileImage.layer.masksToBounds = false
         profileImage.layer.cornerRadius = profileImage.frame.height/2
         profileImage.clipsToBounds = true
@@ -122,6 +133,7 @@ class ProfileVC: UIViewController {
                     if success {
                         // change state of the switch
                         self?.switchFaceid.setOn(!actualValue, animated: true)
+                        self?.defaults.set(!actualValue, forKey: Constants.FACEID_IS_ACTIVATED)
 
                     } else {
                         // change state of the switch

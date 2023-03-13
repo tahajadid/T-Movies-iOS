@@ -49,15 +49,25 @@ class SideMenuVC: UIViewController {
         let gestureHide = UITapGestureRecognizer(target: self, action:  #selector (self.hideMenuOnTap (_:)))
         rightView.addGestureRecognizer(gestureHide)
         
+        let gestureLogout = UITapGestureRecognizer(target: self, action:  #selector (self.logoutAction (_:)))
+        logoutView.addGestureRecognizer(gestureLogout)
+        
         let gestureSwipe = UISwipeGestureRecognizer(target: self, action:  #selector (self.hideMenuOnSwipe (_:)))
         gestureSwipe.direction = .left
         rightView.addGestureRecognizer(gestureSwipe)
-        
-        let logoutGesture = UITapGestureRecognizer(target: self, action:  #selector (self.hideMenuOnTap (_:)))
-        logoutView.addGestureRecognizer(logoutGesture)
+
     }
 
 
+    @objc func logoutAction(_ sender:UITapGestureRecognizer){
+        let splashVC = SplashVC()
+        splashVC.showOnlyLogin = true
+        splashVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        splashVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+        self.present(splashVC, animated: true, completion: nil)
+    }
+    
+    
     @objc func hideMenuOnTap(_ sender:UITapGestureRecognizer){
         rightView.fadeOut(0.2)  // uses custom duration (1.0 in this example)
         
@@ -81,7 +91,6 @@ class SideMenuVC: UIViewController {
         self.dismiss(animated: false)
         
     }
-    
     
 }
 

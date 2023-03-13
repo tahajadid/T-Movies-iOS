@@ -15,6 +15,11 @@ class MainTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         navigationController?.hidesBarsOnTap = true
 
+        tabBar.tintColor = UIColor(named: "primary_color")
+        tabBar.unselectedItemTintColor = UIColor.init(named: "label_color")
+        UITabBar.appearance().barTintColor = UIColor(named: "background_color")
+        //tabBar.isTranslucent = false
+
         
         let vc1 = UINavigationController(rootViewController: HomeVC())
         let vc2 = UINavigationController(rootViewController: SearchVC())
@@ -34,10 +39,6 @@ class MainTabBarViewController: UITabBarController {
         vc2.title = "Search"
         vc3.title = "Profile"
         
-        tabBar.tintColor = UIColor(named: "primary_color")
-        tabBar.unselectedItemTintColor = UIColor.init(named: "label_color")
-        UITabBar.appearance().barTintColor = UIColor(named: "background_color")
-        //tabBar.isTranslucent = false
 
         setViewControllers([vc1,vc2,vc3], animated: true)
 
