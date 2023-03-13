@@ -12,10 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashVC" customModule="T_Movies_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="AnimatedView" destination="RZ1-1J-gqM" id="aOz-ii-A8Q"/>
+                <outlet property="centerLoading" destination="Mb7-gW-ZfR" id="e3b-gW-Qs9"/>
                 <outlet property="designBottom" destination="5qE-lb-03J" id="bG2-0x-fOJ"/>
                 <outlet property="emailTextField" destination="DbJ-pc-elW" id="jsa-Z6-Lmt"/>
                 <outlet property="faceidButton" destination="07F-Xh-5kY" id="mir-of-lMc"/>
                 <outlet property="fixLogo" destination="jhO-t3-YQ5" id="c42-9k-Reb"/>
+                <outlet property="loadingView" destination="OMT-3e-BfS" id="IwZ-7a-2jl"/>
                 <outlet property="loginButton" destination="2b4-c6-jad" id="3y3-9e-rXS"/>
                 <outlet property="loginSectionView" destination="R1m-Ur-dHp" id="gZ7-iY-0cU"/>
                 <outlet property="logoIamge" destination="eOX-mq-iNz" id="g6I-po-Q5J"/>
@@ -117,6 +119,23 @@
                             <color key="textColor" name="primary_color"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMT-3e-BfS" userLabel="Loading">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb7-gW-ZfR" userLabel="CenterLoading">
+                                    <rect key="frame" x="36.666666666666686" y="85" width="260" height="130"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="260" id="NAt-VJ-3Wi"/>
+                                        <constraint firstAttribute="height" constant="130" id="x4P-Ks-p0H"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="0.65021789965986398" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Mb7-gW-ZfR" firstAttribute="centerX" secondItem="OMT-3e-BfS" secondAttribute="centerX" id="8ho-5o-KgB"/>
+                                <constraint firstItem="Mb7-gW-ZfR" firstAttribute="centerY" secondItem="OMT-3e-BfS" secondAttribute="centerY" id="HEk-gO-IEe"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.98400002717971802" green="0.59200000762939453" blue="0.13300000131130219" alpha="0.2230814200680272" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -130,15 +149,19 @@
                         <constraint firstAttribute="trailing" secondItem="ENE-kc-ZxZ" secondAttribute="trailing" constant="16" id="SCD-sC-19W"/>
                         <constraint firstItem="hlX-Om-0PG" firstAttribute="top" secondItem="DbJ-pc-elW" secondAttribute="bottom" constant="10" id="SrU-Og-1qP"/>
                         <constraint firstAttribute="bottom" secondItem="NCK-zD-bpo" secondAttribute="bottom" constant="-40" id="UKx-ed-Ihg"/>
+                        <constraint firstItem="OMT-3e-BfS" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" id="Y7i-ot-HI5"/>
                         <constraint firstItem="c5M-hE-huo" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" constant="56" id="YEb-De-TBp"/>
                         <constraint firstAttribute="trailing" secondItem="2b4-c6-jad" secondAttribute="trailing" constant="16" id="YIi-lE-JGC"/>
                         <constraint firstItem="hlX-Om-0PG" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="akg-ID-LWf"/>
                         <constraint firstItem="KGc-Vz-VoU" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" constant="20" id="eVX-cx-zHF"/>
+                        <constraint firstAttribute="bottom" secondItem="OMT-3e-BfS" secondAttribute="bottom" id="jZj-nL-fPA"/>
                         <constraint firstItem="07F-Xh-5kY" firstAttribute="centerX" secondItem="R1m-Ur-dHp" secondAttribute="centerX" id="ktw-LV-rJ7"/>
                         <constraint firstItem="07F-Xh-5kY" firstAttribute="top" secondItem="2b4-c6-jad" secondAttribute="bottom" constant="12" id="lBK-QQ-Mvy"/>
                         <constraint firstItem="2b4-c6-jad" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="pg8-F7-kzl"/>
+                        <constraint firstItem="OMT-3e-BfS" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" id="sUh-TH-fTU"/>
                         <constraint firstItem="DbJ-pc-elW" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="tnP-Az-xgj"/>
                         <constraint firstAttribute="height" constant="300" id="trw-LP-G06"/>
+                        <constraint firstAttribute="trailing" secondItem="OMT-3e-BfS" secondAttribute="trailing" id="vQc-nm-w3Q"/>
                         <constraint firstItem="ENE-kc-ZxZ" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="yHZ-ub-Bin"/>
                     </constraints>
                 </view>
