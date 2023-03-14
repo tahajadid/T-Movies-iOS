@@ -115,7 +115,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3a3ef85fc05920a8"
+                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3a3ef85fc05927dd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,12 +125,12 @@
                   urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "828">
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "848">
                </Location>
                <Location
-                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3f5f9b41cec045bf"
+                  uuid = "63564DEC-E444-48A8-841D-38C8F88E6D83 - 3f5f9b41cec04214"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -140,9 +140,9 @@
                   urlString = "file:///Users/tahajadid/Desktop/iOS%20Projects/T-Movies-iOS/T-Movies-iOS/Controllers/SearchVC/SearchVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "156">
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "92">
                </Location>
             </Locations>
          </BreakpointContent>

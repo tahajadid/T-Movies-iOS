@@ -21,7 +21,7 @@ class SplashVC: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var fixLogo: UIImageView!
     @IBOutlet weak var designBottom: UIImageView!
-    
+    @IBOutlet weak var forgetButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -98,6 +98,7 @@ class SplashVC: UIViewController {
         // common things
         loadingView.isHidden = true
         loginSectionView.isHidden = true
+        forgetButton.isHidden = true
         loadingView.isHidden = true
         emailEmpty.isHidden = true
         passwordEmpty.isHidden = true
@@ -108,7 +109,18 @@ class SplashVC: UIViewController {
         } else {
             showSplashUI()
         }
+        
     }
+    
+    @IBAction func forgetAction(_ sender: UIButton) {        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let forgetPasswordVC = ForgetPasswordVC()
+            forgetPasswordVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            forgetPasswordVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+            self.present(forgetPasswordVC, animated: true, completion: nil)
+        }
+    }
+
     
     // show only the login section
     func showOnlyLoginUI() {
@@ -181,7 +193,6 @@ class SplashVC: UIViewController {
         } else {
             // behavior empty fiels
             showErrorFields()
-
         }
 
     }
@@ -295,9 +306,14 @@ class SplashVC: UIViewController {
             self.logoIamge.isHidden = true
             
             self.loginSectionView.layer.cornerRadius = 10
+            
             self.loginSectionView.isHidden = false
             self.loginSectionView.alpha = 0
             self.loginSectionView.fadeIn(0.5)
+            
+            self.forgetButton.isHidden = false
+            self.forgetButton.alpha = 0
+            self.forgetButton.fadeIn(0.5)
         }
     }
 

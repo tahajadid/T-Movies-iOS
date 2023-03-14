@@ -18,6 +18,7 @@
                 <outlet property="emailTextField" destination="DbJ-pc-elW" id="jsa-Z6-Lmt"/>
                 <outlet property="faceidButton" destination="07F-Xh-5kY" id="mir-of-lMc"/>
                 <outlet property="fixLogo" destination="jhO-t3-YQ5" id="c42-9k-Reb"/>
+                <outlet property="forgetButton" destination="Z39-66-BRK" id="vyF-r3-Bop"/>
                 <outlet property="loadingView" destination="OMT-3e-BfS" id="IwZ-7a-2jl"/>
                 <outlet property="loginButton" destination="2b4-c6-jad" id="3y3-9e-rXS"/>
                 <outlet property="loginSectionView" destination="R1m-Ur-dHp" id="gZ7-iY-0cU"/>
@@ -135,12 +136,6 @@
                                 <action selector="faceIdAction:" destination="-1" eventType="touchUpInside" id="crk-Bm-3Hr"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-zD-bpo">
-                            <rect key="frame" x="100.33333333333333" y="319" width="132.33333333333337" height="21"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                            <color key="textColor" name="primary_color"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMT-3e-BfS" userLabel="Loading">
                             <rect key="frame" x="0.0" y="0.0" width="333" height="300"/>
                             <subviews>
@@ -162,7 +157,6 @@
                     <color key="backgroundColor" red="0.98400002717971802" green="0.59200000762939453" blue="0.13300000131130219" alpha="0.2230814200680272" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="2b4-c6-jad" firstAttribute="top" secondItem="ENE-kc-ZxZ" secondAttribute="bottom" constant="14" id="1Ha-cb-Dh3"/>
-                        <constraint firstItem="NCK-zD-bpo" firstAttribute="centerX" secondItem="R1m-Ur-dHp" secondAttribute="centerX" id="8b1-Wg-c2g"/>
                         <constraint firstAttribute="trailing" secondItem="DbJ-pc-elW" secondAttribute="trailing" constant="16" id="95f-K2-slB"/>
                         <constraint firstItem="c5M-hE-huo" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="D0c-hy-OBG"/>
                         <constraint firstItem="ENE-kc-ZxZ" firstAttribute="top" secondItem="hlX-Om-0PG" secondAttribute="bottom" constant="4" id="MHC-dO-odw"/>
@@ -170,7 +164,6 @@
                         <constraint firstItem="KGc-Vz-VoU" firstAttribute="centerX" secondItem="R1m-Ur-dHp" secondAttribute="centerX" id="OpX-mB-lLG"/>
                         <constraint firstAttribute="trailing" secondItem="ENE-kc-ZxZ" secondAttribute="trailing" constant="16" id="SCD-sC-19W"/>
                         <constraint firstItem="hlX-Om-0PG" firstAttribute="top" secondItem="DbJ-pc-elW" secondAttribute="bottom" constant="10" id="SrU-Og-1qP"/>
-                        <constraint firstAttribute="bottom" secondItem="NCK-zD-bpo" secondAttribute="bottom" constant="-40" id="UKx-ed-Ihg"/>
                         <constraint firstItem="OMT-3e-BfS" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" id="Y7i-ot-HI5"/>
                         <constraint firstItem="c5M-hE-huo" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" constant="56" id="YEb-De-TBp"/>
                         <constraint firstAttribute="trailing" secondItem="2b4-c6-jad" secondAttribute="trailing" constant="16" id="YIi-lE-JGC"/>
@@ -189,6 +182,21 @@
                         <constraint firstItem="ENE-kc-ZxZ" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="yHZ-ub-Bin"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z39-66-BRK">
+                    <rect key="frame" x="130" y="586" width="133" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="Aw2-8h-6gJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                    <color key="tintColor" name="selected_categorie"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Forget Password ?">
+                        <color key="titleColor" name="primary_color"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetAction:" destination="-1" eventType="touchUpInside" id="dgd-MJ-a0h"/>
+                    </connections>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="only_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jhO-t3-YQ5" userLabel="fix_logo">
                     <rect key="frame" x="96.666666666666686" y="79" width="200" height="160"/>
                     <constraints>
@@ -205,8 +213,10 @@
             <color key="backgroundColor" name="background_sidemenu"/>
             <constraints>
                 <constraint firstItem="eOX-mq-iNz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="240" id="8Ap-Ff-0i6"/>
+                <constraint firstItem="Z39-66-BRK" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="bottom" constant="10" id="BaH-Ce-rnc"/>
                 <constraint firstItem="jhO-t3-YQ5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fhh-nY-fqm"/>
                 <constraint firstItem="RZ1-1J-gqM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="R0v-ZW-2LX"/>
+                <constraint firstItem="Z39-66-BRK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R6m-Qz-bC8"/>
                 <constraint firstItem="eOX-mq-iNz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TcJ-ED-4F0"/>
                 <constraint firstItem="jhO-t3-YQ5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Z0S-TF-2cT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RZ1-1J-gqM" secondAttribute="bottom" constant="10" id="g23-tf-ZhE"/>
@@ -229,7 +239,7 @@
             <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="error_color">
-            <color red="1" green="0.47727837707038767" blue="0.37838834438531355" alpha="0.89649766156462585" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.46127980025773196" green="0.10135498614893458" blue="0.066019679088272429" alpha="0.68109587585034015" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="header_bg">
             <color red="0.99599999189376831" green="0.71799999475479126" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
