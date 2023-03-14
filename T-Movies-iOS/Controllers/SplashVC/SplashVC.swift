@@ -29,6 +29,9 @@ class SplashVC: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var centerLoading: UIView!
     
+    @IBOutlet weak var emailEmpty: UILabel!
+    @IBOutlet weak var passwordEmpty: UILabel!
+    
     @IBOutlet weak var viewH: NSLayoutConstraint!
     
     // MARK: - Variables
@@ -95,7 +98,9 @@ class SplashVC: UIViewController {
         loadingView.isHidden = true
         loginSectionView.isHidden = true
         loadingView.isHidden = true
-
+        emailEmpty.isHidden = true
+        passwordEmpty.isHidden = true
+        
         //check the var show only login
         if(showOnlyLogin == true) {
             showOnlyLoginUI()
@@ -156,14 +161,28 @@ class SplashVC: UIViewController {
     
     // navigate to home
     func navigateToDestination() {
-        showLoginLoader()
+ 
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            let mainTabBarViewController = MainTabBarViewController()
-            mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
-            self.present(mainTabBarViewController, animated: true, completion: nil)
+        if(!(emailTextField.text!.isEmpty) && !(passwordTextField.text!.isEmpty)) {
+            // show Loader in login section
+            showLoginLoader()
+            
+            // save the credentiels
+            UserDefaults.standard.set(emailTextField.text,forKey: Constants.USER_EMAIL)
+            UserDefaults.standard.set(passwordTextField.text,forKey: Constants.USER_PWD)
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                let mainTabBarViewController = MainTabBarViewController()
+                mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+                self.present(mainTabBarViewController, animated: true, completion: nil)
+            }
+        } else {
+            // behavior empty fiels
+            showErrorFields()
+
         }
+
     }
     
     func loginBehavior() {
@@ -205,6 +224,15 @@ class SplashVC: UIViewController {
         viewH.constant -= 40
         // hide teh button
         faceidButton.isHidden = true
+    }
+    
+    // show error in login section
+    func showErrorFields() {
+        passwordTextField.backgroundColor = UIColor(named: "error_color")
+        emailTextField.backgroundColor = UIColor(named: "error_color")
+        
+        passwordEmpty.isHidden = false
+        emailEmpty.isHidden = false
     }
     
     func slideUpLogo() {
@@ -259,6 +287,8 @@ class SplashVC: UIViewController {
                 DispatchQueue.main.async {
                     if success {
                         // change state of the switch
+                        self!.emailTextField.text = UserDefaults.standard.string(forKey: Constants.USER_EMAIL)
+                        self!.passwordTextField.text = UserDefaults.standard.string(forKey: Constants.USER_PWD)
                         self?.navigateToDestination()
 
                     } else {

@@ -14,6 +14,7 @@
                 <outlet property="AnimatedView" destination="RZ1-1J-gqM" id="aOz-ii-A8Q"/>
                 <outlet property="centerLoading" destination="Mb7-gW-ZfR" id="e3b-gW-Qs9"/>
                 <outlet property="designBottom" destination="5qE-lb-03J" id="bG2-0x-fOJ"/>
+                <outlet property="emailEmpty" destination="G7U-Tz-2zu" id="3YB-kt-lus"/>
                 <outlet property="emailTextField" destination="DbJ-pc-elW" id="jsa-Z6-Lmt"/>
                 <outlet property="faceidButton" destination="07F-Xh-5kY" id="mir-of-lMc"/>
                 <outlet property="fixLogo" destination="jhO-t3-YQ5" id="c42-9k-Reb"/>
@@ -21,6 +22,7 @@
                 <outlet property="loginButton" destination="2b4-c6-jad" id="3y3-9e-rXS"/>
                 <outlet property="loginSectionView" destination="R1m-Ur-dHp" id="gZ7-iY-0cU"/>
                 <outlet property="logoIamge" destination="eOX-mq-iNz" id="g6I-po-Q5J"/>
+                <outlet property="passwordEmpty" destination="a5m-zv-DSd" id="3DO-AE-fmE"/>
                 <outlet property="passwordTextField" destination="ENE-kc-ZxZ" id="4yl-gg-AHM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewH" destination="trw-LP-G06" id="Zzb-kE-5TG"/>
@@ -54,13 +56,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5M-hE-huo">
-                            <rect key="frame" x="15.999999999999996" y="56.000000000000007" width="34.666666666666657" height="18.333333333333336"/>
+                            <rect key="frame" x="15.999999999999996" y="56" width="34.666666666666657" height="31"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                             <color key="textColor" name="background_color"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G7U-Tz-2zu" userLabel="EmailEmpty">
+                            <rect key="frame" x="235" y="60" width="78" height="27"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                            <color key="textColor" name="error_color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-pc-elW">
-                            <rect key="frame" x="16" y="78.333333333333314" width="301" height="40"/>
+                            <rect key="frame" x="16" y="91" width="301" height="40"/>
                             <color key="backgroundColor" name="background_color"/>
                             <color key="tintColor" name="primary_color"/>
                             <constraints>
@@ -71,13 +80,20 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-Om-0PG">
-                            <rect key="frame" x="15.999999999999996" y="128.33333333333331" width="59.666666666666657" height="18.333333333333343"/>
+                            <rect key="frame" x="15.999999999999996" y="141" width="59.666666666666657" height="18.333333333333343"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                             <color key="textColor" name="background_color"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a5m-zv-DSd" userLabel="PasswordEmpty">
+                            <rect key="frame" x="212" y="141" width="105" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                            <color key="textColor" name="error_color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENE-kc-ZxZ">
-                            <rect key="frame" x="16" y="150.66666666666669" width="301" height="40"/>
+                            <rect key="frame" x="16" y="163.33333333333331" width="301" height="40"/>
                             <color key="backgroundColor" name="background_color"/>
                             <color key="tintColor" name="primary_color"/>
                             <constraints>
@@ -88,7 +104,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b4-c6-jad">
-                            <rect key="frame" x="16" y="204.66666666666669" width="301" height="36"/>
+                            <rect key="frame" x="16" y="217.33333333333331" width="301" height="36"/>
                             <color key="backgroundColor" name="selected_categorie"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="fdg-34-FzN"/>
@@ -102,7 +118,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07F-Xh-5kY">
-                            <rect key="frame" x="148.66666666666666" y="252.66666666666663" width="36" height="36"/>
+                            <rect key="frame" x="148.66666666666666" y="265.33333333333337" width="36" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="36" id="KWi-LF-NJv"/>
                                 <constraint firstAttribute="height" constant="36" id="yxK-ko-eSI"/>
@@ -154,9 +170,11 @@
                         <constraint firstAttribute="trailing" secondItem="2b4-c6-jad" secondAttribute="trailing" constant="16" id="YIi-lE-JGC"/>
                         <constraint firstItem="hlX-Om-0PG" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="akg-ID-LWf"/>
                         <constraint firstItem="KGc-Vz-VoU" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" constant="20" id="eVX-cx-zHF"/>
+                        <constraint firstItem="a5m-zv-DSd" firstAttribute="top" secondItem="DbJ-pc-elW" secondAttribute="bottom" constant="10" id="gTT-Ha-1eW"/>
                         <constraint firstAttribute="bottom" secondItem="OMT-3e-BfS" secondAttribute="bottom" id="jZj-nL-fPA"/>
                         <constraint firstItem="07F-Xh-5kY" firstAttribute="centerX" secondItem="R1m-Ur-dHp" secondAttribute="centerX" id="ktw-LV-rJ7"/>
                         <constraint firstItem="07F-Xh-5kY" firstAttribute="top" secondItem="2b4-c6-jad" secondAttribute="bottom" constant="12" id="lBK-QQ-Mvy"/>
+                        <constraint firstItem="DbJ-pc-elW" firstAttribute="top" secondItem="G7U-Tz-2zu" secondAttribute="bottom" constant="4" id="lSp-rM-mzh"/>
                         <constraint firstItem="2b4-c6-jad" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="pg8-F7-kzl"/>
                         <constraint firstItem="OMT-3e-BfS" firstAttribute="top" secondItem="R1m-Ur-dHp" secondAttribute="top" id="sUh-TH-fTU"/>
                         <constraint firstItem="DbJ-pc-elW" firstAttribute="leading" secondItem="R1m-Ur-dHp" secondAttribute="leading" constant="16" id="tnP-Az-xgj"/>
@@ -203,6 +221,9 @@
         </namedColor>
         <namedColor name="background_sidemenu">
             <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="error_color">
+            <color red="1" green="0.47727837707038767" blue="0.37838834438531355" alpha="0.89649766156462585" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="header_bg">
             <color red="0.99599999189376831" green="0.71799999475479126" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
