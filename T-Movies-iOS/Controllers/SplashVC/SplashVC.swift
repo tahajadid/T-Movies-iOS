@@ -21,7 +21,7 @@ class SplashVC: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var fixLogo: UIImageView!
     @IBOutlet weak var designBottom: UIImageView!
-    
+    @IBOutlet weak var forgetButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -43,7 +43,8 @@ class SplashVC: UIViewController {
     private var keepOnline: Bool!
     
     public var showOnlyLogin = false
-    
+    var errorFieldEnabled = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +98,7 @@ class SplashVC: UIViewController {
         // common things
         loadingView.isHidden = true
         loginSectionView.isHidden = true
+        forgetButton.isHidden = true
         loadingView.isHidden = true
         emailEmpty.isHidden = true
         passwordEmpty.isHidden = true
@@ -107,7 +109,18 @@ class SplashVC: UIViewController {
         } else {
             showSplashUI()
         }
+        
     }
+    
+    @IBAction func forgetAction(_ sender: UIButton) {        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let forgetPasswordVC = ForgetPasswordVC()
+            forgetPasswordVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            forgetPasswordVC.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+            self.present(forgetPasswordVC, animated: true, completion: nil)
+        }
+    }
+
     
     // show only the login section
     func showOnlyLoginUI() {
@@ -180,10 +193,10 @@ class SplashVC: UIViewController {
         } else {
             // behavior empty fiels
             showErrorFields()
-
         }
 
     }
+    
     
     func loginBehavior() {
         AnimatedView.isHidden = true
@@ -199,9 +212,25 @@ class SplashVC: UIViewController {
 
         if(!faceidIsActivated) {
             hideFaceIDIcon()
+        } else {
+            viewH.constant += 10
         }
         
         
+    }
+    
+    // click on email field
+    @IBAction func emailAction(_ sender: UITextField) {
+        if(errorFieldEnabled == true) {
+            showInitFields()
+        }
+    }
+    
+    // click on password field
+    @IBAction func passwordAction(_ sender: UITextField) {
+        if(errorFieldEnabled == true) {
+            showInitFields()
+        }
     }
     
     func initFields() {
@@ -220,19 +249,32 @@ class SplashVC: UIViewController {
     }
     
     func hideFaceIDIcon() {
-        // decrease the height of the mainVie
-        viewH.constant -= 40
+        // decrease the height of the mainView
+        viewH.constant -= 30
         // hide teh button
         faceidButton.isHidden = true
     }
     
     // show error in login section
     func showErrorFields() {
+        errorFieldEnabled = true
+        
         passwordTextField.backgroundColor = UIColor(named: "error_color")
         emailTextField.backgroundColor = UIColor(named: "error_color")
         
         passwordEmpty.isHidden = false
         emailEmpty.isHidden = false
+    }
+    
+    func showInitFields() {
+        errorFieldEnabled = false
+        
+        passwordTextField.backgroundColor = UIColor(named: "background_color")
+        emailTextField.backgroundColor = UIColor(named: "background_color")
+        
+        passwordEmpty.isHidden = true
+        emailEmpty.isHidden = true
+
     }
     
     func slideUpLogo() {
@@ -264,9 +306,14 @@ class SplashVC: UIViewController {
             self.logoIamge.isHidden = true
             
             self.loginSectionView.layer.cornerRadius = 10
+            
             self.loginSectionView.isHidden = false
             self.loginSectionView.alpha = 0
             self.loginSectionView.fadeIn(0.5)
+            
+            self.forgetButton.isHidden = false
+            self.forgetButton.alpha = 0
+            self.forgetButton.fadeIn(0.5)
         }
     }
 
