@@ -78,6 +78,9 @@
                             <color key="textColor" systemColor="systemGray6Color"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="emailAction:" destination="-1" eventType="editingDidBegin" id="ezr-m8-M2t"/>
+                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-Om-0PG">
                             <rect key="frame" x="15.999999999999996" y="141" width="59.666666666666657" height="18.333333333333343"/>
@@ -102,6 +105,9 @@
                             <color key="textColor" systemColor="systemGray6Color"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="passwordAction:" destination="-1" eventType="editingDidBegin" id="dkm-8O-Dmt"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b4-c6-jad">
                             <rect key="frame" x="16" y="217.33333333333331" width="301" height="36"/>

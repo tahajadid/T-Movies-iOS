@@ -43,7 +43,8 @@ class SplashVC: UIViewController {
     private var keepOnline: Bool!
     
     public var showOnlyLogin = false
-    
+    var errorFieldEnabled = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -185,6 +186,7 @@ class SplashVC: UIViewController {
 
     }
     
+    
     func loginBehavior() {
         AnimatedView.isHidden = true
         slideUpLogo()
@@ -199,9 +201,25 @@ class SplashVC: UIViewController {
 
         if(!faceidIsActivated) {
             hideFaceIDIcon()
+        } else {
+            viewH.constant += 10
         }
         
         
+    }
+    
+    // click on email field
+    @IBAction func emailAction(_ sender: UITextField) {
+        if(errorFieldEnabled == true) {
+            showInitFields()
+        }
+    }
+    
+    // click on password field
+    @IBAction func passwordAction(_ sender: UITextField) {
+        if(errorFieldEnabled == true) {
+            showInitFields()
+        }
     }
     
     func initFields() {
@@ -220,19 +238,32 @@ class SplashVC: UIViewController {
     }
     
     func hideFaceIDIcon() {
-        // decrease the height of the mainVie
-        viewH.constant -= 40
+        // decrease the height of the mainView
+        viewH.constant -= 30
         // hide teh button
         faceidButton.isHidden = true
     }
     
     // show error in login section
     func showErrorFields() {
+        errorFieldEnabled = true
+        
         passwordTextField.backgroundColor = UIColor(named: "error_color")
         emailTextField.backgroundColor = UIColor(named: "error_color")
         
         passwordEmpty.isHidden = false
         emailEmpty.isHidden = false
+    }
+    
+    func showInitFields() {
+        errorFieldEnabled = false
+        
+        passwordTextField.backgroundColor = UIColor(named: "background_color")
+        emailTextField.backgroundColor = UIColor(named: "background_color")
+        
+        passwordEmpty.isHidden = true
+        emailEmpty.isHidden = true
+
     }
     
     func slideUpLogo() {

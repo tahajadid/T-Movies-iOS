@@ -80,6 +80,7 @@ class SettingVC: UIViewController {
                 }
             }
         } else {
+            switchFaceID.setOn(actualValue, animated: true)
             showErorrNoBiometry()
         }
     }

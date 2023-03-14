@@ -143,6 +143,7 @@ class ProfileVC: UIViewController {
                 }
             }
         } else {
+            switchFaceid.setOn(actualValue, animated: true)
             showErorrNoBiometry()
         }
     }
