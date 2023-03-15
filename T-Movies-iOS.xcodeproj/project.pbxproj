@@ -63,6 +63,8 @@
 		1CA84FA329BBD7FB008CEACD /* faceid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FA229BBD7FB008CEACD /* faceid.json */; };
 		1CA84FAC29C0CA2E008CEACD /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA84FAA29C0CA2E008CEACD /* ForgetPasswordVC.swift */; };
 		1CA84FAD29C0CA2E008CEACD /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FAB29C0CA2E008CEACD /* ForgetPasswordVC.xib */; };
+		1CA84FB129C1C35A008CEACD /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA84FAF29C1C35A008CEACD /* FavouriteVC.swift */; };
+		1CA84FB229C1C35A008CEACD /* FavouriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FB029C1C35A008CEACD /* FavouriteVC.xib */; };
 		331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */; };
 		3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
 		78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */; };
@@ -147,6 +149,8 @@
 		1CA84FA229BBD7FB008CEACD /* faceid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = faceid.json; sourceTree = "<group>"; };
 		1CA84FAA29C0CA2E008CEACD /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		1CA84FAB29C0CA2E008CEACD /* ForgetPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordVC.xib; sourceTree = "<group>"; };
+		1CA84FAF29C1C35A008CEACD /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		1CA84FB029C1C35A008CEACD /* FavouriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteVC.xib; sourceTree = "<group>"; };
 		354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +294,7 @@
 		1C35AFC629ACFB6800A57F5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1CA84FAE29C1C24C008CEACD /* FavouriteVC */,
 				1CA84FA929C0CA07008CEACD /* ForgetPasswordVC */,
 				1C35AFC929ACFBD200A57F5F /* HomeVC */,
 				1C38132A29AF67350035B242 /* MainTabBarVC */,
@@ -501,6 +506,15 @@
 			path = ForgetPasswordVC;
 			sourceTree = "<group>";
 		};
+		1CA84FAE29C1C24C008CEACD /* FavouriteVC */ = {
+			isa = PBXGroup;
+			children = (
+				1CA84FAF29C1C35A008CEACD /* FavouriteVC.swift */,
+				1CA84FB029C1C35A008CEACD /* FavouriteVC.xib */,
+			);
+			path = FavouriteVC;
+			sourceTree = "<group>";
+		};
 		3DD38ADDB6CDAFE25C03D2AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +647,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA84FB229C1C35A008CEACD /* FavouriteVC.xib in Resources */,
 				1C35AFA029ACFAFD00A57F5F /* LaunchScreen.storyboard in Resources */,
 				1C35AFCD29AD0E0000A57F5F /* HomeVC.xib in Resources */,
 				1C7187A729B5E8DB004C5C0D /* SideMenuVC.xib in Resources */,
@@ -805,6 +820,7 @@
 				1C35AF9829ACFAFC00A57F5F /* ViewController.swift in Sources */,
 				1C38130429AE4A7E0035B242 /* ProfileVC.swift in Sources */,
 				1C3812FF29AE492A0035B242 /* MainCarouselView.swift in Sources */,
+				1CA84FB129C1C35A008CEACD /* FavouriteVC.swift in Sources */,
 				1CA84FAC29C0CA2E008CEACD /* ForgetPasswordVC.swift in Sources */,
 				1C04750829B7841900B7CC31 /* CategoryOptionItem.swift in Sources */,
 				1C35AFCC29AD0E0000A57F5F /* HomeVC.swift in Sources */,

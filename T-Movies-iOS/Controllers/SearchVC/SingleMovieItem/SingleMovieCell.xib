@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="179" height="273"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movieBg_custom" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-TK-nLQ">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_movie_bg" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-TK-nLQ">
                         <rect key="frame" x="0.0" y="0.0" width="179" height="243"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -70,9 +70,9 @@
     <resources>
         <image name="batman" width="345" height="512"/>
         <image name="favourite" width="128" height="128"/>
-        <image name="movieBg_custom" width="200" height="367"/>
+        <image name="new_movie_bg" width="400" height="701"/>
         <namedColor name="background_color">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
