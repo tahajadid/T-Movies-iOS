@@ -65,8 +65,8 @@
                                 <constraint firstAttribute="height" constant="34" id="yMD-T5-BWV"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search.." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4br-f7-Gip">
-                            <rect key="frame" x="44" y="8" width="279" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search.." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4br-f7-Gip">
+                            <rect key="frame" x="44" y="12.333333333333327" width="279" height="25.333333333333329"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textColor" name="label_color"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -120,7 +120,7 @@
         <image name="search_gray" width="80" height="81"/>
         <image name="search_right" width="148" height="148"/>
         <namedColor name="background_color">
-            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="label_color">
             <color red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

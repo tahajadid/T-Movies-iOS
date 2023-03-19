@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavouriteVC" customModule="T_Movies_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="moviesCollectionFlow" destination="I5e-Zc-cSZ" id="E3c-pc-6ro"/>
+                <outlet property="moviesCollectionView" destination="csC-HS-Ou4" id="2Qh-A2-dHQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
