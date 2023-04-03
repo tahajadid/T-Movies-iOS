@@ -65,9 +65,9 @@
 		1CA84FAD29C0CA2E008CEACD /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FAB29C0CA2E008CEACD /* ForgetPasswordVC.xib */; };
 		1CA84FB129C1C35A008CEACD /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA84FAF29C1C35A008CEACD /* FavouriteVC.swift */; };
 		1CA84FB229C1C35A008CEACD /* FavouriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FB029C1C35A008CEACD /* FavouriteVC.xib */; };
-		331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */; };
-		3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
-		78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */; };
+		3971A5E10C641C61FE3F7574 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2458EEDEF92A8CEA67F582AA /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */; };
+		82F9B8B4BBC2DB478E758AF8 /* Pods_T_Movies_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6240F7B298636B9AFC67E7A9 /* Pods_T_Movies_iOSTests.framework */; };
+		A9F92797D92D53EF52AD89C3 /* Pods_T_Movies_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B9E75E610481D051EAA55F /* Pods_T_Movies_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		052727F76E9589DDFAD5FB91 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1C04750129B77ED300B7CC31 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
 		1C04750229B77ED300B7CC31 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
 		1C04750729B7841900B7CC31 /* CategoryOptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOptionItem.swift; sourceTree = "<group>"; };
@@ -151,14 +151,14 @@
 		1CA84FAB29C0CA2E008CEACD /* ForgetPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordVC.xib; sourceTree = "<group>"; };
 		1CA84FAF29C1C35A008CEACD /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		1CA84FB029C1C35A008CEACD /* FavouriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteVC.xib; sourceTree = "<group>"; };
-		354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73C0FF93136B43D615FB67F2 /* Pods-T-Movies-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		B545FF6E327D6EEDD94BDB69 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C98FC7AA05656C6AFE2BD137 /* Pods-T-Movies-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB603D5B4FF29AE3A4EB5AD3 /* Pods-T-Movies-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2458EEDEF92A8CEA67F582AA /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS_T_Movies_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36063458D32F80C3E520E2F8 /* Pods-T-Movies-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6240F7B298636B9AFC67E7A9 /* Pods_T_Movies_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AF9785691E5A182CF407C4 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		94B9E75E610481D051EAA55F /* Pods_T_Movies_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Movies_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDEB7DB884B7D557E931413A /* Pods-T-Movies-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOSTests/Pods-T-Movies-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF927AA834519D590E1EDB06 /* Pods-T-Movies-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS.release.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F1605BF140F6744AF294E25F /* Pods-T-Movies-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Movies-iOS.debug.xcconfig"; path = "Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				331FC18A7837EDF3E4812A6B /* Pods_T_Movies_iOS.framework in Frameworks */,
+				A9F92797D92D53EF52AD89C3 /* Pods_T_Movies_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C794DF2D0A1367B401FE5C /* Pods_T_Movies_iOSTests.framework in Frameworks */,
+				82F9B8B4BBC2DB478E758AF8 /* Pods_T_Movies_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3743D41238EB3FF2A4503F80 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */,
+				3971A5E10C641C61FE3F7574 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +232,7 @@
 				1C35AFB329ACFAFE00A57F5F /* T-Movies-iOSUITests */,
 				1C35AF9129ACFAFC00A57F5F /* Products */,
 				3DD38ADDB6CDAFE25C03D2AC /* Pods */,
-				D4B8A17C1F3A1CDECACB0C2D /* Frameworks */,
+				95BE0EEB1A6478F6D7EF9954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -518,22 +518,22 @@
 		3DD38ADDB6CDAFE25C03D2AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C98FC7AA05656C6AFE2BD137 /* Pods-T-Movies-iOS.debug.xcconfig */,
-				73C0FF93136B43D615FB67F2 /* Pods-T-Movies-iOS.release.xcconfig */,
-				5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */,
-				B545FF6E327D6EEDD94BDB69 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */,
-				FB603D5B4FF29AE3A4EB5AD3 /* Pods-T-Movies-iOSTests.debug.xcconfig */,
-				354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */,
+				F1605BF140F6744AF294E25F /* Pods-T-Movies-iOS.debug.xcconfig */,
+				DF927AA834519D590E1EDB06 /* Pods-T-Movies-iOS.release.xcconfig */,
+				84AF9785691E5A182CF407C4 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */,
+				052727F76E9589DDFAD5FB91 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */,
+				CDEB7DB884B7D557E931413A /* Pods-T-Movies-iOSTests.debug.xcconfig */,
+				36063458D32F80C3E520E2F8 /* Pods-T-Movies-iOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D4B8A17C1F3A1CDECACB0C2D /* Frameworks */ = {
+		95BE0EEB1A6478F6D7EF9954 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F895883F4A8CC8DC858976D0 /* Pods_T_Movies_iOS.framework */,
-				6805CD63C92186323E8F7543 /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */,
-				1174CFAE9334814E0D9DFB83 /* Pods_T_Movies_iOSTests.framework */,
+				94B9E75E610481D051EAA55F /* Pods_T_Movies_iOS.framework */,
+				2458EEDEF92A8CEA67F582AA /* Pods_T_Movies_iOS_T_Movies_iOSUITests.framework */,
+				6240F7B298636B9AFC67E7A9 /* Pods_T_Movies_iOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -545,11 +545,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C35AFBA29ACFAFE00A57F5F /* Build configuration list for PBXNativeTarget "T-Movies-iOS" */;
 			buildPhases = (
-				6CEFAD983E3720070A17ABC5 /* [CP] Check Pods Manifest.lock */,
+				9D1CCF6F27DCB4D7FBEB13D7 /* [CP] Check Pods Manifest.lock */,
 				1C35AF8C29ACFAFC00A57F5F /* Sources */,
 				1C35AF8D29ACFAFC00A57F5F /* Frameworks */,
 				1C35AF8E29ACFAFC00A57F5F /* Resources */,
-				022B8E7EC8870916CD4941C4 /* [CP] Embed Pods Frameworks */,
+				C9479A6DA53887B565CF3E87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,7 +564,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C35AFBD29ACFAFE00A57F5F /* Build configuration list for PBXNativeTarget "T-Movies-iOSTests" */;
 			buildPhases = (
-				598D6C6ADFD1F01E882A975E /* [CP] Check Pods Manifest.lock */,
+				272B3B945E03F4BFCDD204F6 /* [CP] Check Pods Manifest.lock */,
 				1C35AFA229ACFAFE00A57F5F /* Sources */,
 				1C35AFA329ACFAFE00A57F5F /* Frameworks */,
 				1C35AFA429ACFAFE00A57F5F /* Resources */,
@@ -583,11 +583,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C35AFC029ACFAFE00A57F5F /* Build configuration list for PBXNativeTarget "T-Movies-iOSUITests" */;
 			buildPhases = (
-				CF997E74CFE12ED13D57BBE5 /* [CP] Check Pods Manifest.lock */,
+				0ED21896373D95FA14C66627 /* [CP] Check Pods Manifest.lock */,
 				1C35AFAC29ACFAFE00A57F5F /* Sources */,
 				1C35AFAD29ACFAFE00A57F5F /* Frameworks */,
 				1C35AFAE29ACFAFE00A57F5F /* Resources */,
-				0062B090704EC2FD9F7FF1A9 /* [CP] Embed Pods Frameworks */,
+				DDF4BA4D235848549907E166 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -685,41 +685,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0062B090704EC2FD9F7FF1A9 /* [CP] Embed Pods Frameworks */ = {
+		0ED21896373D95FA14C66627 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-T-Movies-iOS-T-Movies-iOSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		022B8E7EC8870916CD4941C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		598D6C6ADFD1F01E882A975E /* [CP] Check Pods Manifest.lock */ = {
+		272B3B945E03F4BFCDD204F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -741,7 +729,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6CEFAD983E3720070A17ABC5 /* [CP] Check Pods Manifest.lock */ = {
+		9D1CCF6F27DCB4D7FBEB13D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -763,26 +751,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF997E74CFE12ED13D57BBE5 /* [CP] Check Pods Manifest.lock */ = {
+		C9479A6DA53887B565CF3E87 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-T-Movies-iOS-T-Movies-iOSUITests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS/Pods-T-Movies-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDF4BA4D235848549907E166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Movies-iOS-T-Movies-iOSUITests/Pods-T-Movies-iOS-T-Movies-iOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -996,7 +996,7 @@
 		};
 		1C35AFBB29ACFAFE00A57F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C98FC7AA05656C6AFE2BD137 /* Pods-T-Movies-iOS.debug.xcconfig */;
+			baseConfigurationReference = F1605BF140F6744AF294E25F /* Pods-T-Movies-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1024,7 +1024,7 @@
 		};
 		1C35AFBC29ACFAFE00A57F5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73C0FF93136B43D615FB67F2 /* Pods-T-Movies-iOS.release.xcconfig */;
+			baseConfigurationReference = DF927AA834519D590E1EDB06 /* Pods-T-Movies-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1052,7 +1052,7 @@
 		};
 		1C35AFBE29ACFAFE00A57F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB603D5B4FF29AE3A4EB5AD3 /* Pods-T-Movies-iOSTests.debug.xcconfig */;
+			baseConfigurationReference = CDEB7DB884B7D557E931413A /* Pods-T-Movies-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1073,7 +1073,7 @@
 		};
 		1C35AFBF29ACFAFE00A57F5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 354ED20F2B98D8D659D611A4 /* Pods-T-Movies-iOSTests.release.xcconfig */;
+			baseConfigurationReference = 36063458D32F80C3E520E2F8 /* Pods-T-Movies-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1094,7 +1094,7 @@
 		};
 		1C35AFC129ACFAFE00A57F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D5323A727B1A9D38ED52165 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 84AF9785691E5A182CF407C4 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1113,7 +1113,7 @@
 		};
 		1C35AFC229ACFAFE00A57F5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B545FF6E327D6EEDD94BDB69 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */;
+			baseConfigurationReference = 052727F76E9589DDFAD5FB91 /* Pods-T-Movies-iOS-T-Movies-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

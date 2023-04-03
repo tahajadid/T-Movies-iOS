@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,9 +16,11 @@
                 <outlet property="editView" destination="GvM-NH-dj1" id="TDM-Wo-cRN"/>
                 <outlet property="emailValue" destination="CFy-Lt-LTf" id="1pk-er-voy"/>
                 <outlet property="lineOne" destination="JTn-ZJ-oiE" id="6xX-xQ-DbT"/>
+                <outlet property="lineThree" destination="JTn-ZJ-oiE" id="NYC-Of-6Tr"/>
                 <outlet property="lineTwo" destination="sLK-PQ-oxP" id="Qc7-ch-4Ai"/>
                 <outlet property="profileImage" destination="eGJ-FI-szA" id="ZKs-PT-rwn"/>
                 <outlet property="profileImageBg" destination="s3K-3m-vUY" id="ckv-fS-lnM"/>
+                <outlet property="swirchKeepOnline" destination="Hkw-I8-12F" id="oTU-rI-D6k"/>
                 <outlet property="switchFaceid" destination="sft-N6-vab" id="vXj-Mq-eXx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -134,7 +137,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-4P-YIm" userLabel="Always On">
-                    <rect key="frame" x="30" y="608" width="97" height="22"/>
+                    <rect key="frame" x="26" y="608" width="97" height="22"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -145,7 +148,7 @@
                     <color key="onTintColor" name="primary_color"/>
                 </switch>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZe-RN-8Wr">
-                    <rect key="frame" x="0.0" y="616" width="20" height="6"/>
+                    <rect key="frame" x="-4" y="616" width="20" height="6"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="6" id="AYE-qL-HUb"/>
@@ -185,7 +188,7 @@
                 <constraint firstItem="CFy-Lt-LTf" firstAttribute="leading" secondItem="Cj5-va-cJ8" secondAttribute="trailing" constant="10" id="hXh-cT-Xbb"/>
                 <constraint firstItem="FaE-Jy-g3x" firstAttribute="top" secondItem="s3K-3m-vUY" secondAttribute="bottom" constant="20" id="huE-xX-TPL"/>
                 <constraint firstItem="FhL-RH-rgM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hwP-bN-NTF"/>
-                <constraint firstItem="cZe-RN-8Wr" firstAttribute="leading" secondItem="FhL-RH-rgM" secondAttribute="leading" id="iSf-5c-HKC"/>
+                <constraint firstItem="cZe-RN-8Wr" firstAttribute="leading" secondItem="FhL-RH-rgM" secondAttribute="leading" constant="-4" id="iSf-5c-HKC"/>
                 <constraint firstItem="CFy-Lt-LTf" firstAttribute="centerY" secondItem="We1-14-LeP" secondAttribute="centerY" id="jR3-n3-hcC"/>
                 <constraint firstItem="Cj5-va-cJ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="oJT-5B-Tud"/>
                 <constraint firstItem="GvM-NH-dj1" firstAttribute="centerX" secondItem="eGJ-FI-szA" secondAttribute="centerX" constant="70" id="reG-OI-L8E"/>
@@ -213,7 +216,7 @@
             <color red="0.12200000137090683" green="0.12200000137090683" blue="0.12200000137090683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary_color">
-            <color red="0.98431372549019602" green="0.59215686274509804" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98400002717971802" green="0.59200000762939453" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
