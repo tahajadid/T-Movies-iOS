@@ -83,8 +83,16 @@ class ProfileVC: UIViewController {
         switchFaceid.setOn(defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED), animated: false)
     }
     
+    // set Switch State depending on the value stored in UserDefaults
+    func setKeepOnlineState() {
+        defaults = UserDefaults.standard
+        print(defaults.bool(forKey: Constants.KEEP_ONLINE))
+        swirchKeepOnline.setOn(defaults.bool(forKey: Constants.KEEP_ONLINE), animated: false)
+    }
+    
     func configureUI() {
         setSwitchState()
+        setKeepOnlineState()
         
         profileImage.layer.masksToBounds = false
         profileImage.layer.cornerRadius = profileImage.frame.height/2
@@ -104,6 +112,8 @@ class ProfileVC: UIViewController {
 
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
         
+        swirchKeepOnline.addTarget(self, action: #selector(keepOnChangedSwitch), for: .valueChanged)
+
         // Add listener to edit view
         let gestureEdit = UITapGestureRecognizer(target: self, action:  #selector (self.editAction (_:)))
         self.editView.addGestureRecognizer(gestureEdit)
@@ -119,6 +129,15 @@ class ProfileVC: UIViewController {
            checkFaceID(false)
        } else {
            checkFaceID(true)
+       }
+    }
+    
+    // function that change the state of keeping online
+    @objc func keepOnChangedSwitch(switchState: UISwitch) {
+       if swirchKeepOnline.isOn {
+           defaults.set(true, forKey: Constants.KEEP_ONLINE)
+       } else {
+           defaults.set(false, forKey: Constants.KEEP_ONLINE)
        }
     }
     
