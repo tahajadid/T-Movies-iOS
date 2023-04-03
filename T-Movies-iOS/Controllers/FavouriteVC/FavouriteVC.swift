@@ -9,9 +9,12 @@ import UIKit
 
 class FavouriteVC: UIViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var moviesCollectionFlow: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
 }

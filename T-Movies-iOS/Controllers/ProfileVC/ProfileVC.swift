@@ -14,11 +14,15 @@ class ProfileVC: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBg: UIImageView!
+    
     @IBOutlet weak var switchFaceid: UISwitch!
+    @IBOutlet weak var swirchKeepOnline: UISwitch!
+    
     @IBOutlet weak var editView: UIView!
         
     @IBOutlet weak var lineOne: UIView!
     @IBOutlet weak var lineTwo: UIView!
+    @IBOutlet weak var lineThree: UIView!
     
     @IBOutlet weak var emailValue: UILabel!
     
