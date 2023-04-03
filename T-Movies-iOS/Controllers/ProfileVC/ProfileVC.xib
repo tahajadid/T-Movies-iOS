@@ -16,7 +16,7 @@
                 <outlet property="editView" destination="GvM-NH-dj1" id="TDM-Wo-cRN"/>
                 <outlet property="emailValue" destination="CFy-Lt-LTf" id="1pk-er-voy"/>
                 <outlet property="lineOne" destination="JTn-ZJ-oiE" id="6xX-xQ-DbT"/>
-                <outlet property="lineThree" destination="JTn-ZJ-oiE" id="NYC-Of-6Tr"/>
+                <outlet property="lineThree" destination="cZe-RN-8Wr" id="ZwB-BV-Rfe"/>
                 <outlet property="lineTwo" destination="sLK-PQ-oxP" id="Qc7-ch-4Ai"/>
                 <outlet property="profileImage" destination="eGJ-FI-szA" id="ZKs-PT-rwn"/>
                 <outlet property="profileImageBg" destination="s3K-3m-vUY" id="ckv-fS-lnM"/>

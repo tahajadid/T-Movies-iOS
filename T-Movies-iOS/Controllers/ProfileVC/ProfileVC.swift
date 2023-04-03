@@ -100,7 +100,7 @@ class ProfileVC: UIViewController {
         
         lineOne.layer.cornerRadius = 4
         lineTwo.layer.cornerRadius = 4
-
+        lineThree.layer.cornerRadius = 4
 
         switchFaceid.addTarget(self, action: #selector(stateChangedSwitch), for: .valueChanged)
         
