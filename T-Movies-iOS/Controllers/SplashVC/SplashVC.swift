@@ -154,7 +154,7 @@ class SplashVC: UIViewController {
             // check if the user had already activated keep online
             if(self.keepOnline) {
                 // navigate to home
-                self.navigateToDestination()
+                self.navigate()
             } else {
                 self.loginBehavior()
             }
@@ -177,17 +177,11 @@ class SplashVC: UIViewController {
         if(!(emailTextField.text!.isEmpty) && !(passwordTextField.text!.isEmpty)) {
             // show Loader in login section
             showLoginLoader()
-            
             // save the credentiels
             UserDefaults.standard.set(emailTextField.text,forKey: Constants.USER_EMAIL)
             UserDefaults.standard.set(passwordTextField.text,forKey: Constants.USER_PWD)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                let mainTabBarViewController = MainTabBarViewController()
-                mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
-                self.present(mainTabBarViewController, animated: true, completion: nil)
-            }
+            // navigate
+            navigate()
         } else {
             // behavior empty fiels
             showErrorFields()
@@ -195,6 +189,15 @@ class SplashVC: UIViewController {
 
     }
     
+    // fun to only create a dispatchQueue for navigation
+    func navigate(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let mainTabBarViewController = MainTabBarViewController()
+            mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+            self.present(mainTabBarViewController, animated: true, completion: nil)
+        }
+    }
     
     func loginBehavior() {
         AnimatedView.isHidden = true
