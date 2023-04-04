@@ -40,9 +40,9 @@ class SplashVC: UIViewController {
     private var loginAnimationView: LottieAnimationView?
 
     private var faceidIsActivated: Bool!
-    private var keepOnline: Bool!
     
     public var showOnlyLogin = false
+    public var keepOnline = false
     var errorFieldEnabled = false
 
     
@@ -102,7 +102,7 @@ class SplashVC: UIViewController {
         loadingView.isHidden = true
         emailEmpty.isHidden = true
         passwordEmpty.isHidden = true
-        
+                
         //check the var show only login
         if(showOnlyLogin == true) {
             showOnlyLoginUI()
@@ -149,13 +149,12 @@ class SplashVC: UIViewController {
             self.animationView!.play()
         }
         
-        
         // 3 seconds after the ending of animation
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             // check if the user had already activated keep online
             if(self.keepOnline) {
                 // navigate to home
-                self.navigateToDestination()
+                self.navigate()
             } else {
                 self.loginBehavior()
             }
@@ -166,7 +165,6 @@ class SplashVC: UIViewController {
     // function to get the state of variables from cache
     func getDataFromCache() {
         let defaults = UserDefaults.standard
-        defaults.set(false, forKey: Constants.KEEP_ONLINE)
 
         faceidIsActivated = defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED)
         keepOnline = defaults.bool(forKey: Constants.KEEP_ONLINE)
@@ -179,17 +177,11 @@ class SplashVC: UIViewController {
         if(!(emailTextField.text!.isEmpty) && !(passwordTextField.text!.isEmpty)) {
             // show Loader in login section
             showLoginLoader()
-            
             // save the credentiels
             UserDefaults.standard.set(emailTextField.text,forKey: Constants.USER_EMAIL)
             UserDefaults.standard.set(passwordTextField.text,forKey: Constants.USER_PWD)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                let mainTabBarViewController = MainTabBarViewController()
-                mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
-                self.present(mainTabBarViewController, animated: true, completion: nil)
-            }
+            // navigate
+            navigate()
         } else {
             // behavior empty fiels
             showErrorFields()
@@ -197,6 +189,15 @@ class SplashVC: UIViewController {
 
     }
     
+    // fun to only create a dispatchQueue for navigation
+    func navigate(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let mainTabBarViewController = MainTabBarViewController()
+            mainTabBarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            mainTabBarViewController.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
+            self.present(mainTabBarViewController, animated: true, completion: nil)
+        }
+    }
     
     func loginBehavior() {
         AnimatedView.isHidden = true
