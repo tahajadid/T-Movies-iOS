@@ -136,8 +136,12 @@ class ProfileVC: UIViewController {
     @objc func keepOnChangedSwitch(switchState: UISwitch) {
        if swirchKeepOnline.isOn {
            defaults.set(true, forKey: Constants.KEEP_ONLINE)
+           print("- - -")
+           print(defaults.bool(forKey: Constants.KEEP_ONLINE))
        } else {
            defaults.set(false, forKey: Constants.KEEP_ONLINE)
+           print("- - -")
+           print(defaults.bool(forKey: Constants.KEEP_ONLINE))
        }
     }
     
