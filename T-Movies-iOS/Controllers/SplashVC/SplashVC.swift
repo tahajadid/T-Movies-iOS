@@ -40,9 +40,9 @@ class SplashVC: UIViewController {
     private var loginAnimationView: LottieAnimationView?
 
     private var faceidIsActivated: Bool!
-    private var keepOnline: Bool!
     
     public var showOnlyLogin = false
+    public var keepOnline = false
     var errorFieldEnabled = false
 
     
@@ -102,7 +102,7 @@ class SplashVC: UIViewController {
         loadingView.isHidden = true
         emailEmpty.isHidden = true
         passwordEmpty.isHidden = true
-        
+                
         //check the var show only login
         if(showOnlyLogin == true) {
             showOnlyLoginUI()
@@ -149,7 +149,6 @@ class SplashVC: UIViewController {
             self.animationView!.play()
         }
         
-        
         // 3 seconds after the ending of animation
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             // check if the user had already activated keep online
@@ -166,7 +165,6 @@ class SplashVC: UIViewController {
     // function to get the state of variables from cache
     func getDataFromCache() {
         let defaults = UserDefaults.standard
-        defaults.set(false, forKey: Constants.KEEP_ONLINE)
 
         faceidIsActivated = defaults.bool(forKey: Constants.FACEID_IS_ACTIVATED)
         keepOnline = defaults.bool(forKey: Constants.KEEP_ONLINE)
