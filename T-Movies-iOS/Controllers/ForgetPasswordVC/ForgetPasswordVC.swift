@@ -11,19 +11,14 @@ class ForgetPasswordVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backAction(_ sender: UIButton) {
+        let splashVC = SplashVC()
+        splashVC.showOnlyLogin = true
+        splashVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        splashVC.modalPresentationStyle = .overFullScreen
+        self.present(splashVC, animated: true, completion: nil)
     }
-    */
-
 }
