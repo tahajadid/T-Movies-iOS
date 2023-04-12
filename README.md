@@ -2,7 +2,7 @@
 
 T-Movies is an iOS application with many features to get the last movies, and people feedback.
 
-<img src="https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/mock_tmovies_1.jpg"/>
+<img src="https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/mock_tmovies_2.jpg"/>
 
 # Features
 
