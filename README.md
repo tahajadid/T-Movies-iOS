@@ -10,3 +10,6 @@ In the app there is many feature and components, we found :
 
 ## Carousel of the trending movies
 ![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/home_carousel.gif)
+
+## List of movies with categories & searching
+![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/searchview.gif)
