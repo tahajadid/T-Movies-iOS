@@ -12,13 +12,13 @@ In the app there is many feature and components, we found :
 <img src="./Demo/home_carousel.gif" width="230" height="500"/>
 
 ## List of movies with categories & searching
-![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/searchview.gif)
+<img src="./Demo/searchview.gif" width="230" height="500"/>
 
 ## Profile
-![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/profile.gif)
+<img src="./Demo/profile.gif" width="230" height="500"/>
 
 ## Setting
-![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/settings.gif)
+<img src="./Demo/settings.gif" width="230" height="500"/>
 
 ## Side Menu
-![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/sidemenu.gif)
+<img src="./Demo/sidemenu.gif" width="230" height="500"/>
