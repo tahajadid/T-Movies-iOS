@@ -18,4 +18,7 @@ In the app there is many feature and components, we found :
 ![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/profile.gif)
 
 ## Setting
-![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/profile.gif)
+![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/settings.gif)
+
+## Side Menu
+![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/sidemenu.gif)
