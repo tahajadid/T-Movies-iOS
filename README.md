@@ -13,3 +13,7 @@ In the app there is many feature and components, we found :
 
 ## List of movies with categories & searching
 ![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/searchview.gif)
+
+
+## Profile
+![](https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/profile.gif)
