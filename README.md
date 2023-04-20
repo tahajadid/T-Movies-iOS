@@ -10,6 +10,7 @@ T-Movies is an iOS application with many features to get the last movies, and pe
 In the app there is many feature and components, we found :
 
 ## Carousel of the trending movies
+A carousel of movies in the home screen
 <img src="./Demo/home_carousel.gif" width="230" height="500"/>
 
 ## List of movies with categories & searching
