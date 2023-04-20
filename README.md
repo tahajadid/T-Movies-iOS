@@ -1,4 +1,4 @@
-[![platform](https://img.shields.io/badge/platform-ios-orange.svg)](https://www.android.com)
+[![platform](https://img.shields.io/badge/platform-ios-orange.svg)](https://developer.apple.com/swift)
 # T-Movies-iOS
 
 T-Movies is an iOS application with many features to get the last movies, and people feedback.
