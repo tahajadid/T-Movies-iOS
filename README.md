@@ -1,7 +1,7 @@
 [![platform](https://img.shields.io/badge/platform-ios-orange.svg)](https://developer.apple.com/swift)
 # T-Movies-iOS
 
-T-Movies is an iOS application with many features to get the last movies, and people feedback.
+T-Movies is an iOS application with many features to get the last movies, and showing feedback.
 
 <img src="https://github.com/tahajadid/T-Movies-iOS/blob/main/Demo/mock_tmovies_2.jpg"/>
 
