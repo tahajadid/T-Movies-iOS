@@ -12,7 +12,7 @@ In the app there is many feature and components, we found :
 ### Carousel of the trending movies at home
 <img src="./Demo/home_carousel.gif" width="230" height="500"/>
 
-### List of movies with categories & searching
+### List of movies with categories & searching feature
 <img src="./Demo/searchview.gif" width="230" height="500"/>
 
 ### Profile
