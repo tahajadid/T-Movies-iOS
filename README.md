@@ -21,5 +21,5 @@ In the app there is many feature and components, we found :
 ### Setting
 <img src="./Demo/settings.gif" width="230" height="500"/>
 
-### Side Menu
+### Custom Side Menu
 <img src="./Demo/sidemenu.gif" width="230" height="500"/>
